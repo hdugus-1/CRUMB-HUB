@@ -53,6 +53,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""armmovement"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""427bba21-6e54-43dd-836f-a246cb709b0a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -88,6 +97,17 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""brake"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0e9913dd-d0cc-4731-8ab8-edb541bf0327"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""armmovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -99,6 +119,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Player_steer = m_Player.FindAction("steer", throwIfNotFound: true);
         m_Player_accel = m_Player.FindAction("accel", throwIfNotFound: true);
         m_Player_brake = m_Player.FindAction("brake", throwIfNotFound: true);
+        m_Player_armmovement = m_Player.FindAction("armmovement", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -161,6 +182,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_steer;
     private readonly InputAction m_Player_accel;
     private readonly InputAction m_Player_brake;
+    private readonly InputAction m_Player_armmovement;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -168,6 +190,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @steer => m_Wrapper.m_Player_steer;
         public InputAction @accel => m_Wrapper.m_Player_accel;
         public InputAction @brake => m_Wrapper.m_Player_brake;
+        public InputAction @armmovement => m_Wrapper.m_Player_armmovement;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -186,6 +209,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @brake.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBrake;
                 @brake.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBrake;
                 @brake.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBrake;
+                @armmovement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnArmmovement;
+                @armmovement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnArmmovement;
+                @armmovement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnArmmovement;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -199,6 +225,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @brake.started += instance.OnBrake;
                 @brake.performed += instance.OnBrake;
                 @brake.canceled += instance.OnBrake;
+                @armmovement.started += instance.OnArmmovement;
+                @armmovement.performed += instance.OnArmmovement;
+                @armmovement.canceled += instance.OnArmmovement;
             }
         }
     }
@@ -208,5 +237,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnSteer(InputAction.CallbackContext context);
         void OnAccel(InputAction.CallbackContext context);
         void OnBrake(InputAction.CallbackContext context);
+        void OnArmmovement(InputAction.CallbackContext context);
     }
 }
