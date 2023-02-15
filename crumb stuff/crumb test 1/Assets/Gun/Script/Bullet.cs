@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,20 +15,17 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         spaceshipRotation= GameObject.FindGameObjectWithTag("Spaceship").transform;
+        
         if (spaceshipRotation == null)
         {
             Debug.LogWarning("FirePoint not found!");
             return;
         }
         Vector3 direction = (spaceshipRotation.position - transform.position).normalized;
-
-        //rb.velocity = new Vector3(0, 0, speed);
         
-        rb.velocity = new Vector3(Mathf.Cos(spaceshipRotation.rotation.z + Mathf.PI/2) * speed, 0,speed * Mathf.Sin(spaceshipRotation.rotation.z + Mathf.PI/2));
-        Debug.Log(spaceshipRotation.rotation.z);
+        // transform.rotation.y return quaternion angles and not eulerangles .eulerAngles.y gives normal degree angles
+        rb.velocity = new Vector3(Mathf.Cos(-Mathf.PI/180*(spaceshipRotation.rotation.eulerAngles.y) + Mathf.PI/2) * speed, 0,speed * Mathf.Sin(-Mathf.PI/180*(spaceshipRotation.rotation.eulerAngles.y) + Mathf.PI / 2));
         
-
-        //Mathf.Cos(spaceshipRotation.rotation.z + 90
     }
     private void Update()
     {
