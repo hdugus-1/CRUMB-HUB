@@ -21,9 +21,12 @@ public class Bullet : MonoBehaviour
         }
         Vector3 direction = (spaceshipRotation.position - transform.position).normalized;
 
-        rb.velocity = new Vector3(0, 0, speed);
+        //rb.velocity = new Vector3(0, 0, speed);
         
-        //rb.velocity = new Vector3(Mathf.Cos(spaceshipRotation.rotation.z + 90) * speed, 0,speed * Mathf.Sin(spaceshipRotation.rotation.z + 90));
+        rb.velocity = new Vector3(Mathf.Cos(spaceshipRotation.rotation.z + Mathf.PI/2) * speed, 0,speed * Mathf.Sin(spaceshipRotation.rotation.z + Mathf.PI/2));
+        Debug.Log(spaceshipRotation.rotation.z);
+        
+
         //Mathf.Cos(spaceshipRotation.rotation.z + 90
     }
     private void Update()
