@@ -8,7 +8,7 @@ public class Asteroid : MonoBehaviour
     public Rigidbody rb;
     public GameObject goldPrefab;
     
-    public float speed = 5.0f;
+    public float speed = 10.0f;
     public int health = 100;
     
 

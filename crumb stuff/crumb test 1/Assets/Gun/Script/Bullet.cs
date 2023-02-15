@@ -8,11 +8,23 @@ public class Bullet : MonoBehaviour
     public Transform firePoint;
     public int dmg = 20;
     public Rigidbody rb;
-    // Start is called before the first frame update
+
+
+
     void Start()
     {
+        firePoint = GameObject.FindGameObjectWithTag("FirePoint").transform;
+        if (firePoint == null)
+        {
+            Debug.LogWarning("FirePoint not found!");
+            return;
+        }
         Vector3 direction = (firePoint.position - transform.position).normalized;
-        rb.velocity = direction * speed; 
+        rb.velocity = new Vector3(0, 0, speed);
+    }
+    private void Update()
+    {
+        firePoint = GameObject.FindGameObjectWithTag("FirePoint").transform;
     }
 
     private void OnTriggerEnter(Collider other)

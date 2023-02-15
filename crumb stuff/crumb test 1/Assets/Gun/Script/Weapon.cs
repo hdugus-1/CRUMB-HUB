@@ -7,7 +7,10 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
-
+    public Transform GetFirePoint()
+    {
+        return firePoint;
+    }
 
 
     // Update is called once per frame

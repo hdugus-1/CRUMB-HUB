@@ -62,6 +62,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""fire"",
+                    ""type"": ""Button"",
+                    ""id"": ""4f0cb2aa-e82c-4827-91be-33d7759f64f2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -108,6 +117,17 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""armmovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f6bb8a33-89b5-45c3-925b-b535a7d7bea9"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -120,6 +140,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Player_accel = m_Player.FindAction("accel", throwIfNotFound: true);
         m_Player_brake = m_Player.FindAction("brake", throwIfNotFound: true);
         m_Player_armmovement = m_Player.FindAction("armmovement", throwIfNotFound: true);
+        m_Player_fire = m_Player.FindAction("fire", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -183,6 +204,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_accel;
     private readonly InputAction m_Player_brake;
     private readonly InputAction m_Player_armmovement;
+    private readonly InputAction m_Player_fire;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -191,6 +213,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @accel => m_Wrapper.m_Player_accel;
         public InputAction @brake => m_Wrapper.m_Player_brake;
         public InputAction @armmovement => m_Wrapper.m_Player_armmovement;
+        public InputAction @fire => m_Wrapper.m_Player_fire;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -212,6 +235,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @armmovement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnArmmovement;
                 @armmovement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnArmmovement;
                 @armmovement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnArmmovement;
+                @fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
+                @fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
+                @fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -228,6 +254,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @armmovement.started += instance.OnArmmovement;
                 @armmovement.performed += instance.OnArmmovement;
                 @armmovement.canceled += instance.OnArmmovement;
+                @fire.started += instance.OnFire;
+                @fire.performed += instance.OnFire;
+                @fire.canceled += instance.OnFire;
             }
         }
     }
@@ -238,5 +267,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnAccel(InputAction.CallbackContext context);
         void OnBrake(InputAction.CallbackContext context);
         void OnArmmovement(InputAction.CallbackContext context);
+        void OnFire(InputAction.CallbackContext context);
     }
 }
