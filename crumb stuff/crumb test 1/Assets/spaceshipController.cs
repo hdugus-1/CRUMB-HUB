@@ -57,7 +57,7 @@ public class spaceshipController : MonoBehaviour
     void Update()
     {
         transform.Rotate(0,turnspeed * steerval * Time.deltaTime, 0);
-        rigidbody.AddForce(transform.up * accelval * Time.deltaTime * movespeed - rigidbody.velocity * brakeval * Time.deltaTime * brakespeed);
+        rigidbody.AddForce(transform.forward * accelval * Time.deltaTime * movespeed - rigidbody.velocity * brakeval * Time.deltaTime * brakespeed);
         rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, maxspeed);
 
     }
