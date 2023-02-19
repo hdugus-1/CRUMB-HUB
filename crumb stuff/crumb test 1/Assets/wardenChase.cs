@@ -4,6 +4,7 @@ using System.Collections.Specialized;
 using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class wardenChase : MonoBehaviour
 {
@@ -27,5 +28,15 @@ public class wardenChase : MonoBehaviour
         Vector3 direction = (spaceshipPosition.position - wardenPosition.position).normalized;
         rigidbody.AddForce(direction*Accelspeed*Time.deltaTime);
         rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, 15.0f);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Rigidbody otherRigidBody = collision.rigidbody;
+        if (collision.gameObject.CompareTag("Spaceship"))
+        {
+            SceneManager.LoadScene("LosingScene");
+
+        }
     }
 }

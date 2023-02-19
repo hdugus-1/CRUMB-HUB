@@ -10,7 +10,6 @@ public class WinningZone : MonoBehaviour
     {
         if(other.CompareTag("Spaceship"))
         {
-            Debug.Log("You Win!");
             SceneManager.LoadScene("WinningScene");
         }
     }
