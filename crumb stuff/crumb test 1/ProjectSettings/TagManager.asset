@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spaceship
   - FirePoint
+  - Warden
   layers:
   - Default
   - TransparentFX

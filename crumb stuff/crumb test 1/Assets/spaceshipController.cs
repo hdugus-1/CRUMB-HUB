@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
@@ -55,8 +56,8 @@ public class spaceshipController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, 0, -turnspeed * steerval * Time.deltaTime);
-        rigidbody.AddForce(transform.up * accelval * Time.deltaTime * movespeed - rigidbody.velocity * brakeval * Time.deltaTime * brakespeed);
+        transform.Rotate(0,turnspeed * steerval * Time.deltaTime, 0);
+        rigidbody.AddForce(transform.forward * accelval * Time.deltaTime * movespeed - rigidbody.velocity * brakeval * Time.deltaTime * brakespeed);
         rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, maxspeed);
 
     }
