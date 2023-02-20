@@ -11,12 +11,12 @@ public class GunBaseController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sphereTransform= transform.parent;
+        sphereTransform= transform;
     }
 
     // Update is called once per frame
     public void GunBaseRotation()
     {
-        sphereTransform.Rotate(Vector3.up, rotationspeed * Time.deltaTime);
+        sphereTransform.Rotate(Vector3.up, rotationspeed);
     }
 }

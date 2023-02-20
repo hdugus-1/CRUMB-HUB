@@ -2185,6 +2185,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 4f0cb2aa-e82c-4827-91be-33d7759f64f2
     m_ActionName: Player/fire[/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8834248713712475188}
+        m_TargetAssemblyTypeName: GunBaseController, Assembly-CSharp
+        m_MethodName: GunBaseRotation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9ec2cf9d-52ce-41e8-a8f4-1b7949037161
+    m_ActionName: Player/gun_base_control[/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -4852,10 +4868,24 @@ GameObject:
   - component: {fileID: 8834248713712475183}
   - component: {fileID: 8834248713712475180}
   - component: {fileID: 8834248713712475181}
+  - component: {fileID: 8834248713712475188}
   m_Layer: 0
-  m_Name: Sphere
-  m_TagString: Untagged
+  m_Name: GunBase
+  m_TagString: GunBase
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8834248713712475188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834248713712475187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e98c68fba0749542b048a2b91bea8f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationspeed: 10

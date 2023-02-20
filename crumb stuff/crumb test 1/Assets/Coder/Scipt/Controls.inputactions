@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "Tap(duration=2)",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "gun_base_control",
+                    "type": "PassThrough",
+                    "id": "9ec2cf9d-52ce-41e8-a8f4-1b7949037161",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -104,6 +113,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a18d8025-c2c2-44f2-8c54-9683a45a679d",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "gun_base_control",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dbde6d55-84fe-4817-822d-b76f681feda2",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "gun_base_control",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
