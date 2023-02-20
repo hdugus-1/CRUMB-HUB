@@ -12,8 +12,8 @@ public class spaceshipController : MonoBehaviour
     float horiz;
     float turnspeed = 75.0f;
     float movespeed = 300.0f;
-    float maxspeed = 2.0f;
-    float brakespeed = 1000.0f;
+    float maxspeed = 20.0f;
+    float brakespeed = 500.0f;
     float steerval;
     float accelval;
     float brakeval;
