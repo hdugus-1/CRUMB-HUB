@@ -9,13 +9,13 @@ public class Bullet : MonoBehaviour
     public Transform spaceshipRotation;
     public int dmg = 20;
     public Rigidbody rb;
-    public Rigidbody spaceship;
+    public Rigidbody spaceshipRb;
 
 
     void Start()
     {
         spaceshipRotation= GameObject.FindGameObjectWithTag("Spaceship").transform;
-        spaceship = GameObject.FindGameObjectWithTag("Spaceship").GetComponent<Rigidbody>();
+        spaceshipRb = GameObject.FindGameObjectWithTag("Spaceship").GetComponent<Rigidbody>();
 
         if (spaceshipRotation == null)
         {
@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
         Vector3 direction = (spaceshipRotation.position - transform.position).normalized;
         
         
-        rb.velocity = new Vector3(Mathf.Cos(-Mathf.PI/180*(spaceshipRotation.rotation.eulerAngles.y) + Mathf.PI/2) * speed + spaceship.velocity.x, 0,speed * Mathf.Sin(-Mathf.PI/180*(spaceshipRotation.rotation.eulerAngles.y) + spaceship.velocity.y + Mathf.PI / 2));
+        rb.velocity = new Vector3(Mathf.Cos(-Mathf.PI/180*(spaceshipRotation.rotation.eulerAngles.y) + Mathf.PI/2) * speed + spaceshipRb.velocity.x, 0,speed * Mathf.Sin(-Mathf.PI/180*(spaceshipRotation.rotation.eulerAngles.y) + spaceshipRb.velocity.y + Mathf.PI / 2));
         
     }
     private void Update()
