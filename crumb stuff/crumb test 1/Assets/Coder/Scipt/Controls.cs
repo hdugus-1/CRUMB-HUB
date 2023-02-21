@@ -73,10 +73,19 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""gun_base_control"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""9ec2cf9d-52ce-41e8-a8f4-1b7949037161"",
-                    ""expectedControlType"": """",
+                    ""name"": ""gun_base_right"",
+                    ""type"": ""Button"",
+                    ""id"": ""5a752d17-f7e1-4744-a4a1-5ae7998c1c83"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""gun_base_left"",
+                    ""type"": ""Button"",
+                    ""id"": ""a544b3c9-027f-47a1-889e-495376472cf6"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -140,23 +149,23 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a18d8025-c2c2-44f2-8c54-9683a45a679d"",
-                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""id"": ""62f3a6b5-cd17-47df-be86-68bfc76aa7cf"",
+                    ""path"": ""<Gamepad>/dpad/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""gun_base_control"",
+                    ""action"": ""gun_base_right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""dbde6d55-84fe-4817-822d-b76f681feda2"",
-                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""id"": ""1750d998-be78-4281-9372-732db80ea486"",
+                    ""path"": ""<Gamepad>/dpad/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""gun_base_control"",
+                    ""action"": ""gun_base_left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -172,7 +181,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Player_brake = m_Player.FindAction("brake", throwIfNotFound: true);
         m_Player_armmovement = m_Player.FindAction("armmovement", throwIfNotFound: true);
         m_Player_fire = m_Player.FindAction("fire", throwIfNotFound: true);
-        m_Player_gun_base_control = m_Player.FindAction("gun_base_control", throwIfNotFound: true);
+        m_Player_gun_base_right = m_Player.FindAction("gun_base_right", throwIfNotFound: true);
+        m_Player_gun_base_left = m_Player.FindAction("gun_base_left", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -237,7 +247,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_brake;
     private readonly InputAction m_Player_armmovement;
     private readonly InputAction m_Player_fire;
-    private readonly InputAction m_Player_gun_base_control;
+    private readonly InputAction m_Player_gun_base_right;
+    private readonly InputAction m_Player_gun_base_left;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -247,7 +258,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @brake => m_Wrapper.m_Player_brake;
         public InputAction @armmovement => m_Wrapper.m_Player_armmovement;
         public InputAction @fire => m_Wrapper.m_Player_fire;
-        public InputAction @gun_base_control => m_Wrapper.m_Player_gun_base_control;
+        public InputAction @gun_base_right => m_Wrapper.m_Player_gun_base_right;
+        public InputAction @gun_base_left => m_Wrapper.m_Player_gun_base_left;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -272,9 +284,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                @gun_base_control.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGun_base_control;
-                @gun_base_control.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGun_base_control;
-                @gun_base_control.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGun_base_control;
+                @gun_base_right.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGun_base_right;
+                @gun_base_right.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGun_base_right;
+                @gun_base_right.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGun_base_right;
+                @gun_base_left.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGun_base_left;
+                @gun_base_left.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGun_base_left;
+                @gun_base_left.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGun_base_left;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -294,9 +309,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @fire.started += instance.OnFire;
                 @fire.performed += instance.OnFire;
                 @fire.canceled += instance.OnFire;
-                @gun_base_control.started += instance.OnGun_base_control;
-                @gun_base_control.performed += instance.OnGun_base_control;
-                @gun_base_control.canceled += instance.OnGun_base_control;
+                @gun_base_right.started += instance.OnGun_base_right;
+                @gun_base_right.performed += instance.OnGun_base_right;
+                @gun_base_right.canceled += instance.OnGun_base_right;
+                @gun_base_left.started += instance.OnGun_base_left;
+                @gun_base_left.performed += instance.OnGun_base_left;
+                @gun_base_left.canceled += instance.OnGun_base_left;
             }
         }
     }
@@ -308,6 +326,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnBrake(InputAction.CallbackContext context);
         void OnArmmovement(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
-        void OnGun_base_control(InputAction.CallbackContext context);
+        void OnGun_base_right(InputAction.CallbackContext context);
+        void OnGun_base_left(InputAction.CallbackContext context);
     }
 }

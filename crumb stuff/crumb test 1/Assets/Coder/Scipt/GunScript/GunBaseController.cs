@@ -5,7 +5,7 @@ using UnityEngine;
 public class GunBaseController : MonoBehaviour
 {
 
-    public float rotationspeed = 10.0f;
+    public float rotationspeed = 5.0f;
     private Transform sphereTransform;
 
     // Start is called before the first frame update
@@ -15,8 +15,12 @@ public class GunBaseController : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void GunBaseRotation()
+    public void GunBaseRotationRight()
     {
         sphereTransform.Rotate(Vector3.up, rotationspeed);
+    }  
+    public void GunBaseRotationLeft()
+    {
+        sphereTransform.Rotate(Vector3.up, -rotationspeed);
     }
 }

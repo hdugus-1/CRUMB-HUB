@@ -51,10 +51,19 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "gun_base_control",
-                    "type": "PassThrough",
-                    "id": "9ec2cf9d-52ce-41e8-a8f4-1b7949037161",
-                    "expectedControlType": "",
+                    "name": "gun_base_right",
+                    "type": "Button",
+                    "id": "5a752d17-f7e1-4744-a4a1-5ae7998c1c83",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "gun_base_left",
+                    "type": "Button",
+                    "id": "a544b3c9-027f-47a1-889e-495376472cf6",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -118,23 +127,23 @@
                 },
                 {
                     "name": "",
-                    "id": "a18d8025-c2c2-44f2-8c54-9683a45a679d",
-                    "path": "<Gamepad>/dpad/left",
+                    "id": "62f3a6b5-cd17-47df-be86-68bfc76aa7cf",
+                    "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "gun_base_control",
+                    "action": "gun_base_right",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "dbde6d55-84fe-4817-822d-b76f681feda2",
-                    "path": "<Gamepad>/dpad/right",
+                    "id": "1750d998-be78-4281-9372-732db80ea486",
+                    "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "gun_base_control",
+                    "action": "gun_base_left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

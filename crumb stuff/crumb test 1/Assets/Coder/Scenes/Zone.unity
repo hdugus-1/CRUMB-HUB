@@ -2189,7 +2189,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8834248713712475188}
         m_TargetAssemblyTypeName: GunBaseController, Assembly-CSharp
-        m_MethodName: GunBaseRotation
+        m_MethodName: GunBaseRotationRight
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2199,8 +2199,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 9ec2cf9d-52ce-41e8-a8f4-1b7949037161
-    m_ActionName: Player/gun_base_control[/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right]
+    m_ActionId: 5a752d17-f7e1-4744-a4a1-5ae7998c1c83
+    m_ActionName: Player/gun_base_right[/XInputControllerWindows/dpad/right]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8834248713712475188}
+        m_TargetAssemblyTypeName: GunBaseController, Assembly-CSharp
+        m_MethodName: GunBaseRotationLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a544b3c9-027f-47a1-889e-495376472cf6
+    m_ActionName: Player/gun_base_left[/XInputControllerWindows/dpad/left]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -4888,4 +4904,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e98c68fba0749542b048a2b91bea8f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationspeed: 10
+  rotationspeed: 5
