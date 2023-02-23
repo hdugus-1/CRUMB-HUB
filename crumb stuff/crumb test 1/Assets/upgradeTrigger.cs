@@ -47,13 +47,13 @@ public class upgradeTrigger : MonoBehaviour
         upgradePanel.SetActive(spaceshipInbound);
         if (spaceshipInbound)
         {
-            /*
-            if (Input.GetPressDown("u"))
+            
+            if (Input.GetKeyDown("u"))
             {
                 SceneManager.LoadScene("upgradeMenu");
             }
-            */
-            controls.performed += ctx => SceneManager.LoadScene("upgradeMenu");
+            
+            
         }
     }
     
