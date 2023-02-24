@@ -8,6 +8,7 @@ TagManager:
   - FirePoint
   - Warden
   - GunBase
+  - UpgradePanel
   layers:
   - Default
   - TransparentFX

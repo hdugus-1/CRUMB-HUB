@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Coder/Scenes/LosingScene.unity
     guid: 71d3af537c2c8a440a057c8ff1945085
+  - enabled: 1
+    path: Assets/upgradeMenu.unity
+    guid: 3106ddf70b3b1ba4abf35fb3e2cc30a8
   m_configObjects: {}

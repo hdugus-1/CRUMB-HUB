@@ -89,6 +89,24 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""upgradeMenuEnter"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""8d18f2e7-4baf-431b-9ac1-450533e0cf73"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""New action"",
+                    ""type"": ""Button"",
+                    ""id"": ""10942955-4b34-4316-85a5-8f62d510294a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -168,6 +186,28 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""gun_base_left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""17813462-24e4-4ccb-9c92-c06388f16ac9"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""upgradeMenuEnter"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e6701bd4-62c0-423a-884e-585945deb41c"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -183,6 +223,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Player_fire = m_Player.FindAction("fire", throwIfNotFound: true);
         m_Player_gun_base_right = m_Player.FindAction("gun_base_right", throwIfNotFound: true);
         m_Player_gun_base_left = m_Player.FindAction("gun_base_left", throwIfNotFound: true);
+        m_Player_upgradeMenuEnter = m_Player.FindAction("upgradeMenuEnter", throwIfNotFound: true);
+        m_Player_Newaction = m_Player.FindAction("New action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -249,6 +291,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_fire;
     private readonly InputAction m_Player_gun_base_right;
     private readonly InputAction m_Player_gun_base_left;
+    private readonly InputAction m_Player_upgradeMenuEnter;
+    private readonly InputAction m_Player_Newaction;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -260,6 +304,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @fire => m_Wrapper.m_Player_fire;
         public InputAction @gun_base_right => m_Wrapper.m_Player_gun_base_right;
         public InputAction @gun_base_left => m_Wrapper.m_Player_gun_base_left;
+        public InputAction @upgradeMenuEnter => m_Wrapper.m_Player_upgradeMenuEnter;
+        public InputAction @Newaction => m_Wrapper.m_Player_Newaction;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -290,6 +336,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @gun_base_left.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGun_base_left;
                 @gun_base_left.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGun_base_left;
                 @gun_base_left.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGun_base_left;
+                @upgradeMenuEnter.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUpgradeMenuEnter;
+                @upgradeMenuEnter.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUpgradeMenuEnter;
+                @upgradeMenuEnter.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUpgradeMenuEnter;
+                @Newaction.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNewaction;
+                @Newaction.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNewaction;
+                @Newaction.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNewaction;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -315,6 +367,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @gun_base_left.started += instance.OnGun_base_left;
                 @gun_base_left.performed += instance.OnGun_base_left;
                 @gun_base_left.canceled += instance.OnGun_base_left;
+                @upgradeMenuEnter.started += instance.OnUpgradeMenuEnter;
+                @upgradeMenuEnter.performed += instance.OnUpgradeMenuEnter;
+                @upgradeMenuEnter.canceled += instance.OnUpgradeMenuEnter;
+                @Newaction.started += instance.OnNewaction;
+                @Newaction.performed += instance.OnNewaction;
+                @Newaction.canceled += instance.OnNewaction;
             }
         }
     }
@@ -328,5 +386,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnFire(InputAction.CallbackContext context);
         void OnGun_base_right(InputAction.CallbackContext context);
         void OnGun_base_left(InputAction.CallbackContext context);
+        void OnUpgradeMenuEnter(InputAction.CallbackContext context);
+        void OnNewaction(InputAction.CallbackContext context);
     }
 }
