@@ -4,14 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
-
+//using System.Runtime.Remoting.Proxies;
 
 public class upgradeTrigger : MonoBehaviour
 {
     public Transform spaceshipTransform;
     public bool spaceshipInbound;
     public GameObject upgradePanel;
-    public Controls controls;
+    private PlayerInput playerinput;
+    private Controls playercontrols;
+    private float menuButton;
+    private bool realmenubutton;
 
     private void OnTriggerStay(Collider other)
     {
@@ -33,7 +36,23 @@ public class upgradeTrigger : MonoBehaviour
 
     void Awake()
     {
-        controls = new Controls();
+        playerinput = GetComponent<PlayerInput>();
+        playercontrols = new Controls();
+    }
+
+    private void OnEnable()
+    {
+        playercontrols.Enable();
+    }
+
+    private void OnDisable()
+    {
+        playercontrols.Disable();
+    }
+
+    public void OnUpgradeMenu(InputAction.CallbackContext context)
+    {
+        menuButton = context.ReadValue<float>();
     }
 
     void Start()
@@ -48,23 +67,22 @@ public class upgradeTrigger : MonoBehaviour
         if (spaceshipInbound)
         {
             
-            if (Input.GetKeyDown("u"))
+            if (realmenubutton == true)
             {
                 SceneManager.LoadScene("upgradeMenu");
             }
             
-            
+            if ( menuButton == 1)
+            {
+                realmenubutton = true;
+            }
+            else
+            {
+                realmenubutton = false;
+            }
         }
     }
     
-    void OnEnable()
-    {
-        controls.Enable();
-    }
-
-    void OnDisable()
-    {
-        controls.Disable();
-    }
+    
 
 }

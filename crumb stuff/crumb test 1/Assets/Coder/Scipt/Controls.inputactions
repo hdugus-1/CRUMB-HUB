@@ -70,8 +70,17 @@
                 },
                 {
                     "name": "upgradeMenuEnter",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "8d18f2e7-4baf-431b-9ac1-450533e0cf73",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "10942955-4b34-4316-85a5-8f62d510294a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -164,6 +173,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "upgradeMenuEnter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e6701bd4-62c0-423a-884e-585945deb41c",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1172,7 +1172,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -110.899994, y: 52.300003}
+  m_AnchoredPosition: {x: -110.900024, y: 52.299988}
   m_SizeDelta: {x: 1109, y: 521}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470201361
@@ -2402,7 +2402,7 @@ MonoBehaviour:
       - m_Target: {fileID: 8834248713712475188}
         m_TargetAssemblyTypeName: GunBaseController, Assembly-CSharp
         m_MethodName: GunBaseRotationRight
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2418,7 +2418,7 @@ MonoBehaviour:
       - m_Target: {fileID: 8834248713712475188}
         m_TargetAssemblyTypeName: GunBaseController, Assembly-CSharp
         m_MethodName: GunBaseRotationLeft
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2430,9 +2430,25 @@ MonoBehaviour:
     m_ActionId: a544b3c9-027f-47a1-889e-495376472cf6
     m_ActionName: Player/gun_base_left[/XInputControllerWindows/dpad/left]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 51fe0a98-6b0b-4cb2-a502-f11b2867bfd1
+      m_Calls:
+      - m_Target: {fileID: 2069971429}
+        m_TargetAssemblyTypeName: upgradeTrigger, Assembly-CSharp
+        m_MethodName: OnUpgradeMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8d18f2e7-4baf-431b-9ac1-450533e0cf73
     m_ActionName: Player/upgradeMenuEnter[/XInputControllerWindows/buttonNorth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 10942955-4b34-4316-85a5-8f62d510294a
+    m_ActionName: Player/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -5560,4 +5576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e98c68fba0749542b048a2b91bea8f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationspeed: 5
+  rotationspeed: 100
+  gunleft: 0
+  gunright: 0
