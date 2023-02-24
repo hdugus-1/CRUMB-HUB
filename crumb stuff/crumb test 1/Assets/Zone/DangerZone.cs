@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,11 +9,11 @@ public class DangerZone : MonoBehaviour
     public GameObject wardenPrefab;
  
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Spaceship"))
         {
-            Instantiate(wardenPrefab, transform.position, Quaternion.identity);
+            Instantiate(wardenPrefab);
         }
     }
     // Start is called before the first frame update

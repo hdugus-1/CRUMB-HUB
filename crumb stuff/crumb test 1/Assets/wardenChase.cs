@@ -19,6 +19,7 @@ public class wardenChase : MonoBehaviour
     {
         spaceshipPosition = GameObject.FindGameObjectWithTag("Spaceship").transform;
         wardenPosition = GameObject.FindGameObjectWithTag("Warden").transform;
+       
 
     }
 
@@ -28,6 +29,11 @@ public class wardenChase : MonoBehaviour
         Vector3 direction = (spaceshipPosition.position - wardenPosition.position).normalized;
         rigidbody.AddForce(direction*Accelspeed*Time.deltaTime);
         rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, 15.0f);
+<<<<<<< Updated upstream:crumb stuff/crumb test 1/Assets/wardenChase.cs
+=======
+        transform.LookAt(spaceshipPosition, Vector3.up);
+        transform.Rotate(-90, 180, 0);
+>>>>>>> Stashed changes:crumb stuff/crumb test 1/Assets/Coder/Scipt/wardenChase.cs
     }
 
     private void OnCollisionEnter(Collision collision)
