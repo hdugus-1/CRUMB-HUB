@@ -622,6 +622,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2303233824552652752}
     m_Modifications:
+    - target: {fileID: 7501792480229440726, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8071224075293739195, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -670,7 +674,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_PlayerShip
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7501792480229440726, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
 --- !u!4 &7802358320513651908 stripped
 Transform:
