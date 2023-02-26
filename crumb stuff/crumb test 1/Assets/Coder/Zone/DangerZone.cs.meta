@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 41b3c3cc977facb42900843ba8a67530
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - wardenPrefab: {fileID: 2126176225330414065, guid: 6803e74d525bb7747b9e231c8d2091df, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
