@@ -1,0 +1,194 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "e52d212d-9f21-467e-9823-702e0349f880",
+            "actions": [
+                {
+                    "name": "steer",
+                    "type": "PassThrough",
+                    "id": "b5523a2e-e05b-4988-b3ff-8119511ebec7",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "accel",
+                    "type": "PassThrough",
+                    "id": "73ce58f7-152a-41a8-b7a0-0d2a9b0ad2c4",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "brake",
+                    "type": "PassThrough",
+                    "id": "86de9087-a0cf-480e-bbd1-9f9ba6c0c6e2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "armmovement",
+                    "type": "PassThrough",
+                    "id": "427bba21-6e54-43dd-836f-a246cb709b0a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "fire",
+                    "type": "Button",
+                    "id": "4f0cb2aa-e82c-4827-91be-33d7759f64f2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Tap(duration=2)",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "gun_base_right",
+                    "type": "Button",
+                    "id": "5a752d17-f7e1-4744-a4a1-5ae7998c1c83",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "gun_base_left",
+                    "type": "Button",
+                    "id": "a544b3c9-027f-47a1-889e-495376472cf6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "upgradeMenuEnter",
+                    "type": "PassThrough",
+                    "id": "8d18f2e7-4baf-431b-9ac1-450533e0cf73",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "10942955-4b34-4316-85a5-8f62d510294a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d7814913-9640-40d8-8336-05f2e5f5f924",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "steer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c71e8ea0-6733-447d-9d65-b105c0b7aa68",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "accel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cff75b6b-9773-412f-b899-a8eb7234569a",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "brake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0e9913dd-d0cc-4731-8ab8-edb541bf0327",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "armmovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f6bb8a33-89b5-45c3-925b-b535a7d7bea9",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "62f3a6b5-cd17-47df-be86-68bfc76aa7cf",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "gun_base_right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1750d998-be78-4281-9372-732db80ea486",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "gun_base_left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "17813462-24e4-4ccb-9c92-c06388f16ac9",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "upgradeMenuEnter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e6701bd4-62c0-423a-884e-585945deb41c",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
