@@ -8,7 +8,7 @@ public class DangerZone : MonoBehaviour
     public GameObject wardenPrefab;
  
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Spaceship"))
         {
