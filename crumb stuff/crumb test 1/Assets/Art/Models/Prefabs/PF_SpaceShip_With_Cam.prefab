@@ -592,7 +592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2303233824552652752}
   m_Layer: 0
-  m_Name: PF_SpaceShip
+  m_Name: PF_SpaceShip_With_Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
