@@ -622,6 +622,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2303233824552652752}
     m_Modifications:
+    - target: {fileID: 4423642426615439150, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 4389997512810770669, guid: 80ff7cba50a794b429c8b4c7aa466d30, type: 3}
     - target: {fileID: 7501792480229440726, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
       propertyPath: m_Enabled
       value: 0
