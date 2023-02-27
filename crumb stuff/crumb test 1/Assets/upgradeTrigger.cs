@@ -11,10 +11,13 @@ public class upgradeTrigger : MonoBehaviour
     public Transform spaceshipTransform;
     public bool spaceshipInbound;
     public GameObject upgradePanel;
+    public GameObject pausePanel;
     private PlayerInput playerinput;
     private Controls playercontrols;
     private float menuButton;
+    private float pauseButton;
     private bool realmenubutton;
+    public bool isPause = false;
 
     private void OnTriggerStay(Collider other)
     {
@@ -55,15 +58,23 @@ public class upgradeTrigger : MonoBehaviour
         menuButton = context.ReadValue<float>();
     }
 
+    
+    public void OnPauseResume()
+    {
+        isPause = false;
+    }
+    
     void Start()
     {
         spaceshipTransform = GameObject.FindGameObjectWithTag("Spaceship").transform;
         upgradePanel = GameObject.FindGameObjectWithTag("UpgradePanel");
+        pausePanel = GameObject.FindGameObjectWithTag("PauseMenu");
     }
 
     void Update()
     {  
         upgradePanel.SetActive(spaceshipInbound);
+        pausePanel.SetActive(isPause);
         if (spaceshipInbound)
         {
             
@@ -73,6 +84,14 @@ public class upgradeTrigger : MonoBehaviour
             }
             
             
+        }
+        if (playercontrols.Player.pause.ReadValue<float>() == 1)
+        {
+            isPause = true;
+        }
+        if (isPause)
+        {
+            Time.timeScale = 0;
         }
     }
     

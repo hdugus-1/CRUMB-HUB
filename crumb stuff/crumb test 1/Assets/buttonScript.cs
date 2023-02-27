@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class buttonScript : MonoBehaviour
 {
     [SerializeField] private string Scene = "Zone";
+    
     public void StartGameButton()
     {
         SceneManager.LoadScene(Scene);
@@ -19,5 +20,10 @@ public class buttonScript : MonoBehaviour
     public void ExitGameButton()
     {
         Application.Quit();
+    }
+
+    public void ResumeGameButton()
+    {
+        Time.timeScale = 1;
     }
 }
