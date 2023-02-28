@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Smoke_explosion
-  m_Shader: {fileID: -6465566751694194690, guid: 33ed1fa411fda7d4d9ff0f529914b552, type: 3}
+  m_Name: M_Ball_Trail
+  m_Shader: {fileID: -6465566751694194690, guid: 97e548f7fc81b8f4e940ab484905bb23, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -60,6 +60,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_0a1b0f2ceb9646fe875048faa0ba935a_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 5f171a35e4f4b62468fb4463a0230ed3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -87,11 +91,10 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _Dissolve: 1
     - _DstBlend: 0
-    - _Edge_Width: 0
+    - _Emission_Intensity: 1
+    - _Emission_Intensity_Tip: 0
     - _EnvironmentReflections: 1
-    - _Float: 5
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -101,7 +104,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Scrolling_Speed: 0.117
+    - _Scrolling_speed: -0.91
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -111,16 +114,13 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Base_color: {r: 1, g: 0.80811393, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Edge_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 0.24528301, g: 0.23014225, b: 0.16313635, a: 1}
+    - _Color_1: {r: 0.4245283, g: 0.41852084, b: 0.41852084, a: 1}
+    - _DissolveSpeed: {r: -0.1, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Emissive_Color: {r: 3067.9844, g: 1509.8981, b: 0, a: 0}
-    - _End_Base_Color: {r: 0.13207549, g: 0.054275714, b: 0.041740835, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _Start_Base_color: {r: 1, g: 0.53705585, b: 0, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &7494261539044125571
+--- !u!114 &1334273124799016144
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
