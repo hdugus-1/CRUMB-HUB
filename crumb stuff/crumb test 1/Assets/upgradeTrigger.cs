@@ -18,6 +18,9 @@ public class upgradeTrigger : MonoBehaviour
     private float pauseButton;
     private bool realmenubutton;
     public bool isPause = false;
+    public GameObject buttonController;
+    public buttonScript buttonScript;
+    public bool pausecheck;
 
     private void OnTriggerStay(Collider other)
     {
@@ -69,10 +72,13 @@ public class upgradeTrigger : MonoBehaviour
         spaceshipTransform = GameObject.FindGameObjectWithTag("Spaceship").transform;
         upgradePanel = GameObject.FindGameObjectWithTag("UpgradePanel");
         pausePanel = GameObject.FindGameObjectWithTag("PauseMenu");
+        buttonController = GameObject.FindGameObjectWithTag("ButtonController");
+        buttonScript = buttonController.GetComponent<buttonScript>();
     }
 
     void Update()
-    {  
+    {
+        pausecheck = buttonScript.pausecheck;
         upgradePanel.SetActive(spaceshipInbound);
         pausePanel.SetActive(isPause);
         if (spaceshipInbound)
@@ -89,9 +95,21 @@ public class upgradeTrigger : MonoBehaviour
         {
             isPause = true;
         }
+
         if (isPause)
         {
             Time.timeScale = 0;
+
+        }
+        else
+        {
+            buttonScript.Invoke("dechecker", 3);
+            Time.timeScale = 1;
+        }
+
+        if (pausecheck)
+        {
+            isPause = false;
         }
     }
     

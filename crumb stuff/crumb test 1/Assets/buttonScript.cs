@@ -6,7 +6,15 @@ using UnityEngine.SceneManagement;
 public class buttonScript : MonoBehaviour
 {
     [SerializeField] private string Scene = "Zone";
+    public GameObject pausePanel;
+    public bool pausecheck;
     
+
+    void Awake()
+    {
+        pausePanel = GameObject.FindGameObjectWithTag("PauseMenu");
+    }
+
     public void StartGameButton()
     {
         SceneManager.LoadScene(Scene);
@@ -24,6 +32,11 @@ public class buttonScript : MonoBehaviour
 
     public void ResumeGameButton()
     {
-        Time.timeScale = 1;
+        pausecheck = true;
     }
+
+    public void dechecker()
+    {
+        pausecheck = false;
+    } 
 }

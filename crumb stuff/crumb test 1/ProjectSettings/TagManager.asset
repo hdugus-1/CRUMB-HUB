@@ -11,6 +11,7 @@ TagManager:
   - UpgradePanel
   - grabbable
   - PauseMenu
+  - ButtonController
   layers:
   - Default
   - TransparentFX
