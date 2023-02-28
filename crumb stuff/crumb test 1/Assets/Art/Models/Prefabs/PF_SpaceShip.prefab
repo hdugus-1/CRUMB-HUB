@@ -340,15 +340,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756332038356724650}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.803215, y: 25.74662, z: 4.028514}
+  m_LocalRotation: {x: 0.5735764, y: 0, z: 0, w: 0.8191521}
+  m_LocalPosition: {x: 4.803215, y: 13.53, z: -0.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 756332037434462275}
   m_Father: {fileID: 2303233824552652752}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 70, y: 0, z: 0}
 --- !u!20 &756332038356724649
 Camera:
   m_ObjectHideFlags: 0
@@ -374,7 +374,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 50.8
+  field of view: 75
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -622,6 +622,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2303233824552652752}
     m_Modifications:
+    - target: {fileID: 1584696324, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+      propertyPath: ship
+      value: 
+      objectReference: {fileID: 5409763508651253988}
+    - target: {fileID: 6293326634132323483, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711571053620506209, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711571053620506209, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionId
+      value: 8f6f2bbc-b1eb-4565-8bb6-e0baa00d0045
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711571053620506209, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_ActionName
+      value: Player/grab[/DualShock4GamepadHID/leftTrigger]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711571053620506209, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711571053620506209, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2037091602811703419}
+    - target: {fileID: 6711571053620506209, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711571053620506209, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnGrab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711571053620506209, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: targetController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711571053620506209, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+      propertyPath: m_ActionEvents.Array.data[9].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7501792480229440726, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -677,6 +721,22 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7501792480229440726, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+--- !u!114 &2037091602811703419 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1584696324, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+  m_PrefabInstance: {fileID: 2037091603858939007}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff27495742e89774a845fa2f7759425f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &5409763508651253988 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 6293326634132323483, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
+  m_PrefabInstance: {fileID: 2037091603858939007}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7802358320513651908 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8071224075293739195, guid: 766816e136fc40e4eb9f1efa7bcd3639, type: 3}
