@@ -120,7 +120,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Edge_Color: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Emissive_Color: {r: 3067.9844, g: 1509.8981, b: 0, a: 0}
+    - _Emissive_Color: {r: 41.73181, g: 20.53817, b: 0, a: 0}
     - _End_Base_Color: {r: 0.13207549, g: 0.054275714, b: 0.041740835, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _Start_Base_color: {r: 1, g: 0.53705585, b: 0, a: 1}
