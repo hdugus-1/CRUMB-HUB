@@ -1369,62 +1369,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1425627829662563955, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1425627829662563955, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1425627829662563955, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1425627829662563955, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1425627829662563955, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -625
-      objectReference: {fileID: 0}
-    - target: {fileID: 1425627829662563955, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 53
-      objectReference: {fileID: 0}
-    - target: {fileID: 1853195023523924972, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1853195023696563740, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1853195023696563740, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1691
-      objectReference: {fileID: 0}
-    - target: {fileID: 1853195023696563740, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -851
-      objectReference: {fileID: 0}
-    - target: {fileID: 1853195023769996378, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.14509805
-      objectReference: {fileID: 0}
-    - target: {fileID: 1853195023769996378, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.4431373
-      objectReference: {fileID: 0}
-    - target: {fileID: 1853195023769996378, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0.9490197
-      objectReference: {fileID: 0}
-    - target: {fileID: 1853195024968262743, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4948401564572720925, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
       propertyPath: m_Name
       value: PF_SpaceShip
@@ -1433,9 +1377,5 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 499523890}
-    - target: {fileID: 9132038007598716875, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
