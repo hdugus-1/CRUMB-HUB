@@ -64,6 +64,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Triplanar_369fd7fc5cad4f828af424932c4685d6_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -90,6 +94,7 @@ Material:
     - _Dissolve: 1
     - _DstBlend: 0
     - _Edge_Width: 0
+    - _Emissive_intensity: 1.5
     - _EnvironmentReflections: 1
     - _Float: 5
     - _GlossMapScale: 0
