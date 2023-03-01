@@ -9,6 +9,7 @@ TagManager:
   - Warden
   - GunBase
   - UpgradePanel
+  - spawner
   layers:
   - Default
   - TransparentFX
