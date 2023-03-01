@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: -8206337805714322131}
   - component: {fileID: 7314704930717034800}
   m_Layer: 0
-  m_Name: PF_WardenShip
+  m_Name: PF_WardenShip_1
   m_TagString: Warden
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
