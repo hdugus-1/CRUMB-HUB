@@ -9,6 +9,9 @@ TagManager:
   - Warden
   - GunBase
   - UpgradePanel
+  - grabbable
+  - spawner
+  - asteroid
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Minimap
   - 
   - 
   - 
