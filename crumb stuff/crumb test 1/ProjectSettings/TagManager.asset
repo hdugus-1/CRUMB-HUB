@@ -10,6 +10,7 @@ TagManager:
   - GunBase
   - UpgradePanel
   - spawner
+  - asteroid
   layers:
   - Default
   - TransparentFX
