@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     public asteroid[] droid;
 
     asteroid asteroids;
-    public float spawnRate = 6.0f;
+    public float spawnRate = 3.0f;
     public float trajectory = 15.0f;
     public int spawnAmount = 1;
 
