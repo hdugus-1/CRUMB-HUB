@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Damage_Smoke
+  m_Name: M_Ship_Damage_Smoke
   m_Shader: {fileID: -6465566751694194690, guid: eca36f0294a9ba64c946cfbcab646a10, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []

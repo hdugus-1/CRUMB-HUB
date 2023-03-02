@@ -55,7 +55,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4889,7 +4889,7 @@ GameObject:
   - component: {fileID: 3441876431988298919}
   - component: {fileID: 3441876431988298918}
   m_Layer: 0
-  m_Name: PF_Sparks
+  m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4925,7 +4925,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -9759,7 +9759,7 @@ GameObject:
   - component: {fileID: 3441876432143756715}
   - component: {fileID: 3441876432143756714}
   m_Layer: 0
-  m_Name: 'PF_Top_Explosion '
+  m_Name: 'Top_Explosion '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9795,7 +9795,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -14629,7 +14629,7 @@ GameObject:
   - component: {fileID: 3441876432709460335}
   - component: {fileID: 3441876432709460334}
   m_Layer: 0
-  m_Name: PF_Ball
+  m_Name: Sparks_Spheres
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14665,7 +14665,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -19500,7 +19500,7 @@ GameObject:
   - component: {fileID: 3441876432852882958}
   - component: {fileID: 3441876432852882953}
   m_Layer: 0
-  m_Name: PF_Ring (1)
+  m_Name: Ring_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19536,7 +19536,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -24388,7 +24388,7 @@ GameObject:
   - component: {fileID: 3441876433322860124}
   - component: {fileID: 3441876433322860127}
   m_Layer: 0
-  m_Name: PF_Ring
+  m_Name: Ring_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24424,7 +24424,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -29276,7 +29276,7 @@ GameObject:
   - component: {fileID: 3441876433498091958}
   - component: {fileID: 3441876433498091953}
   m_Layer: 0
-  m_Name: 'PF_Mid_Explosion '
+  m_Name: 'Mid_Explosion '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29312,7 +29312,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -34146,7 +34146,7 @@ GameObject:
   - component: {fileID: 3441876433876169871}
   - component: {fileID: 3441876433876169870}
   m_Layer: 0
-  m_Name: PF_Top_Explosion  (1)
+  m_Name: Top_Explosion  (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34182,7 +34182,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
