@@ -48,4 +48,8 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
+    private void OnCollisionEnter(Collision other) {
+        Destroy(this.gameObject);
+    }
+
 }
