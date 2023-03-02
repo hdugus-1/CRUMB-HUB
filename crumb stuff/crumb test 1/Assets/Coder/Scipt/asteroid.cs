@@ -4,48 +4,60 @@ using UnityEngine;
 
 public class asteroid : MonoBehaviour
 {
-    public float size = 1.0f;
-    public float minsize = 0.5f;
-    public float maxsize = 1.5f;
-    public float speed = 25.0f;
-    public float maxLifeTime = 10.0f;
-    public float lifeTime = 0.0f;
+    public float size=1.0f;
+    public float minsize=0.5f;
+    public float maxsize=1.5f;
+    public float speed=25.0f;
+    public float maxLifeTime=10.0f;
+    public float lifeTime=0.0f;
+    public float asteroidHP=75f;
     Rigidbody rb;
+    public coin coinprefab;
 
-    private void Awake()
-    {
-
-        rb = GetComponent<Rigidbody>();
+    public float damageReceieved=25f;
+    
+    private void Awake() {
+       
+        rb=GetComponent<Rigidbody>();
     }
-    private void Start()
-    {
-        this.transform.eulerAngles = new Vector3(0.0f, 0.0f, Random.value * 360.0f);
-        this.transform.localScale = Vector3.one * this.size;
-        rb.mass = this.size;
+    private void Start() {
+        this.transform.eulerAngles=new Vector3(0.0f,0.0f, Random.value * 360.0f);
+        this.transform.localScale= Vector3.one * this.size;
+        rb.mass=this.size;
+    }
+
+    
+
+    private void Update(){
+        lifeTime+=Time.deltaTime;
+        if((GameObject.FindGameObjectWithTag("Spaceship").transform.position - this.gameObject.transform.position).magnitude <20f){
+               lifeTime=0;
+            }
+       if(lifeTime>=maxLifeTime){
+        Destroy(this.gameObject);
+       }
+     
+
     }
 
 
-
-    private void Update()
-    {
-        lifeTime += Time.deltaTime;
-        if ((GameObject.FindGameObjectWithTag("Spaceship").transform.position - this.gameObject.transform.position).magnitude < 20f)
-        {
-            lifeTime = 0;
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.tag=="bullet"){
+           asteroidHP-=damageReceieved;
         }
-        if (lifeTime >= maxLifeTime)
-        {
-            Destroy(this.gameObject);
-        }
-
-
+        if(asteroidHP<=0){
+        Destroy(this.gameObject);
+       }
+       if(asteroidHP<=0 && this.name=="asteroid_gold(Clone)"){
+        coin coins=Instantiate(coinprefab,this.transform.position,this.transform.rotation);
+        coins.coinDecay();
+       }
     }
 
+    
 
-
-    public void SetTrajectory(Vector3 direction)
-    {
-        direction.y = 0f;
-        rb.AddForce(direction * this.speed, ForceMode.Acceleration);
+    public void SetTrajectory(Vector3 direction){
+        direction.y=0f;
+        rb.AddForce(direction * this.speed,ForceMode.Acceleration);
     }
 }

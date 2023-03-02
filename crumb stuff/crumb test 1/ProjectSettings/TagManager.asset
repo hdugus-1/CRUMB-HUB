@@ -12,6 +12,8 @@ TagManager:
   - grabbable
   - spawner
   - asteroid
+  - coin
+  - bullet
   layers:
   - Default
   - TransparentFX

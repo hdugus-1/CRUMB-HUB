@@ -525,7 +525,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   droid:
-  - {fileID: -7810071123982138592, guid: 37573525fe8a1c84eb3d8f6a4149920e, type: 3}
+  - {fileID: 8764156269775705302, guid: c57bed5045d44ec499eb360db115b7be, type: 3}
+  - {fileID: 1797007235356865904, guid: 61aee41f16b33bb47938803401344869, type: 3}
+  - {fileID: 4163995852268700619, guid: 3abefc0cbc126144990cdc5812caef54, type: 3}
   spawnRate: 3
   trajectory: 15
   spawnAmount: 1
