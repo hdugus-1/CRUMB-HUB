@@ -101,12 +101,21 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""New action"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""10942955-4b34-4316-85a5-8f62d510294a"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""grab"",
+                    ""type"": ""Value"",
+                    ""id"": ""8f6f2bbc-b1eb-4565-8bb6-e0baa00d0045"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -208,6 +217,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""New action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""39be4c9a-1f74-44ef-a3a4-edc6d90a5534"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""grab"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -225,6 +245,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_gun_base_left = m_Player.FindAction("gun_base_left", throwIfNotFound: true);
         m_Player_upgradeMenuEnter = m_Player.FindAction("upgradeMenuEnter", throwIfNotFound: true);
         m_Player_Newaction = m_Player.FindAction("New action", throwIfNotFound: true);
+        m_Player_grab = m_Player.FindAction("grab", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -295,6 +316,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_gun_base_left;
     private readonly InputAction m_Player_upgradeMenuEnter;
     private readonly InputAction m_Player_Newaction;
+    private readonly InputAction m_Player_grab;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -308,6 +330,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @gun_base_left => m_Wrapper.m_Player_gun_base_left;
         public InputAction @upgradeMenuEnter => m_Wrapper.m_Player_upgradeMenuEnter;
         public InputAction @Newaction => m_Wrapper.m_Player_Newaction;
+        public InputAction @grab => m_Wrapper.m_Player_grab;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -344,6 +367,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Newaction.started += instance.OnNewaction;
             @Newaction.performed += instance.OnNewaction;
             @Newaction.canceled += instance.OnNewaction;
+<<<<<<< HEAD
+=======
+            @grab.started += instance.OnGrab;
+            @grab.performed += instance.OnGrab;
+            @grab.canceled += instance.OnGrab;
+>>>>>>> main
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -375,6 +404,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @Newaction.started -= instance.OnNewaction;
             @Newaction.performed -= instance.OnNewaction;
             @Newaction.canceled -= instance.OnNewaction;
+<<<<<<< HEAD
+=======
+            @grab.started -= instance.OnGrab;
+            @grab.performed -= instance.OnGrab;
+            @grab.canceled -= instance.OnGrab;
+>>>>>>> main
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -403,5 +438,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnGun_base_left(InputAction.CallbackContext context);
         void OnUpgradeMenuEnter(InputAction.CallbackContext context);
         void OnNewaction(InputAction.CallbackContext context);
+        void OnGrab(InputAction.CallbackContext context);
     }
 }

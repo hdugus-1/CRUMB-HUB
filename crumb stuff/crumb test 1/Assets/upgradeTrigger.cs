@@ -67,19 +67,12 @@ public class upgradeTrigger : MonoBehaviour
         if (spaceshipInbound)
         {
             
-            if (realmenubutton == true)
+            if (menuButton == 1)
             {
                 SceneManager.LoadScene("upgradeMenu");
             }
             
-            if ( menuButton == 1)
-            {
-                realmenubutton = true;
-            }
-            else
-            {
-                realmenubutton = false;
-            }
+            
         }
     }
     
