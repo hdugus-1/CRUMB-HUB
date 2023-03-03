@@ -79,21 +79,12 @@
                 },
                 {
                     "name": "New action",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "10942955-4b34-4316-85a5-8f62d510294a",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "grab",
-                    "type": "Value",
-                    "id": "8f6f2bbc-b1eb-4565-8bb6-e0baa00d0045",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -193,17 +184,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "39be4c9a-1f74-44ef-a3a4-edc6d90a5534",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "grab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
