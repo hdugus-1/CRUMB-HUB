@@ -20,7 +20,8 @@ public class upgradeTrigger : MonoBehaviour
     public bool isPause = false;
     public GameObject buttonController;
     public buttonScript buttonScript;
-    public bool pausecheck;
+    public bool pauseanimcheck = false;
+    public Animator[] anim;
 
     private void OnTriggerStay(Collider other)
     {
@@ -77,9 +78,9 @@ public class upgradeTrigger : MonoBehaviour
 
     void Update()
     {
-        pausecheck = buttonScript.pausecheck;
+        //pausecheck = buttonScript.pausecheck;
         upgradePanel.SetActive(spaceshipInbound);
-        pausePanel.SetActive(isPause);
+        
         if (spaceshipInbound)
         {
 
@@ -93,15 +94,29 @@ public class upgradeTrigger : MonoBehaviour
         if (playercontrols.Player.pause.ReadValue<float>() == 1)
         {
             isPause = true;
+            
         }
-
         if (isPause)
         {
             Time.timeScale = 0;
+            if (pauseanimcheck == false)
+            {
+                foreach (var anim in anim)
+                {
+                    anim.SetTrigger("OpenClose");
+                }
+                pauseanimcheck = true;
+            }
+            
 
             if (playercontrols.Player.unPause.ReadValue<float>() == 1)
             {
                 isPause = false;
+                foreach (var anim in anim)
+                {
+                    anim.SetTrigger("OpenClose");
+                }
+                pauseanimcheck = false;
             }
         }
         else

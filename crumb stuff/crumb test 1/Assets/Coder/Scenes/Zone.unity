@@ -1201,6 +1201,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 157.4
       objectReference: {fileID: 0}
+    - target: {fileID: 4782698658019066580, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4864056309639282896, guid: 9ebf79010b31e0d4b921e6afe4c70b62, type: 3}
     - target: {fileID: 4948401564572720925, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_Name
       value: PF_SpaceShip_1
