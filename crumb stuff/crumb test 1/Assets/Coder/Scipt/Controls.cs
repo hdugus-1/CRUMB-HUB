@@ -116,6 +116,24 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""pause"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""5499f787-10d2-45c5-819c-9e09861ddeed"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""unPause"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""eb3a9cac-c283-427e-b0c4-bf24b5869f8b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -228,6 +246,28 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""grab"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c648686d-9766-4a70-b83f-a25b4c2908df"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e47b85a6-bc3e-4766-9bce-1ff6fb485a77"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""unPause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -246,6 +286,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_upgradeMenuEnter = m_Player.FindAction("upgradeMenuEnter", throwIfNotFound: true);
         m_Player_Newaction = m_Player.FindAction("New action", throwIfNotFound: true);
         m_Player_grab = m_Player.FindAction("grab", throwIfNotFound: true);
+        m_Player_pause = m_Player.FindAction("pause", throwIfNotFound: true);
+        m_Player_unPause = m_Player.FindAction("unPause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -317,6 +359,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_upgradeMenuEnter;
     private readonly InputAction m_Player_Newaction;
     private readonly InputAction m_Player_grab;
+    private readonly InputAction m_Player_pause;
+    private readonly InputAction m_Player_unPause;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -331,6 +375,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @upgradeMenuEnter => m_Wrapper.m_Player_upgradeMenuEnter;
         public InputAction @Newaction => m_Wrapper.m_Player_Newaction;
         public InputAction @grab => m_Wrapper.m_Player_grab;
+        public InputAction @pause => m_Wrapper.m_Player_pause;
+        public InputAction @unPause => m_Wrapper.m_Player_unPause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -370,6 +416,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @grab.started += instance.OnGrab;
             @grab.performed += instance.OnGrab;
             @grab.canceled += instance.OnGrab;
+            @pause.started += instance.OnPause;
+            @pause.performed += instance.OnPause;
+            @pause.canceled += instance.OnPause;
+            @unPause.started += instance.OnUnPause;
+            @unPause.performed += instance.OnUnPause;
+            @unPause.canceled += instance.OnUnPause;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -404,6 +456,12 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @grab.started -= instance.OnGrab;
             @grab.performed -= instance.OnGrab;
             @grab.canceled -= instance.OnGrab;
+            @pause.started -= instance.OnPause;
+            @pause.performed -= instance.OnPause;
+            @pause.canceled -= instance.OnPause;
+            @unPause.started -= instance.OnUnPause;
+            @unPause.performed -= instance.OnUnPause;
+            @unPause.canceled -= instance.OnUnPause;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -433,5 +491,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnUpgradeMenuEnter(InputAction.CallbackContext context);
         void OnNewaction(InputAction.CallbackContext context);
         void OnGrab(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnUnPause(InputAction.CallbackContext context);
     }
 }
