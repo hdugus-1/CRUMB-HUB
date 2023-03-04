@@ -6,6 +6,33 @@
             "id": "e52d212d-9f21-467e-9823-702e0349f880",
             "actions": [
                 {
+                    "name": "UnlockMinimap",
+                    "type": "Button",
+                    "id": "f6a1c654-0407-4fbb-8e42-9a46d03b90dc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GunUpgrade",
+                    "type": "Button",
+                    "id": "d8c4745c-33df-4da6-b61b-e6e09c6a5c2b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpaceShipUpgrade",
+                    "type": "Button",
+                    "id": "c06f53b5-3ad3-4d15-af84-4f4c43df4e3c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "steer",
                     "type": "PassThrough",
                     "id": "b5523a2e-e05b-4988-b3ff-8119511ebec7",
@@ -103,47 +130,9 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "ShipUpgrade",
-                    "type": "Button",
-                    "id": "d0db2618-9751-4069-be30-9c68985383b7",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "GunUpgrade",
-                    "type": "Button",
-                    "id": "af031ab0-f4d8-40f0-844a-f8bde716bef9",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Minimap",
-                    "type": "Button",
-                    "id": "92bf7fb2-f95a-4862-a9d9-391d4cb37cea",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "d7814913-9640-40d8-8336-05f2e5f5f924",
-                    "path": "<Gamepad>/leftStick/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "steer",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "c71e8ea0-6733-447d-9d65-b105c0b7aa68",
@@ -256,19 +245,30 @@
                 },
                 {
                     "name": "",
-                    "id": "2a2aef3e-8780-48d3-a8d2-5c500daa3cad",
-                    "path": "<Gamepad>/buttonWest",
+                    "id": "84fb1cde-31be-4ccf-8606-a39be63fe640",
+                    "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ShipUpgrade",
+                    "action": "UnlockMinimap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "51d3d403-5404-4375-a570-e725f783b6e1",
-                    "path": "<Gamepad>/dpad/up",
+                    "id": "d7814913-9640-40d8-8336-05f2e5f5f924",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "steer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bde8aff1-a59b-4490-b2f3-3cfa68ab2d8e",
+                    "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -278,40 +278,12 @@
                 },
                 {
                     "name": "",
-                    "id": "73b771d2-33b9-40b3-a823-8a90dce3c2f8",
-                    "path": "<Gamepad>/dpad/down",
+                    "id": "43859ea8-424d-4cbd-aca8-0064db2d3928",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Minimap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "",
-            "id": "1ae4a7c9-1297-4105-807a-332cd712c608",
-            "actions": [
-                {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "8e0b1112-5b2d-4303-8a47-bad17d845f59",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "7f782b54-f30c-4680-aa83-3f02abee7a97",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
+                    "action": "SpaceShipUpgrade",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

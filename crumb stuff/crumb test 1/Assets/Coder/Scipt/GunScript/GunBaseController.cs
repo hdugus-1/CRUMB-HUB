@@ -29,7 +29,7 @@ public class GunBaseController : MonoBehaviour
     {
         //sphereTransform.Rotate(Vector3.up, rotationspeed);
         gunright = context.ReadValue<float>();
-        Debug.Log(gunright);
+        
     }  
     public void GunBaseRotationLeft(InputAction.CallbackContext context)
     {

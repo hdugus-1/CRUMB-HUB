@@ -7,7 +7,7 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
     private bool canShoot = true;
-    public float cooldown = 0.5f;
+    public float cooldown = 0.0f;
     public Transform GetFirePoint()
     {
         return firePoint;

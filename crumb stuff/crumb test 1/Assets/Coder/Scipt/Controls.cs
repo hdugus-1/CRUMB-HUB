@@ -28,6 +28,33 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             ""id"": ""e52d212d-9f21-467e-9823-702e0349f880"",
             ""actions"": [
                 {
+                    ""name"": ""UnlockMinimap"",
+                    ""type"": ""Button"",
+                    ""id"": ""f6a1c654-0407-4fbb-8e42-9a46d03b90dc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GunUpgrade"",
+                    ""type"": ""Button"",
+                    ""id"": ""d8c4745c-33df-4da6-b61b-e6e09c6a5c2b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SpaceShipUpgrade"",
+                    ""type"": ""Button"",
+                    ""id"": ""c06f53b5-3ad3-4d15-af84-4f4c43df4e3c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""steer"",
                     ""type"": ""PassThrough"",
                     ""id"": ""b5523a2e-e05b-4988-b3ff-8119511ebec7"",
@@ -100,15 +127,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""New action"",
-                    ""type"": ""Value"",
-                    ""id"": ""10942955-4b34-4316-85a5-8f62d510294a"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
                     ""name"": ""grab"",
                     ""type"": ""Value"",
                     ""id"": ""8f6f2bbc-b1eb-4565-8bb6-e0baa00d0045"",
@@ -134,29 +152,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""ActivateMinimap"",
-                    ""type"": ""Button"",
-                    ""id"": ""d0db2618-9751-4069-be30-9c68985383b7"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""d7814913-9640-40d8-8336-05f2e5f5f924"",
-                    ""path"": ""<Gamepad>/leftStick/x"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""steer"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""c71e8ea0-6733-447d-9d65-b105c0b7aa68"",
@@ -236,17 +234,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""e6701bd4-62c0-423a-884e-585945deb41c"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""39be4c9a-1f74-44ef-a3a4-edc6d90a5534"",
                     ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
@@ -280,12 +267,45 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2a2aef3e-8780-48d3-a8d2-5c500daa3cad"",
+                    ""id"": ""84fb1cde-31be-4ccf-8606-a39be63fe640"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UnlockMinimap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d7814913-9640-40d8-8336-05f2e5f5f924"",
+                    ""path"": ""<Gamepad>/leftStick/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""steer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bde8aff1-a59b-4490-b2f3-3cfa68ab2d8e"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GunUpgrade"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""43859ea8-424d-4cbd-aca8-0064db2d3928"",
                     ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ActivateMinimap"",
+                    ""action"": ""SpaceShipUpgrade"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -296,6 +316,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
+        m_Player_UnlockMinimap = m_Player.FindAction("UnlockMinimap", throwIfNotFound: true);
+        m_Player_GunUpgrade = m_Player.FindAction("GunUpgrade", throwIfNotFound: true);
+        m_Player_SpaceShipUpgrade = m_Player.FindAction("SpaceShipUpgrade", throwIfNotFound: true);
         m_Player_steer = m_Player.FindAction("steer", throwIfNotFound: true);
         m_Player_accel = m_Player.FindAction("accel", throwIfNotFound: true);
         m_Player_brake = m_Player.FindAction("brake", throwIfNotFound: true);
@@ -304,11 +327,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_gun_base_right = m_Player.FindAction("gun_base_right", throwIfNotFound: true);
         m_Player_gun_base_left = m_Player.FindAction("gun_base_left", throwIfNotFound: true);
         m_Player_upgradeMenuEnter = m_Player.FindAction("upgradeMenuEnter", throwIfNotFound: true);
-        m_Player_Newaction = m_Player.FindAction("New action", throwIfNotFound: true);
         m_Player_grab = m_Player.FindAction("grab", throwIfNotFound: true);
         m_Player_pause = m_Player.FindAction("pause", throwIfNotFound: true);
         m_Player_unPause = m_Player.FindAction("unPause", throwIfNotFound: true);
-        m_Player_ActivateMinimap = m_Player.FindAction("ActivateMinimap", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -370,6 +391,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
+    private readonly InputAction m_Player_UnlockMinimap;
+    private readonly InputAction m_Player_GunUpgrade;
+    private readonly InputAction m_Player_SpaceShipUpgrade;
     private readonly InputAction m_Player_steer;
     private readonly InputAction m_Player_accel;
     private readonly InputAction m_Player_brake;
@@ -378,15 +402,16 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_gun_base_right;
     private readonly InputAction m_Player_gun_base_left;
     private readonly InputAction m_Player_upgradeMenuEnter;
-    private readonly InputAction m_Player_Newaction;
     private readonly InputAction m_Player_grab;
     private readonly InputAction m_Player_pause;
     private readonly InputAction m_Player_unPause;
-    private readonly InputAction m_Player_ActivateMinimap;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
         public PlayerActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @UnlockMinimap => m_Wrapper.m_Player_UnlockMinimap;
+        public InputAction @GunUpgrade => m_Wrapper.m_Player_GunUpgrade;
+        public InputAction @SpaceShipUpgrade => m_Wrapper.m_Player_SpaceShipUpgrade;
         public InputAction @steer => m_Wrapper.m_Player_steer;
         public InputAction @accel => m_Wrapper.m_Player_accel;
         public InputAction @brake => m_Wrapper.m_Player_brake;
@@ -395,11 +420,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @gun_base_right => m_Wrapper.m_Player_gun_base_right;
         public InputAction @gun_base_left => m_Wrapper.m_Player_gun_base_left;
         public InputAction @upgradeMenuEnter => m_Wrapper.m_Player_upgradeMenuEnter;
-        public InputAction @Newaction => m_Wrapper.m_Player_Newaction;
         public InputAction @grab => m_Wrapper.m_Player_grab;
         public InputAction @pause => m_Wrapper.m_Player_pause;
         public InputAction @unPause => m_Wrapper.m_Player_unPause;
-        public InputAction @ActivateMinimap => m_Wrapper.m_Player_ActivateMinimap;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -409,6 +432,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
+            @UnlockMinimap.started += instance.OnUnlockMinimap;
+            @UnlockMinimap.performed += instance.OnUnlockMinimap;
+            @UnlockMinimap.canceled += instance.OnUnlockMinimap;
+            @GunUpgrade.started += instance.OnGunUpgrade;
+            @GunUpgrade.performed += instance.OnGunUpgrade;
+            @GunUpgrade.canceled += instance.OnGunUpgrade;
+            @SpaceShipUpgrade.started += instance.OnSpaceShipUpgrade;
+            @SpaceShipUpgrade.performed += instance.OnSpaceShipUpgrade;
+            @SpaceShipUpgrade.canceled += instance.OnSpaceShipUpgrade;
             @steer.started += instance.OnSteer;
             @steer.performed += instance.OnSteer;
             @steer.canceled += instance.OnSteer;
@@ -433,9 +465,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @upgradeMenuEnter.started += instance.OnUpgradeMenuEnter;
             @upgradeMenuEnter.performed += instance.OnUpgradeMenuEnter;
             @upgradeMenuEnter.canceled += instance.OnUpgradeMenuEnter;
-            @Newaction.started += instance.OnNewaction;
-            @Newaction.performed += instance.OnNewaction;
-            @Newaction.canceled += instance.OnNewaction;
             @grab.started += instance.OnGrab;
             @grab.performed += instance.OnGrab;
             @grab.canceled += instance.OnGrab;
@@ -445,13 +474,19 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @unPause.started += instance.OnUnPause;
             @unPause.performed += instance.OnUnPause;
             @unPause.canceled += instance.OnUnPause;
-            @ActivateMinimap.started += instance.OnActivateMinimap;
-            @ActivateMinimap.performed += instance.OnActivateMinimap;
-            @ActivateMinimap.canceled += instance.OnActivateMinimap;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
         {
+            @UnlockMinimap.started -= instance.OnUnlockMinimap;
+            @UnlockMinimap.performed -= instance.OnUnlockMinimap;
+            @UnlockMinimap.canceled -= instance.OnUnlockMinimap;
+            @GunUpgrade.started -= instance.OnGunUpgrade;
+            @GunUpgrade.performed -= instance.OnGunUpgrade;
+            @GunUpgrade.canceled -= instance.OnGunUpgrade;
+            @SpaceShipUpgrade.started -= instance.OnSpaceShipUpgrade;
+            @SpaceShipUpgrade.performed -= instance.OnSpaceShipUpgrade;
+            @SpaceShipUpgrade.canceled -= instance.OnSpaceShipUpgrade;
             @steer.started -= instance.OnSteer;
             @steer.performed -= instance.OnSteer;
             @steer.canceled -= instance.OnSteer;
@@ -476,9 +511,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @upgradeMenuEnter.started -= instance.OnUpgradeMenuEnter;
             @upgradeMenuEnter.performed -= instance.OnUpgradeMenuEnter;
             @upgradeMenuEnter.canceled -= instance.OnUpgradeMenuEnter;
-            @Newaction.started -= instance.OnNewaction;
-            @Newaction.performed -= instance.OnNewaction;
-            @Newaction.canceled -= instance.OnNewaction;
             @grab.started -= instance.OnGrab;
             @grab.performed -= instance.OnGrab;
             @grab.canceled -= instance.OnGrab;
@@ -488,9 +520,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @unPause.started -= instance.OnUnPause;
             @unPause.performed -= instance.OnUnPause;
             @unPause.canceled -= instance.OnUnPause;
-            @ActivateMinimap.started -= instance.OnActivateMinimap;
-            @ActivateMinimap.performed -= instance.OnActivateMinimap;
-            @ActivateMinimap.canceled -= instance.OnActivateMinimap;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -510,6 +539,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     public PlayerActions @Player => new PlayerActions(this);
     public interface IPlayerActions
     {
+        void OnUnlockMinimap(InputAction.CallbackContext context);
+        void OnGunUpgrade(InputAction.CallbackContext context);
+        void OnSpaceShipUpgrade(InputAction.CallbackContext context);
         void OnSteer(InputAction.CallbackContext context);
         void OnAccel(InputAction.CallbackContext context);
         void OnBrake(InputAction.CallbackContext context);
@@ -518,10 +550,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnGun_base_right(InputAction.CallbackContext context);
         void OnGun_base_left(InputAction.CallbackContext context);
         void OnUpgradeMenuEnter(InputAction.CallbackContext context);
-        void OnNewaction(InputAction.CallbackContext context);
         void OnGrab(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnUnPause(InputAction.CallbackContext context);
-        void OnActivateMinimap(InputAction.CallbackContext context);
     }
 }

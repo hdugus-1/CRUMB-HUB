@@ -16,7 +16,7 @@ public class UpgradeManager : MonoBehaviour
     }
     void Start()
     {
-        //minimap.SetActive(false);
+        minimap.SetActive(false);
     }
 
     public void ActivateMinimap()
@@ -34,6 +34,6 @@ public class UpgradeManager : MonoBehaviour
 
     public void UpgradeGun()
     {
-        weapon.cooldown *= 0.8f;
+        weapon.cooldown = 0;
     }
 }
