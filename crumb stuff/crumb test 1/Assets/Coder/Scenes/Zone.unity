@@ -495,6 +495,26 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &562353233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9132038007598716875, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
+  m_PrefabInstance: {fileID: 1853195023844658947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &562353236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562353233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 419be03426b00d74ebd11e6d754cac0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  rotationSpeed: 720
+  bulletprefab: {fileID: 5780182782770785070, guid: 37fbe515e5b56614e8007280397821ca, type: 3}
 --- !u!1 &799341587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a1761ed266cbe4281a773088e0fa83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
+  spawner: {fileID: 799341588}
 --- !u!136 &1956559926
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1540,5 +1560,21 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 499523890}
+    - target: {fileID: 7318393296919400252, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
+      propertyPath: m_Size.y
+      value: 6.5699153
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318393296919400252, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
+      propertyPath: m_Center.x
+      value: -0.029999971
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318393296919400252, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
+      propertyPath: m_Center.y
+      value: 1.7939494
+      objectReference: {fileID: 0}
+    - target: {fileID: 8615203242278559041, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4bdd086518f789a4aad61fb12e704b1b, type: 3}

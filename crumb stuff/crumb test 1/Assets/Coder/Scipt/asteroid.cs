@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class asteroid : MonoBehaviour
 {
-    public float size=1.0f;
-    public float minsize=0.5f;
-    public float maxsize=1.5f;
+    public float size=30.0f;
+    public float minsize=20.0f;
+    public float maxsize=40.5f;
     public float speed=25.0f;
     public float maxLifeTime=10.0f;
     public float lifeTime=0.0f;
@@ -40,8 +40,9 @@ public class asteroid : MonoBehaviour
 
     }
 
+    
 
-    private void OnCollisionEnter(Collision other) {
+    private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag=="bullet"){
            asteroidHP-=damageReceieved;
         }
