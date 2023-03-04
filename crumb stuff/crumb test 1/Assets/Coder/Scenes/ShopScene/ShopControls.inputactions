@@ -1,0 +1,34 @@
+{
+    "name": "ShopControls",
+    "maps": [
+        {
+            "name": "UI",
+            "id": "2c35c6eb-830f-4660-af36-058e897adf5c",
+            "actions": [
+                {
+                    "name": "BackToMain",
+                    "type": "Button",
+                    "id": "0d92632f-054e-4e50-8d22-354b02cf6789",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "aa1c6dcb-1601-47fd-9f00-dacfd521a05d",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BackToMain",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -14,6 +14,7 @@ TagManager:
   - asteroid
   - ButtonController
   - PauseMenu
+  - Minimap
   layers:
   - Default
   - TransparentFX

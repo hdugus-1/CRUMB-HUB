@@ -599,7 +599,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334191031}
   m_LocalRotation: {x: 0.00000018584359, y: 0.00000002293561, z: -0.122484274, w: 0.9924705}
-  m_LocalPosition: {x: -1324.6738, y: -1465.2119, z: -0.00013660268}
+  m_LocalPosition: {x: -1477.6605, y: -1676.0505, z: -0.00015343352}
   m_LocalScale: {x: 86.918846, y: 157.7978, z: 93.18294}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -684,6 +684,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &401073223 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8498385421501844849, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+  m_PrefabInstance: {fileID: 861183642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &499523885
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,14 +786,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cb05b9a6d626248ba8cf8681932d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spaceshipTransform: {fileID: 0}
+  spaceshipTransform: {fileID: 401073223}
   spaceshipInbound: 0
   upgradePanel: {fileID: 0}
   pausePanel: {fileID: 0}
   isPause: 0
   buttonController: {fileID: 0}
   buttonScript: {fileID: 0}
-  pausecheck: 0
+  pauseanimcheck: 0
+  anim: []
 --- !u!64 &499523891
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1193,13 +1199,21 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 1853195023085430703, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853195023085430703, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1853195023696563740, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -155.29999
+      value: -155.2998
       objectReference: {fileID: 0}
     - target: {fileID: 1853195023696563740, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 157.4
+      value: 157.3999
       objectReference: {fileID: 0}
     - target: {fileID: 4782698658019066580, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_Mesh
@@ -1208,6 +1222,54 @@ PrefabInstance:
     - target: {fileID: 4948401564572720925, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_Name
       value: PF_SpaceShip_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4948401564572720925, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401481334268046251, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401481334268046251, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionId
+      value: 5499f787-10d2-45c5-819c-9e09861ddeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401481334268046251, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_ActionId
+      value: eb3a9cac-c283-427e-b0c4-bf24b5869f8b
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401481334268046251, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_ActionName
+      value: Player/pause[/XInputControllerWindows/start]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401481334268046251, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_ActionName
+      value: Player/unPause[/XInputControllerWindows/buttonEast]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6401481334268046251, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 499523890}
+    - target: {fileID: 6401481334268046251, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnUpgradeMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121281067086813070, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_Name
+      value: Mini_map
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121281067086813070, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121281067086813070, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_TagString
+      value: Minimap
+      objectReference: {fileID: 0}
+    - target: {fileID: 8255671909457368393, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
@@ -1259,7 +1321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -14.071}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 711.35986, y: -117.72003}
+  m_AnchoredPosition: {x: 711.35986, y: -117.71997}
   m_SizeDelta: {x: 206.58002, y: 84.149994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &912527784
@@ -2239,7 +2301,7 @@ RectTransform:
   - {fileID: 334191032}
   - {fileID: 311817695}
   m_Father: {fileID: 861183644}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
