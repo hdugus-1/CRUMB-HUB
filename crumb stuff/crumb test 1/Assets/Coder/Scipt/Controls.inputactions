@@ -78,15 +78,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "New action",
-                    "type": "Value",
-                    "id": "10942955-4b34-4316-85a5-8f62d510294a",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
                     "name": "grab",
                     "type": "Value",
                     "id": "8f6f2bbc-b1eb-4565-8bb6-e0baa00d0045",
@@ -108,6 +99,33 @@
                     "name": "unPause",
                     "type": "PassThrough",
                     "id": "eb3a9cac-c283-427e-b0c4-bf24b5869f8b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ShipUpgrade",
+                    "type": "Button",
+                    "id": "d0db2618-9751-4069-be30-9c68985383b7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GunUpgrade",
+                    "type": "Button",
+                    "id": "af031ab0-f4d8-40f0-844a-f8bde716bef9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Minimap",
+                    "type": "Button",
+                    "id": "92bf7fb2-f95a-4862-a9d9-391d4cb37cea",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -205,17 +223,6 @@
                 },
                 {
                     "name": "",
-                    "id": "e6701bd4-62c0-423a-884e-585945deb41c",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "39be4c9a-1f74-44ef-a3a4-edc6d90a5534",
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
@@ -244,6 +251,67 @@
                     "processors": "",
                     "groups": "",
                     "action": "unPause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2a2aef3e-8780-48d3-a8d2-5c500daa3cad",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ShipUpgrade",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51d3d403-5404-4375-a570-e725f783b6e1",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GunUpgrade",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "73b771d2-33b9-40b3-a823-8a90dce3c2f8",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Minimap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "",
+            "id": "1ae4a7c9-1297-4105-807a-332cd712c608",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "8e0b1112-5b2d-4303-8a47-bad17d845f59",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7f782b54-f30c-4680-aa83-3f02abee7a97",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

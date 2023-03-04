@@ -134,6 +134,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ActivateMinimap"",
+                    ""type"": ""Button"",
+                    ""id"": ""d0db2618-9751-4069-be30-9c68985383b7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -268,6 +277,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""unPause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2a2aef3e-8780-48d3-a8d2-5c500daa3cad"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ActivateMinimap"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -288,6 +308,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_grab = m_Player.FindAction("grab", throwIfNotFound: true);
         m_Player_pause = m_Player.FindAction("pause", throwIfNotFound: true);
         m_Player_unPause = m_Player.FindAction("unPause", throwIfNotFound: true);
+        m_Player_ActivateMinimap = m_Player.FindAction("ActivateMinimap", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -361,6 +382,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_grab;
     private readonly InputAction m_Player_pause;
     private readonly InputAction m_Player_unPause;
+    private readonly InputAction m_Player_ActivateMinimap;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -377,6 +399,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @grab => m_Wrapper.m_Player_grab;
         public InputAction @pause => m_Wrapper.m_Player_pause;
         public InputAction @unPause => m_Wrapper.m_Player_unPause;
+        public InputAction @ActivateMinimap => m_Wrapper.m_Player_ActivateMinimap;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -422,6 +445,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @unPause.started += instance.OnUnPause;
             @unPause.performed += instance.OnUnPause;
             @unPause.canceled += instance.OnUnPause;
+            @ActivateMinimap.started += instance.OnActivateMinimap;
+            @ActivateMinimap.performed += instance.OnActivateMinimap;
+            @ActivateMinimap.canceled += instance.OnActivateMinimap;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -462,6 +488,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @unPause.started -= instance.OnUnPause;
             @unPause.performed -= instance.OnUnPause;
             @unPause.canceled -= instance.OnUnPause;
+            @ActivateMinimap.started -= instance.OnActivateMinimap;
+            @ActivateMinimap.performed -= instance.OnActivateMinimap;
+            @ActivateMinimap.canceled -= instance.OnActivateMinimap;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -493,5 +522,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnGrab(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnUnPause(InputAction.CallbackContext context);
+        void OnActivateMinimap(InputAction.CallbackContext context);
     }
 }
