@@ -34,6 +34,6 @@ public class UpgradeManager : MonoBehaviour
 
     public void UpgradeGun()
     {
-        weapon.cooldown = 0;
+        weapon.cooldown *= 0.8f;
     }
 }
