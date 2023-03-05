@@ -16,6 +16,7 @@ TagManager:
   - PauseMenu
   - bullet
   - coin
+  - Minimap
   layers:
   - Default
   - TransparentFX
