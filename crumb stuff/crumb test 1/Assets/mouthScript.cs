@@ -6,11 +6,11 @@ public class mouthScript : MonoBehaviour
 {
 
     public targetController target;
-
+    public int goldprice = 500;
     // Start is called before the first frame update
     void Start()
     {
-        
+         MoneyManager moneyManager = FindObjectOfType<MoneyManager>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -18,6 +18,9 @@ public class mouthScript : MonoBehaviour
         {
             target.grabstatus = false;
             Destroy(other.gameObject);
+            MoneyManager.money += goldprice;
+            MoneyManager.instance.currentMoney.text = MoneyManager.money.ToString();
+            
         }
     }
     // Update is called once per frame

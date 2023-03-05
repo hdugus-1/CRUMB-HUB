@@ -97,8 +97,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.867691, z: 1}
-  m_Center: {x: 0, y: -0.01996231, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &6067979759446041444
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,10 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a605db56574412b42b3e6a0c0f4a8731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 1
-  minsize: 0.5
-  maxsize: 1.5
-  speed: 25
+  size: 2
+  minsize: 1
+  maxsize: 3
+  speed: 5
   maxLifeTime: 10
   lifeTime: 0
   asteroidHP: 75

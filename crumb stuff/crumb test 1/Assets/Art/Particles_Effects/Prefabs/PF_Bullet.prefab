@@ -151,12 +151,12 @@ GameObject:
   - component: {fileID: 32675631514194287}
   - component: {fileID: 1062703848178928358}
   - component: {fileID: 6648163679899933482}
-  - component: {fileID: 4647984571976316379}
   - component: {fileID: 534052971460896369}
   - component: {fileID: 5601155120567074611}
+  - component: {fileID: 9000729302518027881}
   m_Layer: 0
   m_Name: PF_Bullet
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,19 +228,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &4647984571976316379
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4389997512810770669}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &534052971460896369
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -255,7 +242,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 1
 --- !u!114 &5601155120567074611
 MonoBehaviour:
@@ -273,6 +260,20 @@ MonoBehaviour:
   dmg: 10
   rb: {fileID: 534052971460896369}
   spaceshipRb: {fileID: 0}
+--- !u!136 &9000729302518027881
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4389997512810770669}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 20
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9038801022444287621
 GameObject:
   m_ObjectHideFlags: 0

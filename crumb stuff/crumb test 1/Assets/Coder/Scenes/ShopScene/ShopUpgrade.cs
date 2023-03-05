@@ -7,6 +7,7 @@ using TMPro;
 public class ShopUpgrade : MonoBehaviour
 {
     public TextMeshProUGUI currentMoney;
+    
     void Start()
     {
         currentMoney.text = MoneyManager.money.ToString();

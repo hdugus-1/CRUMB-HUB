@@ -9,7 +9,7 @@ public class WinningZone : MonoBehaviour
     {
         if(other.CompareTag("Spaceship"))
         {
-            SceneManager.LoadScene("WinningScene");
+            SceneManager.LoadScene("UI_win");
         }
     }
 
