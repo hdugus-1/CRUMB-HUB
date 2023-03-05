@@ -7,7 +7,7 @@ public class perimeter : MonoBehaviour
     public Spawner spawner;
 
 
-    bool tof = false;
+    public bool tof = false;
     // Start is called before the first frame update
     private void Start()
     {
@@ -20,18 +20,19 @@ public class perimeter : MonoBehaviour
         if (other.tag == "Spaceship" && tof == false)
         {
             spawner.startSpawning();
-            tof = true;
+
 
         }
-        else if (other.tag == "Spaceship" && tof == true)
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        GameObject[] asteroids = GameObject.FindGameObjectsWithTag("asteroid");
+        spawner.stopSpawning();
+
+        for (int i = 0; i < asteroids.Length; i++)
         {
-            GameObject[] asteroids = GameObject.FindGameObjectsWithTag("asteroid");
-            spawner.stopSpawning();
-            tof = false;
-            for (int i = 0; i < asteroids.Length; i++)
-            {
-                Destroy(asteroids[i]);
-            }
+            Destroy(asteroids[i]);
         }
     }
 

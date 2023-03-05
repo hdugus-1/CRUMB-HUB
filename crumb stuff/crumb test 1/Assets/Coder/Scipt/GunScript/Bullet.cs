@@ -38,6 +38,7 @@ public class Bullet : MonoBehaviour
         Asteroid asteroid = other.GetComponent<Asteroid>();
         if (asteroid != null) 
         {
+            Debug.Log("hit!");
             asteroid.TakeDamage(dmg);
             Destroy(gameObject);
         }
