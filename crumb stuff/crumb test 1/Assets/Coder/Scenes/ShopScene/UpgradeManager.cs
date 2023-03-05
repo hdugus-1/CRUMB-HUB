@@ -63,7 +63,6 @@ public class UpgradeManager : MonoBehaviour
         PlayerPrefs.SetFloat("TurnSpeed", spaceship.turnspeed);
         PlayerPrefs.SetFloat("MoveSpeed", spaceship.movespeed);
         PlayerPrefs.SetFloat("MaxSpeed", spaceship.maxspeed);
-        PlayerPrefs.Save();
     }
 
     public void UpgradeGun()
