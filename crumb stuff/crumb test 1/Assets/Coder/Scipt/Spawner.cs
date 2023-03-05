@@ -52,7 +52,7 @@ public class Spawner : MonoBehaviour
                 distvec = Vector3.Distance(asteroidspawnPoint, GameObject.FindGameObjectWithTag("Spaceship").transform.position);
             }
 
-            float asteroidvariance = UnityEngine.Random.Range(-this.trajectory, this.trajectory);
+            float asteroidvariance = UnityEngine.Random.Range(-trajectory, trajectory);
             Quaternion asteroidrotation = Quaternion.AngleAxis(asteroidvariance, Vector3.up);
             int asteroidchoice = UnityEngine.Random.Range(0, droid.Length);
             asteroid asteroidprefab = Instantiate(droid[asteroidchoice], asteroidspawnPoint, asteroidrotation);

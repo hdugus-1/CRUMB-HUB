@@ -367,7 +367,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: cb0c9f24f9d335a45b89778cc9abca8c, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 1
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -418,7 +418,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 279296477}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1655591848}
+        m_TargetAssemblyTypeName: buttonScript, Assembly-CSharp
+        m_MethodName: MainMenuButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &279296477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,7 +687,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334191031}
   m_LocalRotation: {x: 0.00000018584359, y: 0.00000002293561, z: -0.122484274, w: 0.9924705}
-  m_LocalPosition: {x: -1477.6605, y: -1676.0505, z: -0.00015343352}
+  m_LocalPosition: {x: -1251.7618, y: -1364.7285, z: 0.00025716258}
   m_LocalScale: {x: 86.918846, y: 157.7978, z: 93.18294}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -902,7 +914,11 @@ MonoBehaviour:
   buttonController: {fileID: 0}
   buttonScript: {fileID: 0}
   pauseanimcheck: 0
-  anim: []
+  anim:
+  - {fileID: 1342898908}
+  - {fileID: 912527784}
+  - {fileID: 279296475}
+  - {fileID: 666429348}
 --- !u!64 &499523891
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -970,7 +986,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: df88f9ad7b2996f429f61d406e4ec1f8, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 1
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -1021,7 +1037,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 666429350}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1655591848}
+        m_TargetAssemblyTypeName: buttonScript, Assembly-CSharp
+        m_MethodName: RestartGameButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &666429350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1496,17 +1524,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_SpaceShip_1
       objectReference: {fileID: 0}
-    - target: {fileID: 7318393296919400252, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
-      propertyPath: m_Size.y
-      value: 10.014285
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318393296919400252, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
-      propertyPath: m_Center.x
-      value: -0.029999971
-      objectReference: {fileID: 0}
-    - target: {fileID: 7318393296919400252, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
-      propertyPath: m_Center.y
-      value: 0.33286142
     - target: {fileID: 4948401564572720925, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1699,6 +1716,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Minimap
       objectReference: {fileID: 0}
+    - target: {fileID: 7318393296919400252, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_Size.y
+      value: 10.014285
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318393296919400252, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_Center.x
+      value: -0.029999971
+      objectReference: {fileID: 0}
+    - target: {fileID: 7318393296919400252, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_Center.y
+      value: 0.33286142
+      objectReference: {fileID: 0}
     - target: {fileID: 8255671909457368393, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1768,7 +1797,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c57ca0fd3c0778042ab5f7a9b6d47858, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 1
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -1819,7 +1848,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 912527786}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1655591848}
+        m_TargetAssemblyTypeName: buttonScript, Assembly-CSharp
+        m_MethodName: ExitGameButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &912527786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2571,7 +2612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1342898908
 Animator:
   serializedVersion: 5
@@ -2584,7 +2625,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3be4bd84237c0054aa098ed2500dd3ae, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 1
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -2875,6 +2916,8 @@ MonoBehaviour:
   Scene: Zone
   pausePanel: {fileID: 1342898907}
   pausecheck: 0
+  upgradeTrigger: {fileID: 499523890}
+  ispause: 0
 --- !u!4 &1655591849
 Transform:
   m_ObjectHideFlags: 0
@@ -3250,7 +3293,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.52
+  m_Radius: 0.88
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
@@ -3273,8 +3316,7 @@ MeshRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 8bcb3c29227ae3b44a9954993e88c610, type: 2}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3312,7 +3354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1956559924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.41, y: -3, z: 0.56099945}
+  m_LocalPosition: {x: 0.1, y: -3, z: 0.56099945}
   m_LocalScale: {x: 43.58, y: 1, z: 43.54}
   m_ConstrainProportionsScale: 0
   m_Children: []

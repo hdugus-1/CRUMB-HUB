@@ -7,7 +7,7 @@ public class asteroid : MonoBehaviour
     public float size=30.0f;
     public float minsize=20.0f;
     public float maxsize=40.5f;
-    public float speed=25.0f;
+    public float speed=6.0f;
     public float maxLifeTime=10.0f;
     public float lifeTime=0.0f;
     public float asteroidHP=75f;
@@ -67,7 +67,7 @@ public class asteroid : MonoBehaviour
 
     public void SetTrajectory(Vector3 direction){
         direction.y=0f;
-        rb.AddForce(direction * this.speed,ForceMode.Acceleration);
+        rb.AddForce(direction *speed*Random.Range(-0.5f, 0.5f),ForceMode.Acceleration);
     }
 
 }

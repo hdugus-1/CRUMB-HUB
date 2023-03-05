@@ -43,6 +43,7 @@ public class upgradeTrigger : MonoBehaviour
 
     void Awake()
     {
+        isPause = false;
         playerinput = GetComponent<PlayerInput>();
         playercontrols = new Controls();
     }
@@ -78,7 +79,7 @@ public class upgradeTrigger : MonoBehaviour
 
     void Update()
     {
-        //pausecheck = buttonScript.pausecheck;
+   
         upgradePanel.SetActive(spaceshipInbound);
         
         if (spaceshipInbound)
