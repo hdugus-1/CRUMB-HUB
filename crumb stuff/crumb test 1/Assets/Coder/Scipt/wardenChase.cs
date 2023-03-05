@@ -9,8 +9,8 @@ using UnityEngine.SceneManagement;
 public class wardenChase : MonoBehaviour
 {
     public Rigidbody rigidbody;
-    public float moveSpeed;
-    public float Accelspeed;
+    public float moveSpeed = 16.0f;
+    public float Accelspeed = 2500.0f;
     public Transform spaceshipPosition;
     public Transform wardenPosition;
 
