@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UpgradeManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class UpgradeManager : MonoBehaviour
 
     private const string CooldownUpgradeKey = "CooldownUpgrade";
     private const string ShipUpgradeKey = "ShipUpgradeKey";
-
+    private int UpgradeCost = 1000;
     void Awake()
     {
         if (instance == null)
@@ -42,34 +43,67 @@ public class UpgradeManager : MonoBehaviour
         spaceship.turnspeed = PlayerPrefs.GetFloat("TurnSpeed", spaceship.turnspeed);
         spaceship.movespeed = PlayerPrefs.GetFloat("MoveSpeed", spaceship.movespeed);
         spaceship.maxspeed = PlayerPrefs.GetFloat("MaxSpeed", spaceship.maxspeed);
+
+        MoneyManager moneyManager = FindObjectOfType<MoneyManager>();
+        if (moneyManager != null)
+        {
+            moneyManager.currentMoney.text = MoneyManager.money.ToString();
+
+        }
     }
 
     public void ActivateMinimap()
     {
-        if (minimap != null)
+        if(MoneyManager.money >= UpgradeCost)
         {
-            minimap.SetActive(true);
+            if (minimap != null)
+            {
+                minimap.SetActive(true);
+            }
+            MoneyManager.money -= UpgradeCost;
+            if (MoneyManager.instance.currentMoney != null)
+            {
+                MoneyManager.instance.currentMoney.text = MoneyManager.money.ToString();
+            }
+            SceneManager.LoadScene("Zone");
         }
-        //Debug.Log("Minimap!!");
     }
 
     public void ShipUpgrade()
     {
-        float upgradeAmounth = 2.5f;
-        spaceship.turnspeed *= 1.1f;
-        spaceship.movespeed *= upgradeAmounth;
-        spaceship.maxspeed  *= upgradeAmounth;
+        if (MoneyManager.money >= UpgradeCost)
+        {
+            float upgradeAmounth = 2.5f;
+            spaceship.turnspeed *= 1.1f;
+            spaceship.movespeed *= upgradeAmounth;
+            spaceship.maxspeed  *= upgradeAmounth;
 
-        PlayerPrefs.SetFloat("TurnSpeed", spaceship.turnspeed);
-        PlayerPrefs.SetFloat("MoveSpeed", spaceship.movespeed);
-        PlayerPrefs.SetFloat("MaxSpeed", spaceship.maxspeed);
+            PlayerPrefs.SetFloat("TurnSpeed", spaceship.turnspeed);
+            PlayerPrefs.SetFloat("MoveSpeed", spaceship.movespeed);
+            PlayerPrefs.SetFloat("MaxSpeed", spaceship.maxspeed);
+            MoneyManager.money -= UpgradeCost;
+            if (MoneyManager.instance.currentMoney != null)
+            {
+                MoneyManager.instance.currentMoney.text = MoneyManager.money.ToString();
+            }
+            SceneManager.LoadScene("Zone");
+        }
     }
 
     public void UpgradeGun()
     {
-        float upgradeAmount = 0.1f;
-        weapon.cooldown *= upgradeAmount;
-        PlayerPrefs.SetFloat(CooldownUpgradeKey, upgradeAmount);
+        if (MoneyManager.money >= UpgradeCost)
+        {
+            float upgradeAmount = 0.1f;
+            weapon.cooldown *= upgradeAmount;
+            PlayerPrefs.SetFloat(CooldownUpgradeKey, upgradeAmount);
+            MoneyManager.money -= UpgradeCost;
+            if (MoneyManager.instance.currentMoney != null)
+            {
+                MoneyManager.instance.currentMoney.text = MoneyManager.money.ToString();
+            }
+            SceneManager.LoadScene("Zone");
+        }
     }
 
 
