@@ -20,7 +20,9 @@ public class spaceshipController : MonoBehaviour
     private PlayerInput playerinput;
     private Controls playercontrols;
     public Rigidbody rigidbody;
+    public targetController target;
 
+    
 
     private void Awake()
     {
@@ -52,7 +54,14 @@ public class spaceshipController : MonoBehaviour
         brakeval = context.ReadValue<float>();
     }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag.Contains("gold") && target.grabstatus == true)
+        {
+            target.grabstatus = false;
+            Destroy(other.gameObject);
+        }
+    }
     // Update is called once per frame
     void Update()
     {

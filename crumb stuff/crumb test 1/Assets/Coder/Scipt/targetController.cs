@@ -11,8 +11,8 @@ public class targetController : MonoBehaviour
     public Rigidbody ship;
     public Collider thing;
     Vector2 ballpoint;
-    float grabby;
-    bool grabstatus = false;
+    public float grabby;
+    public bool grabstatus = false;
     Vector3 oldpos;
     
     float sens = 3;
@@ -48,7 +48,7 @@ public class targetController : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         
-        if (other.CompareTag("grabbable") && grabby == 1)
+        if (other.tag.Contains("grab") && grabby == 1)
         {
             grabstatus = true;
            
@@ -70,6 +70,11 @@ public class targetController : MonoBehaviour
     {
         oldpos = transform.position;
         transform.position = new Vector3(target.position.x + ballpoint.x * sens, target.position.y, target.position.z + ballpoint.y * sens);
+        
+        if(thing == null)
+        {
+            grabstatus = false;
+        }
         if (grabby == 1 && grabstatus == true)
         {
             thing.transform.position = transform.position;

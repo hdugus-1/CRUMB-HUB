@@ -116,6 +116,8 @@ MonoBehaviour:
   Grabbed: {fileID: 0}
   ship: {fileID: 5955034354554583377}
   thing: {fileID: 0}
+  grabby: 0
+  grabstatus: 0
 --- !u!114 &428663348859210185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2490,6 +2492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 5955034354554583377}
+  target: {fileID: 0}
 --- !u!114 &6401481334268046251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2663,6 +2666,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8f6f2bbc-b1eb-4565-8bb6-e0baa00d0045
     m_ActionName: Player/grab[/DualShock4GamepadHID/leftTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5499f787-10d2-45c5-819c-9e09861ddeed
+    m_ActionName: Player/pause[/DualShock4GamepadHID/start]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: eb3a9cac-c283-427e-b0c4-bf24b5869f8b
+    m_ActionName: Player/unPause[/DualShock4GamepadHID/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
