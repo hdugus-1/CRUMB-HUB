@@ -7,17 +7,16 @@ TagManager:
   - Spaceship
   - FirePoint
   - Warden
-<<<<<<< Updated upstream
-=======
   - GunBase
   - UpgradePanel
+  - grabbable
   - spawner
   - asteroid
   - ButtonController
   - PauseMenu
-  - grab
-  - grabgold
->>>>>>> Stashed changes
+  - bullet
+  - coin
+  - Minimap
   layers:
   - Default
   - TransparentFX
@@ -28,7 +27,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Minimap
   - 
   - 
   - 
