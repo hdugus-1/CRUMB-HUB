@@ -76,7 +76,7 @@ public class UpgradeManager : MonoBehaviour
 
 
 
-    private void OnApplicationQuit()
+    public void OnApplicationQuit()
     {
         PlayerPrefs.DeleteAll();
     }
