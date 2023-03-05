@@ -33,7 +33,7 @@ public class asteroid : MonoBehaviour
 
     private void Update(){
         lifeTime+=Time.deltaTime;
-        if((GameObject.FindGameObjectWithTag("Spaceship").transform.position - this.gameObject.transform.position).magnitude <100f){
+        if((GameObject.FindGameObjectWithTag("Spaceship").transform.position - this.gameObject.transform.position).magnitude <20f){
                lifeTime=0;
             }
        if(lifeTime>=maxLifeTime){
@@ -49,17 +49,15 @@ public class asteroid : MonoBehaviour
 
 
     private void OnTriggerEnter(Collider other) {
-        
-        if (other.tag=="bullet"){
-            Debug.Log("hit!");
-            asteroidHP -= damageReceieved;
+        if(other.gameObject.tag=="bullet"){
+           asteroidHP-=damageReceieved;
         }
         if(asteroidHP<=0){
         Destroy(this.gameObject);
        }
        if(asteroidHP<=0 && this.name=="asteroid_gold(Clone)"){
         coin coins=Instantiate(coinprefab,this.transform.position,this.transform.rotation);
-        //coins.coinDecay();
+        coins.coinDecay();
        }
     }
 

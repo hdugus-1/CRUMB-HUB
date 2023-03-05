@@ -13,7 +13,7 @@ public class coin : MonoBehaviour
 
        private void OnTriggerEnter(Collider other) {
         if(other.tag=="Spaceship"){
-            //Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
     }
     public void coinDecay(){

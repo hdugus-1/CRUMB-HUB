@@ -9,6 +9,7 @@ TagManager:
   - Warden
   - GunBase
   - UpgradePanel
+  - grabbable
   - spawner
   - asteroid
   - ButtonController
@@ -16,9 +17,6 @@ TagManager:
   - bullet
   - coin
   - Minimap
-  - gold
-  - goldgrab
-  - grab
   layers:
   - Default
   - TransparentFX

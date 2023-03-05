@@ -54,8 +54,14 @@ public class spaceshipController : MonoBehaviour
         brakeval = context.ReadValue<float>();
     }
 
-    
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag.Contains("gold") && target.grabstatus == true)
+        {
+            target.grabstatus = false;
+            Destroy(other.gameObject);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
