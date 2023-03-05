@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Coder/Scenes/Shop.unity
     guid: 9fae8b6d374e4b24a94ae3853b12ce60
   - enabled: 1
-    path: Assets/Coder/Scenes/WinningScene.unity
-    guid: 7f603e0d4f699f0498953a0e29ce3f04
+    path: Assets/Coder/Scenes/UI_win.unity
+    guid: 9ad6f7476c628bf498ccaae682eefa72
   - enabled: 1
     path: Assets/Coder/Scenes/LosingScene.unity
     guid: 71d3af537c2c8a440a057c8ff1945085
