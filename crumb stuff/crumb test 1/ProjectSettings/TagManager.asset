@@ -7,6 +7,17 @@ TagManager:
   - Spaceship
   - FirePoint
   - Warden
+<<<<<<< Updated upstream
+=======
+  - GunBase
+  - UpgradePanel
+  - spawner
+  - asteroid
+  - ButtonController
+  - PauseMenu
+  - grab
+  - grabgold
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
