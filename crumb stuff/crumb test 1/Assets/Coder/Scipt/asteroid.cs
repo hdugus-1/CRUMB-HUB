@@ -33,7 +33,7 @@ public class asteroid : MonoBehaviour
 
     private void Update(){
         lifeTime+=Time.deltaTime;
-        if((GameObject.FindGameObjectWithTag("Spaceship").transform.position - this.gameObject.transform.position).magnitude <20f){
+        if((GameObject.FindGameObjectWithTag("Spaceship").transform.position - this.gameObject.transform.position).magnitude <250f){
                lifeTime=0;
             }
        if(lifeTime>=maxLifeTime){
@@ -57,7 +57,7 @@ public class asteroid : MonoBehaviour
        }
        if(asteroidHP<=0 && this.name=="asteroid_gold(Clone)"){
         coin coins=Instantiate(coinprefab,this.transform.position,this.transform.rotation);
-        coins.coinDecay();
+        //coins.coinDecay();
        }
     }
 

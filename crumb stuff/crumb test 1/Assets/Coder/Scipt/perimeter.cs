@@ -17,22 +17,22 @@ public class perimeter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Spaceship" && tof == false)
+        if (other.tag == "Spaceship")
         {
             spawner.startSpawning();
-            tof = true;
+            
 
         }
-        else if (other.tag == "Spaceship" && tof == true)
-        {
-            GameObject[] asteroids = GameObject.FindGameObjectsWithTag("asteroid");
-            spawner.stopSpawning();
-            tof = false;
-            for (int i = 0; i < asteroids.Length; i++)
-            {
-                Destroy(asteroids[i]);
-            }
-        }
+        
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Spaceship")
+        {
+            spawner.stopSpawning();
 
+
+        }
+
+    }
 }

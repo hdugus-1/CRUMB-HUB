@@ -17,6 +17,8 @@ TagManager:
   - bullet
   - coin
   - Minimap
+  - grab
+  - grabgold
   layers:
   - Default
   - TransparentFX
