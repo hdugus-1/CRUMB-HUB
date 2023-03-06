@@ -820,6 +820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_SpaceShip_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5955034354554583377, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
 --- !u!1 &1135807599
@@ -1569,7 +1573,7 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
+  m_UpdateMethod: 0
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
