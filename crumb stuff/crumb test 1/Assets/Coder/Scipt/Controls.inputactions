@@ -6,33 +6,6 @@
             "id": "e52d212d-9f21-467e-9823-702e0349f880",
             "actions": [
                 {
-                    "name": "UnlockMinimap",
-                    "type": "Button",
-                    "id": "f6a1c654-0407-4fbb-8e42-9a46d03b90dc",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "GunUpgrade",
-                    "type": "Button",
-                    "id": "d8c4745c-33df-4da6-b61b-e6e09c6a5c2b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "SpaceShipUpgrade",
-                    "type": "Button",
-                    "id": "c06f53b5-3ad3-4d15-af84-4f4c43df4e3c",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "steer",
                     "type": "PassThrough",
                     "id": "b5523a2e-e05b-4988-b3ff-8119511ebec7",
@@ -245,17 +218,6 @@
                 },
                 {
                     "name": "",
-                    "id": "84fb1cde-31be-4ccf-8606-a39be63fe640",
-                    "path": "<Gamepad>/dpad/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "UnlockMinimap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d7814913-9640-40d8-8336-05f2e5f5f924",
                     "path": "<Gamepad>/leftStick/x",
                     "interactions": "",
@@ -264,26 +226,32 @@
                     "action": "steer",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "New action map",
+            "id": "a1d3b5ae-4476-4c29-bf74-bf3f03fc1b07",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "29160ad6-7b5f-4728-a93e-eb965d782dae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
                 {
                     "name": "",
-                    "id": "bde8aff1-a59b-4490-b2f3-3cfa68ab2d8e",
-                    "path": "<Gamepad>/dpad/down",
+                    "id": "20f9909d-0f28-474e-a488-0e2f24ee2a9f",
+                    "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "GunUpgrade",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "43859ea8-424d-4cbd-aca8-0064db2d3928",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SpaceShipUpgrade",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
