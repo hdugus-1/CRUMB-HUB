@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Security.Cryptography;
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -36,8 +37,9 @@ public class wardenChase : MonoBehaviour
         Rigidbody otherRigidBody = collision.rigidbody;
         if (collision.gameObject.CompareTag("Spaceship"))
         {
-            SceneManager.LoadScene("LosingScene");
-
+            Destroy(gameObject);
+            Time.timeScale = 0.001f;
+            deathScene.DeathSceneActivate();
         }
     }
 }
