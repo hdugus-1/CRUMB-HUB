@@ -38,7 +38,7 @@ public class wardenChase : MonoBehaviour
         if (collision.gameObject.CompareTag("Spaceship"))
         {
             Destroy(gameObject);
-            Time.timeScale = 0.1f;
+            Time.timeScale = 0.001f;
             deathScene.DeathSceneActivate();
         }
     }
