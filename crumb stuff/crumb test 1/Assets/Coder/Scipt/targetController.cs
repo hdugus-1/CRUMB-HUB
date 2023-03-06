@@ -15,7 +15,7 @@ public class targetController : MonoBehaviour
     public bool grabstatus = false;
     Vector3 oldpos;
     
-    float sens = 3;
+    public float grabLength = 3;
     private PlayerInput playerinput;
     private Controls playercontrols;
 
@@ -69,7 +69,7 @@ public class targetController : MonoBehaviour
     void Update()
     {
         oldpos = transform.position;
-        transform.position = new Vector3(target.position.x + ballpoint.x * sens, target.position.y, target.position.z + ballpoint.y * sens);
+        transform.position = new Vector3(target.position.x + ballpoint.x * grabLength, target.position.y, target.position.z + ballpoint.y * grabLength);
         
         if(thing == null)
         {
