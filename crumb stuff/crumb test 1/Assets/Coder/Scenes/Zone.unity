@@ -1850,7 +1850,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6742756cc55ec54bb1be748dd67a2ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: Zone
 --- !u!1 &691580837
 GameObject:
   m_ObjectHideFlags: 0
@@ -2334,9 +2333,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   droid:
-  - {fileID: 8471616696351030138, guid: d68ec1c77ee7ccd429fbe7af3c6d018b, type: 3}
-  - {fileID: 8620525458405784713, guid: 4c174d1d27e8b0d4aab1c2b3e01fa265, type: 3}
-  - {fileID: 5213377281510213901, guid: c57bed5045d44ec499eb360db115b7be, type: 3}
+  - {fileID: 5111618956510202450, guid: 2af379389b529664db8822f84e3d88fb, type: 3}
+  - {fileID: -8883580014422875810, guid: 277808a52744ea942a2efab7d91af43a, type: 3}
+  - {fileID: 3186118557834199203, guid: b7512c7e7f7f8624ea8e1d15f5875d71, type: 3}
+  - {fileID: -8776313711566119710, guid: 09743ebbd62dd6541b165377adf17b85, type: 3}
+  - {fileID: 8768294162064814276, guid: 364b5a1b0aa5b5c4db1e7ecf9ea2617f, type: 3}
+  - {fileID: -390422437938208606, guid: f5af37447fd3be549a92e92ea1e21bc7, type: 3}
+  - {fileID: 2484636820840995696, guid: a567cb912e2105c42b4f32efe30f06c3, type: 3}
+  - {fileID: -1992736412263595304, guid: b46b823e31d0ead448845240145cb99d, type: 3}
   spawnRate: 3
   trajectory: 15
   spawnAmount: 1
@@ -2546,6 +2550,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1342898912, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 450753569232934501, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -4163,7 +4171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a1ca60b77ff8641bef04f60ed483dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wardenPrefab: {fileID: 2126176225330414065, guid: 6803e74d525bb7747b9e231c8d2091df, type: 3}
 --- !u!4 &1259305078
 Transform:
   m_ObjectHideFlags: 0

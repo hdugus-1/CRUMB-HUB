@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5694886573068772455}
   - component: {fileID: 6780586194975947257}
   - component: {fileID: 8356575569710329453}
+  - component: {fileID: -7229703175761905299}
+  - component: {fileID: 8768294162064814276}
   m_Layer: 0
   m_Name: astroids iron 1
   m_TagString: Untagged
@@ -98,3 +100,40 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0646685, y: 1.2810386, z: 1.5028117}
   m_Center: {x: -0.015844882, y: -0.032457173, z: 0.088504314}
+--- !u!54 &-7229703175761905299
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266574127875728264}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
+--- !u!114 &8768294162064814276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266574127875728264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a605db56574412b42b3e6a0c0f4a8731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 2
+  minsize: 1
+  maxsize: 3
+  speed: 5
+  maxLifeTime: 10
+  lifeTime: 0
+  asteroidHP: 75
+  coinprefab: {fileID: 1311732616721963888, guid: 918b5f2e8b3f531479aa59066efeebb7, type: 3}
+  damageReceieved: 25
