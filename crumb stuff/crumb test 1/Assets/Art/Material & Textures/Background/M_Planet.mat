@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3591859521762108848
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Planet
+  m_Shader: {fileID: -6465566751694194690, guid: cdd4ef22364a2fc47b6366900e2c15bd, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_4caa5870a9944059950137b063c7c737_Texture_1:
+        m_Texture: {fileID: 2800000, guid: a3fca3eb1330d9e43856eea699236cd5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_5e314faa90cc472b9ac9768d7aa5d72f_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 61434ea53770df84a9d8a39dc7ac131b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_c7b21f60811c43eba6c6fc452f97b353_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 61434ea53770df84a9d8a39dc7ac131b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 5c74a56b461b17c48bd1e2fc6d4f2007, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Cloud_speed: -0.02
+    - _Cloud_speed_2: -0.03
+    - _Planet_rotation: 0.005
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors:
+    - _Base_color: {r: 0.7725491, g: 0.2980392, b: 0.1176471, a: 1}
+    - _Cloud_color: {r: 0.53846514, g: 0.681, b: 0.6730814, a: 1}
+    - _Cloud_density: {r: 1, g: 1.57, b: 0, a: 0}
+    - _Secondary_color: {r: 0.7764707, g: 0.4980392, b: 0.1960784, a: 1}
+    - _Tertiary_color: {r: 0.7725491, g: 0.6078432, b: 0.2431373, a: 1}
+  m_BuildTextureStacks: []
