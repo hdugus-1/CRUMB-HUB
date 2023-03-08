@@ -23,11 +23,24 @@ public class buttonScript : MonoBehaviour
         SceneManager.LoadScene(Scene);
     }
 
-    public void RestartGameButton()
+    public void RestartGameButtonisPause()
     {
         if (upgradeTrigger.isPause)
         {
             SceneManager.LoadScene(Scene);
+            upgradeTrigger.isPause = false;
+            spaceshipController.isDead = false;
+        }
+    }
+    
+    public void RestartGameButton()
+    {
+        if(spaceshipController.isDead)
+        {
+            PlayerPrefs.DeleteAll();
+            SceneManager.LoadScene(Scene);
+            upgradeTrigger.isPause = false;
+            spaceshipController.isDead = false;
         }
     }
 
@@ -38,7 +51,8 @@ public class buttonScript : MonoBehaviour
 
     public void ExitGameButton()
     {
-        Application.Quit();
+        if (spaceshipController.isDead)
+                Application.Quit();
     }
 
     public void MainMenuButtonisPause()
@@ -46,12 +60,18 @@ public class buttonScript : MonoBehaviour
         if (upgradeTrigger.isPause)
         {
             SceneManager.LoadScene("UI_mainmenu");
+            upgradeTrigger.isPause = false;
         }
     }
     
     public void MainMenuButton()
     {
-        SceneManager.LoadScene("UI_mainmenu");
+        if(spaceshipController.isDead)
+        {
+            SceneManager.LoadScene("UI_mainmenu");
+            upgradeTrigger.isPause = false;
+            spaceshipController.isDead = false;
+        }
     }
 
     public void ResumeGameButton()

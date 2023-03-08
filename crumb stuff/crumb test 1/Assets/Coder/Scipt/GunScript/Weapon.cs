@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
 
     public void Shoot(InputAction.CallbackContext context)
     {
-        if(canShoot && context.performed)
+        if(canShoot && context.performed && upgradeTrigger.isPause == false)
         {
             muzzelFlash.SetActive(false);
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);

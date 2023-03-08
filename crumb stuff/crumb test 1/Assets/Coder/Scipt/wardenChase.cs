@@ -37,9 +37,11 @@ public class wardenChase : MonoBehaviour
         Rigidbody otherRigidBody = collision.rigidbody;
         if (collision.gameObject.CompareTag("Spaceship"))
         {
+            Spawner.
             Destroy(gameObject);
             Time.timeScale = 0.2f;
             deathScene.DeathSceneActivate();
+
         }
     }
 }

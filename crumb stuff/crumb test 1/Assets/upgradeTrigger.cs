@@ -17,7 +17,7 @@ public class upgradeTrigger : MonoBehaviour
     private float menuButton;
     private float pauseButton;
     private bool realmenubutton;
-    public bool isPause = false;
+    static public bool isPause = false;
     public GameObject buttonController;
     public buttonScript buttonScript;
     public bool pauseanimcheck = false;
@@ -61,6 +61,7 @@ public class upgradeTrigger : MonoBehaviour
     public void OnUpgradeMenu(InputAction.CallbackContext context)
     {
         menuButton = context.ReadValue<float>();
+        isPause = false;
     }
 
     public void OnPauseResume()
