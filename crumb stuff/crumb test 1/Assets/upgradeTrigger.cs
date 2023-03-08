@@ -87,7 +87,7 @@ public class upgradeTrigger : MonoBehaviour
 
             if (menuButton == 1)
             {
-                SceneManager.LoadScene("Shop");
+                SceneManager.LoadScene("UI_Shop");
             }
 
 

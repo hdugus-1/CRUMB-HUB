@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Weapon : MonoBehaviour
 {
@@ -13,9 +14,9 @@ public class Weapon : MonoBehaviour
         return firePoint;
     }
 
-    public void Shoot()
+    public void Shoot(InputAction.CallbackContext context)
     {
-        if(canShoot)
+        if(canShoot && context.performed)
         {
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             canShoot= false;

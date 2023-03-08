@@ -41,12 +41,17 @@ public class buttonScript : MonoBehaviour
         Application.Quit();
     }
 
-    public void MainMenuButton()
+    public void MainMenuButtonisPause()
     {
         if (upgradeTrigger.isPause)
         {
             SceneManager.LoadScene("UI_mainmenu");
         }
+    }
+    
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene("UI_mainmenu");
     }
 
     public void ResumeGameButton()
