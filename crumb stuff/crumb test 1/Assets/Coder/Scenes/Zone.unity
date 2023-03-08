@@ -6170,7 +6170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ee1c2dc934faa44584f25f74b90d8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PF_bouy: {fileID: 0}
+  PF_bouy: {fileID: 2030450875267604584, guid: e97ca34e7acf44742955678e9e70f7e9, type: 3}
   numberOfObjects: 100
   radius: 480
 --- !u!4 &1718859998
