@@ -27,6 +27,6 @@ public class HyperDriveManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentHyperDrives.text = HyperDriveCounter.ToString();
+        //currentHyperDrives.text = HyperDriveCounter.ToString();
     }
 }

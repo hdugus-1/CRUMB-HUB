@@ -52,13 +52,18 @@ public class targetController : MonoBehaviour
         {
             grabstatus = true;
            
-            Debug.Log("grabbed");
             //other.attachedRigidbody.velocity = Vector3.zero;
             thing = other;
             
         }
-
+        if(other.tag.Contains("HyperDriveComponents") && grabby == 1)
+        {
+            grabstatus= true;
+            thing = other;
+        }
     }
+    
+    
     // Start is called before the first frame update
     void Start()
     {
