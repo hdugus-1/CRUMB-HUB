@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class BouySpawnCircle : MonoBehaviour
 {
+    [SerializeField] GameObject PF_bouy;
+    [SerializeField] int numberOfObjects = 20;
+    [SerializeField] float radius = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        for (int i = 0; i < numberOfObjects; i++)
+        {
+            float angle = i * Mathf.PI * 2 / numberOfObjects;
+            float x = Mathf.Cos(angle) * radius;
+            float z = Mathf.Sin(angle) * radius;
+            Vector3 pos = transform.position + new Vector3(x, 0, z);
+            float angleDegrees = - angle* Mathf.Rad2Deg;
+            Quaternion rot = Quaternion.Euler(0, angleDegrees, 0); 
+            Instantiate(PF_bouy, pos, rot);
+
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
