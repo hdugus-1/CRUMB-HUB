@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject muzzelFlash;
     private bool canShoot = true;
     public float cooldown = 0.5f;
     public Transform GetFirePoint()
@@ -19,6 +20,7 @@ public class Weapon : MonoBehaviour
         if(canShoot && context.performed)
         {
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Instantiate(muzzelFlash, firePoint.position, firePoint.rotation);
             canShoot= false;
             StartCoroutine(Cooldown());
         }

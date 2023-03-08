@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class wardenChase : MonoBehaviour
 {
-    public Rigidbody rigidbody;
+    public new Rigidbody rigidbody;
     public float moveSpeed;
     public float Accelspeed;
     public Transform spaceshipPosition;
@@ -38,7 +38,7 @@ public class wardenChase : MonoBehaviour
         if (collision.gameObject.CompareTag("Spaceship"))
         {
             Destroy(gameObject);
-            Time.timeScale = 0.001f;
+            Time.timeScale = 0.2f;
             deathScene.DeathSceneActivate();
         }
     }
