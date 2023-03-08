@@ -30,7 +30,10 @@ public class Bullet : MonoBehaviour
     }
     private void Update()
     {
-        objectRotation = GameObject.FindGameObjectWithTag("FirePoint").transform;
+        if(GameObject.FindGameObjectWithTag("FirePoint") != null)
+        {
+            objectRotation = GameObject.FindGameObjectWithTag("FirePoint").transform;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

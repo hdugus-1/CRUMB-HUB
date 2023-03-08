@@ -123,6 +123,120 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4803811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4803812}
+  - component: {fileID: 4803814}
+  - component: {fileID: 4803813}
+  - component: {fileID: 4803815}
+  m_Layer: 5
+  m_Name: UpgradeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4803812
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4803811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 983502924}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4803813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4803811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d22983faa9d6c4897ab32b59dddcb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMoney: {fileID: 1682825647}
+--- !u!114 &4803814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4803811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 1134fcd4b13e7eb4e9fb35daf872bc1a, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0d92632f-054e-4e50-8d22-354b02cf6789
+    m_ActionName: UI/BackToMain[/XInputControllerWindows/buttonEast,/XInputControllerWindows1/buttonEast]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4803815}
+        m_TargetAssemblyTypeName: BackScene, Assembly-CSharp
+        m_MethodName: BackToGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4c0faa21-213c-4c74-8569-41e4abeec76a
+    m_ActionName: UI/BackToGame[/XInputControllerWindows/buttonEast,/XInputControllerWindows1/buttonEast]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: UI
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &4803815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4803811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22148473d9dacb649b2aa082b46905af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &60125875
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +295,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: :- 0000
+  m_text: :- 1000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3564e8b9478113441834a1c792a50c0a, type: 2}
   m_sharedMaterial: {fileID: 949151885016944763, guid: 3564e8b9478113441834a1c792a50c0a, type: 2}
@@ -508,14 +622,14 @@ RectTransform:
   - {fileID: 195626088}
   - {fileID: 1941873646}
   - {fileID: 1667788106}
-  - {fileID: 1562259794}
   - {fileID: 418962339}
-  - {fileID: 1135357032}
   - {fileID: 384587196}
-  - {fileID: 1278684062}
   - {fileID: 1862068418}
-  - {fileID: 473282252}
   - {fileID: 790269483}
+  - {fileID: 1562259794}
+  - {fileID: 1135357032}
+  - {fileID: 1278684062}
+  - {fileID: 473282252}
   - {fileID: 1693943480}
   m_Father: {fileID: 983502924}
   m_RootOrder: 0
@@ -594,7 +708,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 330057857}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -805,7 +919,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 330057857}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -885,7 +999,7 @@ RectTransform:
   - {fileID: 1409128311}
   - {fileID: 1618146048}
   m_Father: {fileID: 330057857}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -935,7 +1049,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 473282254}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4803813}
+        m_TargetAssemblyTypeName: ShopUpgrade, Assembly-CSharp
+        m_MethodName: ShopActivateMinimap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &473282254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1430,7 +1556,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 330057857}
-  m_RootOrder: 13
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1748,7 +1874,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: :- 0000
+  m_text: :- 1000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3564e8b9478113441834a1c792a50c0a, type: 2}
   m_sharedMaterial: {fileID: 949151885016944763, guid: 3564e8b9478113441834a1c792a50c0a, type: 2}
@@ -1918,6 +2044,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 330057857}
+  - {fileID: 4803812}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2096,7 +2223,7 @@ RectTransform:
   - {fileID: 787330389}
   - {fileID: 60125876}
   m_Father: {fileID: 330057857}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2166,7 +2293,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1135357035}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4803813}
+        m_TargetAssemblyTypeName: ShopUpgrade, Assembly-CSharp
+        m_MethodName: ShopUpgradeGun
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1135357035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2474,7 +2613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1562259793}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1263328097
@@ -2527,7 +2666,7 @@ RectTransform:
   - {fileID: 1059737807}
   - {fileID: 75840024}
   m_Father: {fileID: 330057857}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2597,7 +2736,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1278684065}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4803811}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1278684065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3076,7 +3227,7 @@ RectTransform:
   - {fileID: 513433796}
   - {fileID: 917670989}
   m_Father: {fileID: 330057857}
-  m_RootOrder: 6
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3146,7 +3297,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1562259797}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4803813}
+        m_TargetAssemblyTypeName: ShopUpgrade, Assembly-CSharp
+        m_MethodName: ShopUpgradeShip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1562259797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3243,7 +3406,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: :- 0000
+  m_text: :- 1000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3564e8b9478113441834a1c792a50c0a, type: 2}
   m_sharedMaterial: {fileID: 949151885016944763, guid: 3564e8b9478113441834a1c792a50c0a, type: 2}
@@ -3996,7 +4159,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 330057857}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

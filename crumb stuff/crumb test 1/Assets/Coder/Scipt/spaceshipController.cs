@@ -19,15 +19,20 @@ public class spaceshipController : MonoBehaviour
     float brakeval;
     private PlayerInput playerinput;
     private Controls playercontrols;
-    public Rigidbody rigidbody;
+    public new Rigidbody rigidbody;
     public targetController target;
+    private GameObject spawnertag;
+    public GameObject Explosion;
 
-    
+    static public bool isDead = false;
+
 
     private void Awake()
     {
+        spawnertag = GameObject.FindGameObjectWithTag("spawner");
         playerinput = GetComponent<PlayerInput>();
         playercontrols = new Controls();
+        Explosion.SetActive(false);
     }
 
 
@@ -70,4 +75,18 @@ public class spaceshipController : MonoBehaviour
         rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, maxspeed);
 
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Rigidbody otherRigidBody = collision.rigidbody;
+        if (collision.gameObject.CompareTag("Warden"))
+        {
+            isDead= true;
+            spawnertag.SetActive(false);
+            Explosion.SetActive(true);
+            Destroy(gameObject);
+        }
+    }
+
 }

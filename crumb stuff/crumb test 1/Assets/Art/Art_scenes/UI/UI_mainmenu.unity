@@ -293,6 +293,7 @@ RectTransform:
   m_Children:
   - {fileID: 647316485}
   - {fileID: 47738771}
+  - {fileID: 190503316}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -436,6 +437,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74146772}
   m_CullTransparentMesh: 1
+--- !u!1 &190503315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 190503316}
+  - component: {fileID: 190503317}
+  m_Layer: 5
+  m_Name: ButtonController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &190503316
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190503315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 59515108}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &190503317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190503315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7094126f9adac9242b7f285e2225319d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scene: Zone
 --- !u!1 &190762152
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -26.700012, y: 73.20001}
+  m_AnchoredPosition: {x: -26.700073, y: 73.20001}
   m_SizeDelta: {x: 137.15, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &395754585
@@ -820,7 +871,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 289.2, y: 125.61}
+  m_AnchoredPosition: {x: 289.20007, y: 125.61}
   m_SizeDelta: {x: 898.52, y: 109.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610420931
@@ -866,7 +917,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 610420932}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 190503317}
+        m_TargetAssemblyTypeName: mainmenuScript, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &610420932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -917,7 +980,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 743659dd542e5b642b2dc6d449ad4aa3, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -1023,7 +1086,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 40679019fac22684b82f6f3725b9431f, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -1216,7 +1279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 610420929}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1117015366
@@ -1345,7 +1408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 243.45001, y: -102.28}
+  m_AnchoredPosition: {x: 243.45007, y: -102.28003}
   m_SizeDelta: {x: 433.54, y: 152.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1174863879
@@ -1586,7 +1649,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 743659dd542e5b642b2dc6d449ad4aa3, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -1637,7 +1700,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1332198044}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 190503317}
+        m_TargetAssemblyTypeName: mainmenuScript, Assembly-CSharp
+        m_MethodName: CreditScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1332198044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1849,7 +1924,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 188.20001, y: -99.9}
+  m_AnchoredPosition: {x: 188.20007, y: -99.9}
   m_SizeDelta: {x: 898.52, y: 109.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1848016992
@@ -1864,7 +1939,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 743659dd542e5b642b2dc6d449ad4aa3, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -1915,7 +1990,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1848016994}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 190503317}
+        m_TargetAssemblyTypeName: mainmenuScript, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1848016994
 MonoBehaviour:
   m_ObjectHideFlags: 0

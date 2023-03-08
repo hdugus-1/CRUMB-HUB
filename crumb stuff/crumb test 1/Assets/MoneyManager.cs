@@ -12,6 +12,7 @@ public class MoneyManager : MonoBehaviour
 
     static public int money = 5000;
 
+
     private void Awake()
     {
         if (instance == null)
@@ -23,9 +24,9 @@ public class MoneyManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        //currentMoney = FindObjectOfType<TextMeshProUGUI>();
     }
+
+
     public void moneyCounting()
     {
         

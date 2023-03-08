@@ -1,0 +1,114 @@
+{
+    "name": "Player1",
+    "maps": [
+        {
+            "name": "Player1",
+            "id": "0d3998dd-b7a7-45db-9c2f-9ffb420a275c",
+            "actions": [
+                {
+                    "name": "Steer",
+                    "type": "Value",
+                    "id": "8f9a548d-c1c4-4923-9bdf-072b48dd0205",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Accelerate",
+                    "type": "Button",
+                    "id": "a965eeea-4bc0-416a-a279-c3a99965363d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Brake",
+                    "type": "Button",
+                    "id": "7e0f784f-c382-4324-8148-8f593a9ba47f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UpgradeMenu",
+                    "type": "Button",
+                    "id": "e9b245df-ab76-4926-acef-9096f8005109",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpawnWarden",
+                    "type": "Button",
+                    "id": "ed1ae0d6-673e-4655-858a-a62aedf8a037",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "779de235-609c-4958-83d7-7f83deace2cf",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Steer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e1e3971f-b95e-40b1-a600-7560bf8da4ae",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Accelerate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "20a4ca5a-9720-4032-86bc-1045f14f2118",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Brake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2fe9ffea-c3e0-4473-8514-d71705a6a7e9",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UpgradeMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "db4ab2d0-c775-41bb-b9d0-5fbc8666dc4f",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpawnWarden",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

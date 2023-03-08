@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class BackScene : MonoBehaviour
 {
-    public void BackToMain()
+    public void BackToGame()
     {
         SceneManager.LoadScene("Zone");
     }
-
+    
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("UI_mainmenu");
+    }
 
 }
