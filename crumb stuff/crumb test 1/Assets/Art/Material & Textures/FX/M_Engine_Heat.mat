@@ -38,7 +38,7 @@ Material:
     - _Float: 4.77
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ScrollSpeed: -2
+    - _ScrollSpeed: -1
     - _Start_intensinty: 3.17
     m_Colors:
     - _Color: {r: 0.019607842, g: 0.47013783, b: 1, a: 1}
