@@ -17,10 +17,14 @@ public class spaceshipController : MonoBehaviour
     float steerval;
     float accelval;
     float brakeval;
+
+    public int Health = 1;
+
     private PlayerInput playerinput;
     private Controls playercontrols;
     public Rigidbody rigidbody;
     public targetController target;
+    
 
     
 
@@ -54,6 +58,14 @@ public class spaceshipController : MonoBehaviour
         brakeval = context.ReadValue<float>();
     }
 
+    private void OnCollisionEnter(Collision body)
+    {
+        if(body.relativeVelocity.magnitude > 50 && !body.gameObject.tag.Contains("grab"))
+        {
+            Health -= 1;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Contains("gold") && target.grabstatus == true)
@@ -68,6 +80,12 @@ public class spaceshipController : MonoBehaviour
         transform.Rotate(0,turnspeed * steerval * Time.deltaTime, 0);
         rigidbody.AddForce(transform.forward * accelval * Time.deltaTime * movespeed - rigidbody.velocity * brakeval * Time.deltaTime * brakespeed);
         rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, maxspeed);
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+            Time.timeScale = 0.001f;
+            deathScene.DeathSceneActivate();
+        }
 
     }
 }
