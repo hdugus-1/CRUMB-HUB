@@ -24,7 +24,10 @@ public class smoothcam : MonoBehaviour
 
     public void smoothfollow()
     {
-        transform.position = Vector3.Lerp(transform.position, target.position + offset, smoothing);
+        if (target != null)
+        {
+            transform.position = Vector3.Lerp(transform.position, target.position + offset, smoothing);
+        }
         //transform.LookAt(target);
     }
 

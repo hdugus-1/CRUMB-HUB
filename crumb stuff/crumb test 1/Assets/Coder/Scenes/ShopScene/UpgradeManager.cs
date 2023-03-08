@@ -94,7 +94,7 @@ public class UpgradeManager : MonoBehaviour
     {
         if (MoneyManager.money >= UpgradeCost)
         {
-            float upgradeAmount = 0.1f;
+            float upgradeAmount = 0.5f;
             weapon.cooldown *= upgradeAmount;
             PlayerPrefs.SetFloat(CooldownUpgradeKey, upgradeAmount);
             MoneyManager.money -= UpgradeCost;

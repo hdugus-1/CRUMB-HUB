@@ -24,8 +24,6 @@ public class MoneyManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        //currentMoney = FindObjectOfType<TextMeshProUGUI>();
     }
 
 
