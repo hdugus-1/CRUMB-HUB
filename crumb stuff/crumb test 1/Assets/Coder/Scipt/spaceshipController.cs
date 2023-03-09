@@ -17,6 +17,10 @@ public class spaceshipController : MonoBehaviour
     float steerval;
     float accelval;
     float brakeval;
+
+    public int health = 1;
+    public float crashSpeed = 10;
+
     private PlayerInput playerinput;
     private Controls playercontrols;
     public new Rigidbody rigidbody;
@@ -80,6 +84,13 @@ public class spaceshipController : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    
+    
+       
+
+    
+
     // Update is called once per frame
     void Update()
     {
@@ -89,6 +100,13 @@ public class spaceshipController : MonoBehaviour
         rigidbody.AddForce(transform.forward * accelval * Time.deltaTime * movespeed - rigidbody.velocity * brakeval * Time.deltaTime * brakespeed);
         rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, maxspeed);
 
+        if(health <= 0)
+        {
+            isDead = true;
+            spawnertag.SetActive(false);
+            Explosion.SetActive(true);
+            Destroy(gameObject);
+        }
     }
 
 
@@ -101,7 +119,14 @@ public class spaceshipController : MonoBehaviour
             spawnertag.SetActive(false);
             Explosion.SetActive(true);
             Destroy(gameObject);
+            //deathScene.DeathSceneActivate();
+        }
+
+        if (collision.relativeVelocity.magnitude > crashSpeed && !collision.gameObject.tag.Contains("grab"))
+        {
+            Debug.Log("crash");
+            health -= 1;
         }
     }
-
+    
 }
