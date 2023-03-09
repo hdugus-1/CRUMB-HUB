@@ -23,8 +23,11 @@ public class spaceshipController : MonoBehaviour
     public targetController target;
     private GameObject spawnertag;
     public GameObject Explosion;
-
     static public bool isDead = false;
+
+    private bool isControllerIndex1;
+
+
 
 
     private void Awake()
@@ -33,6 +36,12 @@ public class spaceshipController : MonoBehaviour
         playerinput = GetComponent<PlayerInput>();
         playercontrols = new Controls();
         Explosion.SetActive(false);
+        //spilt control
+        isControllerIndex1 = (playerinput.playerIndex == -1);
+        Debug.Log(playerinput.playerIndex);
+
+
+        
     }
 
 
@@ -52,10 +61,14 @@ public class spaceshipController : MonoBehaviour
     }
     public void OnAccel(InputAction.CallbackContext context)
     {
-        accelval = context.ReadValue<float>();
+        if (isControllerIndex1)
+        {
+            accelval = context.ReadValue<float>();
+        }
     }
     public void OnBrake(InputAction.CallbackContext context)
     {
+        //Debug.Log(playerinput.playerIndex);
         brakeval = context.ReadValue<float>();
     }
 
@@ -70,6 +83,8 @@ public class spaceshipController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         rigidbody.AddTorque(0,turnspeed * steerval * Time.deltaTime, 0);
         rigidbody.AddForce(transform.forward * accelval * Time.deltaTime * movespeed - rigidbody.velocity * brakeval * Time.deltaTime * brakespeed);
         rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, maxspeed);
