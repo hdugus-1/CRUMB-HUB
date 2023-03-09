@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Engine_Heat
+  m_Name: M_Engine_Side_R
   m_Shader: {fileID: -6465566751694194690, guid: 3b5609497224c844089b502bf50d28e5, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -34,12 +34,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Emissive_intensity: 3.51
+    - _Emissive_intensity: 4
+    - _Flame_length: 0.69
     - _Float: 4.77
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ScrollSpeed: -1
-    - _Start_intensinty: 3.17
+    - _ScrollSpeed: -1.2
+    - _Start_intensinty: 3
     m_Colors:
     - _Color: {r: 0.019607842, g: 0.47013783, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -230,7 +230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334191031}
   m_LocalRotation: {x: 0.00000018584359, y: 0.00000002293561, z: -0.122484274, w: 0.9924705}
-  m_LocalPosition: {x: -1478.0696, y: -1676.6141, z: 0}
+  m_LocalPosition: {x: -2519.352, y: -3111.6562, z: 0}
   m_LocalScale: {x: 86.918846, y: 157.7978, z: 93.18294}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -703,7 +703,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -14.071}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 711.35986, y: -117.71997}
+  m_AnchoredPosition: {x: 711.35986, y: -117.71991}
   m_SizeDelta: {x: 206.58002, y: 84.149994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &912527787
@@ -3440,6 +3440,7 @@ MonoBehaviour:
   maxspeed: 40
   rigidbody: {fileID: 5955034354554583377}
   target: {fileID: 428663348859210190}
+  Explosion: {fileID: 0}
 --- !u!114 &6401481334268046251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3653,6 +3654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 3390394678021245515}
   bulletPrefab: {fileID: 4389997512810770669, guid: 80ff7cba50a794b429c8b4c7aa466d30, type: 3}
+  muzzelFlash: {fileID: 0}
   cooldown: 0.5
 --- !u!1001 &907709615122573338
 PrefabInstance:
@@ -3720,7 +3722,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 0a3926e85150c87408d1102c41be4864, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 13cdddd623ff61c459d8dc749984e8de, type: 2}
+      objectReference: {fileID: 2100000, guid: 99e95f15f94624b40b6eaadede58a507, type: 2}
     - target: {fileID: 919132149155446097, guid: 0a3926e85150c87408d1102c41be4864, type: 3}
       propertyPath: m_Name
       value: S_Engine (2)
@@ -4304,7 +4306,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 0a3926e85150c87408d1102c41be4864, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 13cdddd623ff61c459d8dc749984e8de, type: 2}
+      objectReference: {fileID: 2100000, guid: 0a8bf95482e01794c8c6eced84685b11, type: 2}
     - target: {fileID: 919132149155446097, guid: 0a3926e85150c87408d1102c41be4864, type: 3}
       propertyPath: m_Name
       value: S_Engine (1)
