@@ -1041,7 +1041,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334191031}
   m_LocalRotation: {x: 0.00000018584359, y: 0.00000002293561, z: -0.122484274, w: 0.9924705}
-  m_LocalPosition: {x: -1477.6605, y: -1676.0505, z: -0.00015343352}
+  m_LocalPosition: {x: -1318.4789, y: -1456.6744, z: -0.00013592116}
   m_LocalScale: {x: 86.918846, y: 157.7978, z: 93.18294}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2618,14 +2618,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   droid:
-  - {fileID: 5111618956510202450, guid: 2af379389b529664db8822f84e3d88fb, type: 3}
-  - {fileID: -8883580014422875810, guid: 277808a52744ea942a2efab7d91af43a, type: 3}
-  - {fileID: 3186118557834199203, guid: b7512c7e7f7f8624ea8e1d15f5875d71, type: 3}
-  - {fileID: -8776313711566119710, guid: 09743ebbd62dd6541b165377adf17b85, type: 3}
-  - {fileID: 8768294162064814276, guid: 364b5a1b0aa5b5c4db1e7ecf9ea2617f, type: 3}
-  - {fileID: -390422437938208606, guid: f5af37447fd3be549a92e92ea1e21bc7, type: 3}
-  - {fileID: 2484636820840995696, guid: a567cb912e2105c42b4f32efe30f06c3, type: 3}
-  - {fileID: -1992736412263595304, guid: b46b823e31d0ead448845240145cb99d, type: 3}
+  - {fileID: 3076813477662066628, guid: 2271cf3a9c9c9fe419f9cf84eab98141, type: 3}
+  - {fileID: 4437165452200822942, guid: 361f4668ec4da3840897131ee301437c, type: 3}
+  - {fileID: -2161964862430052018, guid: 38e6e701d2dbd5744bcc286b6d40fa4f, type: 3}
+  - {fileID: -1617726671574026957, guid: aab284ba3c18e3f46ab9b7e02551b05f, type: 3}
+  - {fileID: -4604162718121362799, guid: 29cd1c75460f36b45b2c34305d224958, type: 3}
+  - {fileID: -6989668801932096892, guid: 08a968e02745e5348a29277971fe0e09, type: 3}
+  - {fileID: -8472540994288829857, guid: 12d42b0edd37bbf47845fcbe725124a1, type: 3}
+  - {fileID: -1268928345000936211, guid: 241e8670993861649a8bee48551d6966, type: 3}
+  - {fileID: -3993297269571075631, guid: dc00db8e3c9bfc642bf4f39566f52df9, type: 3}
+  - {fileID: 5089122769796658845, guid: 0f234932470e8c1438ed558f4afec3db, type: 3}
+  - {fileID: 590010750522082372, guid: 92118c3964ab30140910f646baf6487a, type: 3}
+  - {fileID: 7239295530288077741, guid: 1567309248cad15498039167f15690c7, type: 3}
+  - {fileID: 7409823333677583779, guid: 1af0f8f0161b8c24a9827fd58e11504e, type: 3}
   spawnRate: 3
   trajectory: 15
   spawnAmount: 1
