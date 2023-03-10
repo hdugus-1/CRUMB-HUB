@@ -125,6 +125,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""openHUD"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""8cd7c4be-0a13-41e5-9ffd-07bc4876e0a4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -248,6 +257,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""steer"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8d7ad0af-4445-45a5-a455-1191214d4213"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""openHUD"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -295,6 +315,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_Player_grab = m_Player.FindAction("grab", throwIfNotFound: true);
         m_Player_pause = m_Player.FindAction("pause", throwIfNotFound: true);
         m_Player_unPause = m_Player.FindAction("unPause", throwIfNotFound: true);
+        m_Player_openHUD = m_Player.FindAction("openHUD", throwIfNotFound: true);
         // New action map
         m_Newactionmap = asset.FindActionMap("New action map", throwIfNotFound: true);
         m_Newactionmap_Newaction = m_Newactionmap.FindAction("New action", throwIfNotFound: true);
@@ -370,6 +391,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_grab;
     private readonly InputAction m_Player_pause;
     private readonly InputAction m_Player_unPause;
+    private readonly InputAction m_Player_openHUD;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -385,6 +407,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @grab => m_Wrapper.m_Player_grab;
         public InputAction @pause => m_Wrapper.m_Player_pause;
         public InputAction @unPause => m_Wrapper.m_Player_unPause;
+        public InputAction @openHUD => m_Wrapper.m_Player_openHUD;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -427,6 +450,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @unPause.started += instance.OnUnPause;
             @unPause.performed += instance.OnUnPause;
             @unPause.canceled += instance.OnUnPause;
+            @openHUD.started += instance.OnOpenHUD;
+            @openHUD.performed += instance.OnOpenHUD;
+            @openHUD.canceled += instance.OnOpenHUD;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -464,6 +490,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @unPause.started -= instance.OnUnPause;
             @unPause.performed -= instance.OnUnPause;
             @unPause.canceled -= instance.OnUnPause;
+            @openHUD.started -= instance.OnOpenHUD;
+            @openHUD.performed -= instance.OnOpenHUD;
+            @openHUD.canceled -= instance.OnOpenHUD;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -540,6 +569,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnGrab(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnUnPause(InputAction.CallbackContext context);
+        void OnOpenHUD(InputAction.CallbackContext context);
     }
     public interface INewactionmapActions
     {

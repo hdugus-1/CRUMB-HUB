@@ -24,6 +24,7 @@ public class upgradeTrigger : MonoBehaviour
     public buttonScript buttonScript;
     public bool pauseanimcheck = false;
     public Animator[] anim;
+    
 
     private void OnTriggerStay(Collider other)
     {
@@ -88,7 +89,16 @@ public class upgradeTrigger : MonoBehaviour
 
     void Update()
     {
-        if(upgradePanel != null)
+        if (playercontrols.Player.openHUD.ReadValue<float>() == 1)
+        {
+            anim[4].SetBool("Open", true);
+        }
+        if (playercontrols.Player.openHUD.ReadValue<float>() == 0)
+        {
+            anim[4].SetBool("Open", false);
+        }
+
+        if (upgradePanel != null)
             upgradePanel.SetActive(spaceshipInbound);
         
         if (spaceshipInbound)
