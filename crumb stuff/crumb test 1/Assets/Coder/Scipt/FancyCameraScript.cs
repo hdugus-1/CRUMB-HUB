@@ -7,7 +7,9 @@ public class FancyCameraScript : MonoBehaviour
 {
     public CinemachineVirtualCamera newFancyCam;
     private float CameraFOVDefaultValue;
-    private float OffsetVavlue = 5.0f;
+    private float OffsetValue = 5.0f;
+    private float SecondOffsetValue = 30.0f;
+
 
 
     private void Start()
@@ -17,12 +19,18 @@ public class FancyCameraScript : MonoBehaviour
 
     private void Update()
     {
-        //newFancyCam.m_Lens.FieldOfView= 80;
 
-        if (spaceshipController.SpaceShipSpeed >= OffsetVavlue)
-            newFancyCam.m_Lens.FieldOfView = (spaceshipController.SpaceShipSpeed/4) + CameraFOVDefaultValue;
-        //print(spaceshipController.SpaceShipSpeed);
-        print(newFancyCam.m_Lens.FieldOfView);
+        if (spaceshipController.SpaceShipSpeed >= OffsetValue && spaceshipController.SpaceShipSpeed <= SecondOffsetValue)
+        {
+            newFancyCam.m_Lens.FieldOfView = (spaceshipController.SpaceShipSpeed / 4) + CameraFOVDefaultValue;
+        }
+        else if(spaceshipController.SpaceShipSpeed >= SecondOffsetValue)
+        {
+            newFancyCam.m_Lens.FieldOfView = (spaceshipController.SpaceShipSpeed / 5) + CameraFOVDefaultValue;
+        }
+
+        //print("speed: " + spaceshipController.SpaceShipSpeed);
+        //print(newFancyCam.m_Lens.FieldOfView);
         
     }
 
