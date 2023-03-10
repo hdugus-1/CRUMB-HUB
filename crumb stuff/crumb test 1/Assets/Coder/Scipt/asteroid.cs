@@ -35,6 +35,7 @@ public class asteroid : MonoBehaviour
 
 
     private void Update(){
+        transform.Rotate(0.5f,0.5f,0.5f);
         if(GameObject.FindGameObjectWithTag("Spaceship") != null)
         {
 
