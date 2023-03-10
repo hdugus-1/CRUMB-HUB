@@ -9,7 +9,9 @@ using UnityEngine.InputSystem;
 public class upgradeTrigger : MonoBehaviour
 {
     public Transform spaceshipTransform;
-    public bool spaceshipInbound;
+    private bool spaceshipInbound;
+    private bool HyperDriveinBound = false;
+    //public HyperDriveManager Hyperdrivemanager;
     public GameObject upgradePanel;
     public GameObject pausePanel;
     private PlayerInput playerinput;
@@ -28,6 +30,12 @@ public class upgradeTrigger : MonoBehaviour
         if (other.CompareTag("Spaceship"))
         {
             spaceshipInbound = true;
+        }
+
+        if (other.CompareTag("HyperDriveComponents"))
+        {
+            Destroy(other.gameObject);
+            HyperDriveManager.HyperDriveCounter++; 
         }
         
     }
@@ -80,8 +88,8 @@ public class upgradeTrigger : MonoBehaviour
 
     void Update()
     {
-   
-        upgradePanel.SetActive(spaceshipInbound);
+        if(upgradePanel != null)
+            upgradePanel.SetActive(spaceshipInbound);
         
         if (spaceshipInbound)
         {

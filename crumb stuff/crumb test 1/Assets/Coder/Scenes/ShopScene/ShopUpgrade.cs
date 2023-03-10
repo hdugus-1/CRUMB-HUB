@@ -7,10 +7,15 @@ using TMPro;
 public class ShopUpgrade : MonoBehaviour
 {
     public TextMeshProUGUI currentMoney;
+    public TextMeshProUGUI currentComponents;
+ 
+   
     
     void Start()
     {
+        
         currentMoney.text = MoneyManager.money.ToString();
+        currentComponents.text = HyperDriveManager.HyperDriveCounter.ToString();
     }
 
     public void ShopActivateMinimap()
@@ -29,6 +34,9 @@ public class ShopUpgrade : MonoBehaviour
         UpgradeManager.instance.ShipUpgrade();
     }
 
-
+    /*public void UpgradeHyperDrive()
+    {
+        UpgradeManager.instance.HyperDriveUpgrade();
+    }*/
 
 }

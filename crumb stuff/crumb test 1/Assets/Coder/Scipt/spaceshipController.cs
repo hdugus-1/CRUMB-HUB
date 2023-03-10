@@ -40,9 +40,6 @@ public class spaceshipController : MonoBehaviour
         playerinput = GetComponent<PlayerInput>();
         playercontrols = new Controls();
         Explosion.SetActive(false);
-        //spilt control
-        isControllerIndex1 = (playerinput.playerIndex == -1);
-        Debug.Log(playerinput.playerIndex);
 
 
         
@@ -65,10 +62,7 @@ public class spaceshipController : MonoBehaviour
     }
     public void OnAccel(InputAction.CallbackContext context)
     {
-        if (isControllerIndex1)
-        {
             accelval = context.ReadValue<float>();
-        }
     }
     public void OnBrake(InputAction.CallbackContext context)
     {

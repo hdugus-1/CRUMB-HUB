@@ -12,6 +12,7 @@ public class UpgradeManager : MonoBehaviour
     public GameObject Radar;
     public spaceshipController spaceship;
     public Weapon weapon;
+    //public upgradeTrigger upgradetrigger;
 
 
     private const string CooldownUpgradeKey = "CooldownUpgrade";
@@ -108,7 +109,14 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
-
+    /*public void HyperDrive()
+    {
+        if (upgradetrigger.HyperDriveCounter == 4)
+        {
+            //add Hyperdrive/SetActive
+        }
+        
+    }*/
 
 
 
