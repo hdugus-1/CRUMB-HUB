@@ -11,8 +11,6 @@ public class Sounds
     public float volume = 1;
     [Range(-3f, 3f)]
     public float pitch = 1;
-    [Range(0f, 1f)]
-    public float spatialBlend = 0;
 
     public bool loop = false;
 
