@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEditor.Rendering.LookDev;
 //using System.Runtime.Remoting.Proxies;
 
 public class upgradeTrigger : MonoBehaviour
@@ -22,7 +23,11 @@ public class upgradeTrigger : MonoBehaviour
     public buttonScript buttonScript;
     public bool pauseanimcheck = false;
     public Animator[] anim;
-
+    public PlayerInput player1;
+    public PlayerInput player2;
+    private Controls player1control;
+    private PlayerInput player2control;
+    private float HUDopener;
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Spaceship"))
@@ -43,9 +48,12 @@ public class upgradeTrigger : MonoBehaviour
 
     void Awake()
     {
-        isPause = false;
         playerinput = GetComponent<PlayerInput>();
         playercontrols = new Controls();
+        isPause = false;
+        player1 = GetComponent<PlayerInput>();
+        player2 = GetComponent<PlayerInput>();
+        player1control = new Controls();
     }
 
     private void OnEnable()
@@ -69,6 +77,20 @@ public class upgradeTrigger : MonoBehaviour
         isPause = false;
     }
 
+    public void HUD(InputAction.CallbackContext context)
+    {
+        HUDopener = context.ReadValue<float>();
+        print(HUDopener);
+        if (HUDopener == 1)
+        {
+            anim[4].SetBool("open", true);
+        }
+        else
+        {
+            anim[4].SetBool("open", false);
+        }
+    }
+
     void Start()
     {
         spaceshipTransform = GameObject.FindGameObjectWithTag("Spaceship").transform;
@@ -80,7 +102,7 @@ public class upgradeTrigger : MonoBehaviour
 
     void Update()
     {
-        if(upgradePanel != null)
+        if (upgradePanel != null)
             upgradePanel.SetActive(spaceshipInbound);
         
         if (spaceshipInbound)
@@ -103,9 +125,9 @@ public class upgradeTrigger : MonoBehaviour
             Time.timeScale = 0;
             if (pauseanimcheck == false)
             {
-                foreach (var anim in anim)
+                for(int i = 0; i < 4; i++)
                 {
-                    anim.SetTrigger("OpenClose");
+                    anim[i].SetTrigger("OpenClose");
                 }
                 pauseanimcheck = true;
             }
@@ -114,9 +136,9 @@ public class upgradeTrigger : MonoBehaviour
             if (playercontrols.Player.unPause.ReadValue<float>() == 1)
             {
                 isPause = false;
-                foreach (var anim in anim)
+                for(int i = 0; i < 4; i++)
                 {
-                    anim.SetTrigger("OpenClose");
+                    anim[i].SetTrigger("OpenClose");
                 }
                 pauseanimcheck = false;
             }

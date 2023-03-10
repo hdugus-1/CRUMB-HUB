@@ -52,12 +52,12 @@
                 },
                 {
                     "name": "openHUD",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "bf197d10-93ef-4b56-81d6-1b4b4a78527a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
