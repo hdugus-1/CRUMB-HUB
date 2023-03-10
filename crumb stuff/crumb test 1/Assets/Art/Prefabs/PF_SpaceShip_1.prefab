@@ -965,6 +965,8 @@ MonoBehaviour:
   turnspeed: 200
   movespeed: 600
   maxspeed: 40
+  health: 1
+  crashSpeed: 10
   rigidbody: {fileID: 5955034354554583377}
   target: {fileID: 428663348859210190}
   Explosion: {fileID: 0}
@@ -1416,6 +1418,10 @@ PrefabInstance:
       value: -2.4880223
       objectReference: {fileID: 0}
     - target: {fileID: 8016579591277445293, guid: 0d75546b4edc96b4384bd7e7324c2ad4, type: 3}
+      propertyPath: far clip plane
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016579591277445293, guid: 0d75546b4edc96b4384bd7e7324c2ad4, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 55
       objectReference: {fileID: 0}
@@ -1435,6 +1441,10 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 8498385421501844849}
+    - target: {fileID: 8016579592368948425, guid: 0d75546b4edc96b4384bd7e7324c2ad4, type: 3}
+      propertyPath: m_Lens.FarClipPlane
+      value: 100000
+      objectReference: {fileID: 0}
     - target: {fileID: 8016579592368948430, guid: 0d75546b4edc96b4384bd7e7324c2ad4, type: 3}
       propertyPath: m_TagString
       value: MainCamera
