@@ -14,11 +14,14 @@ public class asteroid : MonoBehaviour
     Rigidbody rb;
     public coin coinprefab;
 
+    static public GameObject VFXbulletCollided;
+    static public GameObject AsteroidExplosion;
 
     public float damageReceieved=25f;
    
     private void Awake() {
-       
+       VFXbulletCollided.SetActive(false);
+        AsteroidExplosion.SetActive(false);
         rb=GetComponent<Rigidbody>();
     }
     private void Start() {
@@ -32,6 +35,9 @@ public class asteroid : MonoBehaviour
 
 
     private void Update(){
+        if(GameObject.FindGameObjectWithTag("Spaceship") != null)
+        {
+
         lifeTime+=Time.deltaTime;
         if((GameObject.FindGameObjectWithTag("Spaceship").transform.position - this.gameObject.transform.position).magnitude <250f){
                lifeTime=0;
@@ -39,6 +45,7 @@ public class asteroid : MonoBehaviour
        if(lifeTime>=maxLifeTime){
         Destroy(this.gameObject);
        }
+        }
      
 
 
@@ -49,10 +56,16 @@ public class asteroid : MonoBehaviour
 
 
     private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag=="bullet"){
+        if(other.gameObject.tag=="bullet")
+        {
+            VFXbulletCollided.transform.position = other.transform.position;
+           Destroy(other.gameObject);
            asteroidHP-=damageReceieved;
+            Explode();
         }
         if(asteroidHP<=0){
+            AsteroidExplosion.transform.position = this.gameObject.transform.position;
+            RockExplode();
         Destroy(this.gameObject);
        }
        if(asteroidHP<=0 && this.name=="asteroid_gold(Clone)"){
@@ -61,7 +74,17 @@ public class asteroid : MonoBehaviour
        }
     }
 
+    void Explode()
+    {
+        VFXbulletCollided.SetActive(false);
+        VFXbulletCollided.SetActive(true);
+    }
 
+    void RockExplode()
+    {
+        AsteroidExplosion.SetActive(false);
+        AsteroidExplosion.SetActive(true);
+    }
    
 
 

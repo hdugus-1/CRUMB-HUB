@@ -1,0 +1,114 @@
+{
+    "name": "Player2",
+    "maps": [
+        {
+            "name": "Player2",
+            "id": "8b42e411-0942-4332-b402-b55f9f3a6106",
+            "actions": [
+                {
+                    "name": "Fire",
+                    "type": "Button",
+                    "id": "14349d03-9970-4d79-9584-19947a1b027c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GunBaseRight",
+                    "type": "PassThrough",
+                    "id": "5e659556-a85e-4838-8d84-85554baf9656",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GunBaseLeft",
+                    "type": "PassThrough",
+                    "id": "6b20fbe7-d941-4066-bb9f-579a24766d41",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Grab",
+                    "type": "PassThrough",
+                    "id": "9ad7c20b-2a3f-417f-a2e2-4095a84c946a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ArmMovement",
+                    "type": "PassThrough",
+                    "id": "9d48d725-be7a-4932-9864-dd2451cb1238",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a158fa61-2951-4935-807b-628d247da6d4",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a500166-c0ed-4752-89cd-5fef98829401",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GunBaseRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "03f87c5b-8973-40a8-b1bc-d074e8679258",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GunBaseLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e5030e98-14ff-4823-b744-77e90b52a1cd",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2047fa27-2cb9-4a0e-844e-cf02190578d5",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ArmMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

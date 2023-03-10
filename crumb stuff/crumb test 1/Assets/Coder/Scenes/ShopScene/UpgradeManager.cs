@@ -9,6 +9,7 @@ public class UpgradeManager : MonoBehaviour
     public static UpgradeManager instance;
 
     private GameObject minimap;
+    public GameObject Radar;
     public spaceshipController spaceship;
     public Weapon weapon;
 
@@ -18,6 +19,7 @@ public class UpgradeManager : MonoBehaviour
     private int UpgradeCost = 1000;
     void Awake()
     {
+       
         if (instance == null)
         {
             instance = this;
@@ -94,7 +96,7 @@ public class UpgradeManager : MonoBehaviour
     {
         if (MoneyManager.money >= UpgradeCost)
         {
-            float upgradeAmount = 0.1f;
+            float upgradeAmount = 0.5f;
             weapon.cooldown *= upgradeAmount;
             PlayerPrefs.SetFloat(CooldownUpgradeKey, upgradeAmount);
             MoneyManager.money -= UpgradeCost;

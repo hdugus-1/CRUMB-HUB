@@ -17,17 +17,35 @@ public class spaceshipController : MonoBehaviour
     float steerval;
     float accelval;
     float brakeval;
+
+    public int health = 1;
+    public float crashSpeed = 10;
+
     private PlayerInput playerinput;
     private Controls playercontrols;
-    public Rigidbody rigidbody;
+    public new Rigidbody rigidbody;
     public targetController target;
+    private GameObject spawnertag;
+    public GameObject Explosion;
+    static public bool isDead = false;
 
-    
+    private bool isControllerIndex1;
+
+
+
 
     private void Awake()
     {
+        spawnertag = GameObject.FindGameObjectWithTag("spawner");
         playerinput = GetComponent<PlayerInput>();
         playercontrols = new Controls();
+        Explosion.SetActive(false);
+        //spilt control
+        isControllerIndex1 = (playerinput.playerIndex == -1);
+        Debug.Log(playerinput.playerIndex);
+
+
+        
     }
 
 
@@ -47,10 +65,14 @@ public class spaceshipController : MonoBehaviour
     }
     public void OnAccel(InputAction.CallbackContext context)
     {
-        accelval = context.ReadValue<float>();
+        if (isControllerIndex1)
+        {
+            accelval = context.ReadValue<float>();
+        }
     }
     public void OnBrake(InputAction.CallbackContext context)
     {
+        //Debug.Log(playerinput.playerIndex);
         brakeval = context.ReadValue<float>();
     }
 
@@ -62,12 +84,49 @@ public class spaceshipController : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    
+    
+       
+
+    
+
     // Update is called once per frame
     void Update()
     {
+        
+
         rigidbody.AddTorque(0,turnspeed * steerval * Time.deltaTime, 0);
         rigidbody.AddForce(transform.forward * accelval * Time.deltaTime * movespeed - rigidbody.velocity * brakeval * Time.deltaTime * brakespeed);
         rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, maxspeed);
 
+        if(health <= 0)
+        {
+            isDead = true;
+            spawnertag.SetActive(false);
+            Explosion.SetActive(true);
+            Destroy(gameObject);
+        }
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Rigidbody otherRigidBody = collision.rigidbody;
+        if (collision.gameObject.CompareTag("Warden"))
+        {
+            isDead= true;
+            spawnertag.SetActive(false);
+            Explosion.SetActive(true);
+            Destroy(gameObject);
+            //deathScene.DeathSceneActivate();
+        }
+
+        if (collision.relativeVelocity.magnitude > crashSpeed && !collision.gameObject.tag.Contains("grab"))
+        {
+            Debug.Log("crash");
+            health -= 1;
+        }
+    }
+    
 }
