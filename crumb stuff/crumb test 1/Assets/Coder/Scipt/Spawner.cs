@@ -12,8 +12,14 @@ public class Spawner : MonoBehaviour
     public float trajectory = 15.0f;
     public int spawnAmount = 1;
 
+    public safezonePerimeter safezoneperim;
+
+
+    bool tof = false;
+    // Start is called before the first frame update
     private void Start()
     {
+        safezoneperim = GameObject.FindGameObjectWithTag("safezoneperimeter").GetComponent<safezonePerimeter>();
 
     }
 
@@ -40,6 +46,7 @@ public class Spawner : MonoBehaviour
             {
                 float distvec = 0;
                 Vector3 flattenedpos;
+                int asteroidchoice=0;
                 Vector3 asteroidspawnDirection = Vector3.one;
                 Vector3 asteroidspawnPoint = Vector3.one;
                 flattenedpos = UnityEngine.Random.onUnitSphere * 40;
@@ -58,7 +65,12 @@ public class Spawner : MonoBehaviour
 
                 float asteroidvariance = UnityEngine.Random.Range(-trajectory, trajectory);
                 Quaternion asteroidrotation = Quaternion.AngleAxis(asteroidvariance, Vector3.up);
-                int asteroidchoice = UnityEngine.Random.Range(0, droid.Length);
+                if(safezoneperim.collisionchecker()==false){
+                    asteroidchoice = UnityEngine.Random.Range(0, 3);
+                }
+                else if(safezoneperim.collisionchecker()==true){
+                    asteroidchoice = UnityEngine.Random.Range(4, droid.Length);
+                }
                 asteroid asteroidprefab = Instantiate(droid[asteroidchoice], asteroidspawnPoint, asteroidrotation);
                 asteroidprefab.size = UnityEngine.Random.Range(asteroidprefab.minsize, asteroidprefab.maxsize);
                 asteroidprefab.SetTrajectory(asteroidrotation * -asteroidspawnDirection);
