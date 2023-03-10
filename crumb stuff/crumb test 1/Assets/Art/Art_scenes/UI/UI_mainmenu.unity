@@ -1626,11 +1626,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
+  - name: main
+    clip: {fileID: 8300000, guid: e051162643f67a74aa21394c6abdb822, type: 3}
+    volume: 0.48
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   - name: 
     clip: {fileID: 0}
     volume: 0
     pitch: 0
-    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
     loop: 0
     source: {fileID: 0}
 --- !u!4 &1320663820
