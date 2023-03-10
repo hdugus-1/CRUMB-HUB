@@ -21,11 +21,11 @@ public class FancyCameraScript : MonoBehaviour
     {
         if(spaceshipController.SpaceShipSpeed > OffsetValue)
         {
-            newFancyCam.m_Lens.FieldOfView = (spaceshipController.SpaceShipSpeed - OffsetValue)/3.5f + CameraFOVDefaultValue;
+            newFancyCam.m_Lens.FieldOfView = (spaceshipController.SpaceShipSpeed - OffsetValue)/3.0f + CameraFOVDefaultValue;
         }
 
         //print("speed: " + spaceshipController.SpaceShipSpeed);
-        print(newFancyCam.m_Lens.FieldOfView);
+        //print(newFancyCam.m_Lens.FieldOfView);
         
     }
 

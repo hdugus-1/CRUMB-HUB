@@ -157,7 +157,6 @@ public class spaceshipController : MonoBehaviour
 
         if (collision.relativeVelocity.magnitude > crashSpeed && !collision.gameObject.tag.Contains("grab"))
         {
-            Debug.Log("crash");
             health -= 1;
         }
     }
