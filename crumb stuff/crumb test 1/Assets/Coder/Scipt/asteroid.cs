@@ -35,18 +35,18 @@ public class asteroid : MonoBehaviour
 
 
     private void Update(){
-        transform.Rotate(0.5f,0.5f,0.5f);
-        if(GameObject.FindGameObjectWithTag("Spaceship") != null)
-        {
-
+        transform.Rotate(0.1f,0.1f,0.1f);
         lifeTime+=Time.deltaTime;
+        //if(GameObject.FindGameObjectWithTag("Spaceship") != null)
+        //{
+
         if((GameObject.FindGameObjectWithTag("Spaceship").transform.position - this.gameObject.transform.position).magnitude <250f){
                lifeTime=0;
             }
        if(lifeTime>=maxLifeTime){
         Destroy(this.gameObject);
        }
-        }
+        //}
      
 
 

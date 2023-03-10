@@ -22,12 +22,13 @@ public class perimeter : MonoBehaviour
 
            spawner.startSpawning();
             tof=true;
+            Debug.Log("entered");
             
         }
         else if(other.tag=="Spaceship" && tof==true){
             spawner.stopSpawning();
             tof=false;
-           
+           Debug.Log("exited");
         }
         
     }

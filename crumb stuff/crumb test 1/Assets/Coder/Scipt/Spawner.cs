@@ -15,7 +15,6 @@ public class Spawner : MonoBehaviour
     public safezonePerimeter safezoneperim;
 
 
-    bool tof = false;
     // Start is called before the first frame update
     private void Start()
     {
