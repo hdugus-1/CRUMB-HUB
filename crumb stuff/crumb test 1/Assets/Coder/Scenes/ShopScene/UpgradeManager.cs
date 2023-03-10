@@ -9,7 +9,7 @@ public class UpgradeManager : MonoBehaviour
     public static UpgradeManager instance;
 
     private GameObject minimap;
-    public GameObject Radar;
+    private GameObject Radar;
     public spaceshipController spaceship;
     public Weapon weapon;
 
@@ -17,6 +17,7 @@ public class UpgradeManager : MonoBehaviour
     private const string CooldownUpgradeKey = "CooldownUpgrade";
     private const string ShipUpgradeKey = "ShipUpgradeKey";
     private int UpgradeCost = 1000;
+    
     void Awake()
     {
        
@@ -29,16 +30,20 @@ public class UpgradeManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         minimap = GameObject.Find("Minimap");
+        Radar = GameObject.FindGameObjectWithTag("Radar");
     }
-    void Start()
+    public void Start()
     {
+        
         if (PlayerPrefs.HasKey("minimapUpgraded")) 
         {
             minimap.SetActive(true); 
+            Radar.SetActive(true);
         }
         else
         {
-            minimap.SetActive(false); 
+            minimap.SetActive(false);
+            Radar.SetActive(false);
         }
         float cooldownUpgrade = PlayerPrefs.GetFloat(CooldownUpgradeKey, 1f);
         weapon.cooldown *= cooldownUpgrade;
@@ -56,11 +61,12 @@ public class UpgradeManager : MonoBehaviour
 
     public void ActivateMinimap()
     {
-        if(MoneyManager.money >= UpgradeCost)
+        if (MoneyManager.money >= UpgradeCost)
         {
-            if (minimap != null)
+            if (minimap != null && Radar != null)
             {
                 minimap.SetActive(true);
+                Radar.SetActive(true);
             }
             MoneyManager.money -= UpgradeCost;
             if (MoneyManager.instance.currentMoney != null)

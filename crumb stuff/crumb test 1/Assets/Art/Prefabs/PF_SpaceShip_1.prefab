@@ -841,9 +841,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8498385421501844849}
   - component: {fileID: 4782698658019066580}
+  - component: {fileID: 8615203242278559041}
   - component: {fileID: 7330585168310580766}
   - component: {fileID: 5955034354554583377}
-  - component: {fileID: 8615203242278559041}
   - component: {fileID: 6401481334268046251}
   - component: {fileID: 7318393296919400252}
   - component: {fileID: 4076043889210661604}
@@ -889,6 +889,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9132038007598716875}
   m_Mesh: {fileID: 4864056309639282896, guid: 9ebf79010b31e0d4b921e6afe4c70b62, type: 3}
+--- !u!114 &8615203242278559041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9132038007598716875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8a18f18beb25744953f5faaeaebb74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnspeed: 200
+  movespeed: 600
+  maxspeed: 40
+  health: 1
+  crashSpeed: 10
+  rigidbody: {fileID: 5955034354554583377}
+  target: {fileID: 428663348859210190}
+  Explosion: {fileID: 0}
+  mainEngine: {fileID: 0}
+  sideEngineR: {fileID: 0}
+  sideEngineL: {fileID: 0}
 --- !u!23 &7330585168310580766
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -950,24 +973,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!114 &8615203242278559041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9132038007598716875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d8a18f18beb25744953f5faaeaebb74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turnspeed: 200
-  movespeed: 600
-  maxspeed: 40
-  rigidbody: {fileID: 5955034354554583377}
-  target: {fileID: 428663348859210190}
-  Explosion: {fileID: 0}
 --- !u!114 &6401481334268046251
 MonoBehaviour:
   m_ObjectHideFlags: 0
