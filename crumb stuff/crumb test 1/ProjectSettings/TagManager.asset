@@ -19,6 +19,9 @@ TagManager:
   - Minimap
   - grab
   - grabgold
+  - HyperDriveComponents
+  - HyperDriveCounter
+  - upgradeTrigger
   layers:
   - Default
   - TransparentFX
