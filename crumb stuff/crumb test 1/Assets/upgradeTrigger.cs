@@ -80,8 +80,8 @@ public class upgradeTrigger : MonoBehaviour
 
     void Update()
     {
-   
-        upgradePanel.SetActive(spaceshipInbound);
+        if(upgradePanel != null)
+            upgradePanel.SetActive(spaceshipInbound);
         
         if (spaceshipInbound)
         {
