@@ -80,14 +80,13 @@ public class upgradeTrigger : MonoBehaviour
     public void HUD(InputAction.CallbackContext context)
     {
         HUDopener = context.ReadValue<float>();
-        print(HUDopener);
         if (HUDopener == 1)
         {
-            anim[4].SetBool("open", true);
+            anim[4].SetBool("Open", true);
         }
         else
         {
-            anim[4].SetBool("open", false);
+            anim[4].SetBool("Open", false);
         }
     }
 
