@@ -121,9 +121,9 @@ public class upgradeTrigger : MonoBehaviour
             Time.timeScale = 0;
             if (pauseanimcheck == false)
             {
-                foreach (var anim in anim)
+                for (int i = 0; i < 4; i++)
                 {
-                    anim.SetTrigger("OpenClose");
+                    anim[i].SetTrigger("OpenClose");
                 }
                 pauseanimcheck = true;
             }
@@ -132,9 +132,9 @@ public class upgradeTrigger : MonoBehaviour
             if (playercontrols.Player.unPause.ReadValue<float>() == 1)
             {
                 isPause = false;
-                foreach (var anim in anim)
+                for (int i = 0; i < 4; i++)
                 {
-                    anim.SetTrigger("OpenClose");
+                    anim[i].SetTrigger("OpenClose");
                 }
                 pauseanimcheck = false;
             }
