@@ -35,7 +35,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Emissive_intensity: 4
-    - _Flame_length: 0.6
+    - _Flame_length: 1.321
     - _Float: 4.77
     - _QueueControl: 0
     - _QueueOffset: 0

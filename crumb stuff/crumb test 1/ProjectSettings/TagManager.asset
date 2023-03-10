@@ -19,10 +19,7 @@ TagManager:
   - Minimap
   - grab
   - grabgold
-  - HyperDriveComponents
-  - HyperDriveCounter
-  - upgradeTrigger
-  - HUD
+  - Radar
   layers:
   - Default
   - TransparentFX
