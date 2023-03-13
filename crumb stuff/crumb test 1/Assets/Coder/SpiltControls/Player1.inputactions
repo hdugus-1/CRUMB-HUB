@@ -7,16 +7,16 @@
             "actions": [
                 {
                     "name": "Steer",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "8f9a548d-c1c4-4923-9bdf-072b48dd0205",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
                 },
                 {
                     "name": "Accelerate",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "a965eeea-4bc0-416a-a279-c3a99965363d",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -25,7 +25,7 @@
                 },
                 {
                     "name": "Brake",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "7e0f784f-c382-4324-8148-8f593a9ba47f",
                     "expectedControlType": "Button",
                     "processors": "",
@@ -49,6 +49,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "openHUD",
+                    "type": "Value",
+                    "id": "bf197d10-93ef-4b56-81d6-1b4b4a78527a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -104,6 +113,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "SpawnWarden",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b8c5c73c-6ffe-488f-bd3b-f7aeea5e44ba",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "openHUD",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

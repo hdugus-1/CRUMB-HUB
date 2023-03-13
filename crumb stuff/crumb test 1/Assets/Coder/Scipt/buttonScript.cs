@@ -27,6 +27,7 @@ public class buttonScript : MonoBehaviour
     {
         if (upgradeTrigger.isPause)
         {
+            PlayerPrefs.DeleteAll();
             SceneManager.LoadScene(Scene);
             upgradeTrigger.isPause = false;
             spaceshipController.isDead = false;
