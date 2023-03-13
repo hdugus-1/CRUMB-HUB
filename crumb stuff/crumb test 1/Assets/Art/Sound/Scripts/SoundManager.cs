@@ -3,16 +3,26 @@ using System;
 using UnityEngine;
 using Unity.VisualScripting;
 using Unity.Mathematics;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
     public Sounds[] sounds;
+    public static Sounds[] staticSounds;
 
     public static SoundManager instance;
+
+    private static bool keepFadingIn;
+    private static bool keepFadingOut;
     
     // Start is called before the first frame update
     void Awake()
     {
+        if (sounds != null)
+        {
+            staticSounds = sounds;
+        }
         if (instance == null)
             instance= this;
         else
@@ -73,13 +83,44 @@ public class SoundManager : MonoBehaviour
         while (s.source.volume < s.volume)
         {
             s.source.volume = math.lerp(0, s.volume, percentage);
-            Debug.Log(s.source.volume);
+            //Debug.Log(s.source.volume);
             percentage += Time.deltaTime / transition;
         }
     }
 
+
+    static IEnumerator FadeInMusic(string name)
+    {
+        keepFadingIn= true;
+        keepFadingOut= false;
+        Sounds s = Array.Find(staticSounds, sound => sound.name == name);
+        s.source.volume= 0f;
+        s.source.Play();
+        yield break;
+    }
+    static IEnumerator FadeOutMusic(string name)
+    {
+        keepFadingIn = false;
+        keepFadingOut = true;
+        float speed = 0.01f;
+        Sounds s = Array.Find(staticSounds, sound => sound.name == name);
+        s.source.volume -= 10f;
+        /*while(s.source.volume > 0 && keepFadingOut)
+        {
+            s.source.volume -= speed * Time.deltaTime;
+        }
+        s.source.Stop();*/
+        yield return new WaitForSeconds(0.1f);
+    }
+
+    public static void FadeOutCaller(string name)
+    {
+        instance.StartCoroutine(FadeOutMusic(name));    
+    }
+
     public void FadeOut(string name)
     {
+        print("fade out");
         float percentage = 0f;
         float transition = 100f;
         Sounds s = Array.Find(sounds, sound => sound.name == name);
@@ -96,9 +137,21 @@ public class SoundManager : MonoBehaviour
         }
         s.source.Stop();
     }
+
+
+
     private void Start()
     {
         FindObjectOfType<SoundManager>().FadeIn("main");
     }
-    
+
+
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.P)) 
+        {
+            FadeOutCaller("main");
+        }
+    }
+
 }
