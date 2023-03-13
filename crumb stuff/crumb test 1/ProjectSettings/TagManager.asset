@@ -20,6 +20,9 @@ TagManager:
   - grab
   - grabgold
   - Radar
+  - HUD
+  - HyperDriveComponents
+  - HyperDriveCounter
   layers:
   - Default
   - TransparentFX
