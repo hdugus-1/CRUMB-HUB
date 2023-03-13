@@ -28,13 +28,19 @@ public class upgradeTrigger : MonoBehaviour
     private Controls player1control;
     private PlayerInput player2control;
     private float HUDopener;
+
+    private bool HyperDriveinBound = false;
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Spaceship"))
         {
             spaceshipInbound = true;
         }
-        
+        if (other.CompareTag("HyperDriveComponents"))
+        {
+            Destroy(other.gameObject);
+            HyperDriveManager.HyperDriveCounter++;
+        }
     }
 
     private void OnTriggerExit(Collider other)
