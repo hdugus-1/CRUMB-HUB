@@ -115,7 +115,7 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        FindObjectOfType<SoundManager>().FadeIn("main");
+        //FindObjectOfType<SoundManager>().FadeIn("main");
     }
 
 }
