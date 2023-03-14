@@ -120,7 +120,7 @@ MonoBehaviour:
   speed: 5
   maxLifeTime: 10
   lifeTime: 0
-  asteroidHP: 100
+  asteroidHP: 125
   coinprefab: {fileID: 1311732616721963888, guid: 918b5f2e8b3f531479aa59066efeebb7, type: 3}
   damageReceieved: 25
 --- !u!136 &2630425477275770705
