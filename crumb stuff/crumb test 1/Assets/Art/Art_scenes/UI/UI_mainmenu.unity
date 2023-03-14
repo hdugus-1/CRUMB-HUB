@@ -598,7 +598,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -26.700073, y: 73.20001}
+  m_AnchoredPosition: {x: -26.700195, y: 73.19995}
   m_SizeDelta: {x: 137.15, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &395754585
@@ -1523,6 +1523,7 @@ GameObject:
   - component: {fileID: 1282657896}
   - component: {fileID: 1282657895}
   - component: {fileID: 1282657894}
+  - component: {fileID: 1282657897}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1595,6 +1596,114 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1282657897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282657893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!1 &1320663818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1320663820}
+  - component: {fileID: 1320663819}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1320663819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320663818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e77c9b4d9a13f40a3b507a06f02615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: main
+    clip: {fileID: 8300000, guid: 4bb33aef485b94a4c9592e5eb95d05a9, type: 3}
+    volume: 0.48
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: area
+    clip: {fileID: 8300000, guid: e051162643f67a74aa21394c6abdb822, type: 3}
+    volume: 0.3
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: chase
+    clip: {fileID: 8300000, guid: 06b9138fb1ac9ad43bda42e69623fb0c, type: 3}
+    volume: 0.48
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: win
+    clip: {fileID: 8300000, guid: 9428d88717bffde4f8c58c4a09af7c55, type: 3}
+    volume: 0.48
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: shop
+    clip: {fileID: 8300000, guid: b5632441c5b3f1f4da421ec02a1e2085, type: 3}
+    volume: 0.2
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+--- !u!4 &1320663820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320663818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 332.1857, y: 44.352036, z: 9937.356}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1332198040
 GameObject:
