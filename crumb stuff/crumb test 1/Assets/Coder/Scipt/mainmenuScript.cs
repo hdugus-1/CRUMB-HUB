@@ -8,6 +8,12 @@ public class mainmenuScript : MonoBehaviour
 {
     [SerializeField] private string Scene = "Zone";
 
+    public void Start()
+    {
+        FindObjectOfType<SoundManager>().FadeOut("win");
+        FindObjectOfType<SoundManager>().FadeOut("chase");
+        FindObjectOfType<SoundManager>().FadeOut("area");
+    }
     public void StartGame()
     {
         SceneManager.LoadScene(Scene);

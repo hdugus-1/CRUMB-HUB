@@ -3,13 +3,15 @@ using System;
 using UnityEngine;
 using Unity.VisualScripting;
 using Unity.Mathematics;
+using System.Collections;
 
 public class SoundManager : MonoBehaviour
 {
     public Sounds[] sounds;
 
     public static SoundManager instance;
-    
+    float percentage = 0f;
+    float transition = 100f;
     // Start is called before the first frame update
     void Awake()
     {
@@ -34,7 +36,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-   public void Play (string name)
+    public void Play (string name)
     {
         Sounds s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
@@ -60,45 +62,60 @@ public class SoundManager : MonoBehaviour
 
     public void FadeIn(string name)
     {
+        StartCoroutine(InFade(name));
+    }
+
+    public void FadeOut(string name)
+    {
+        StartCoroutine(OutFade(name));
+    }
+    IEnumerator InFade(string name)
+    {
         float percentage = 0f;
-        float transition = 100f;
+        float transition = 15f;
         Sounds s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
             Debug.LogWarning("Sound:" + name + "not found. What a disappointment. Aren't you sad.");
-            return;
+            
         }
         s.source.volume = 0f;
         s.source.Play();
+
         while (s.source.volume < s.volume)
         {
             s.source.volume = math.lerp(0, s.volume, percentage);
             Debug.Log(s.source.volume);
             percentage += Time.deltaTime / transition;
+            yield return null;
         }
     }
-
-    public void FadeOut(string name)
+    IEnumerator OutFade(string name)
     {
         float percentage = 0f;
-        float transition = 100f;
+        float transition = 15f;
         Sounds s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
             Debug.LogWarning("Sound:" + name + "not found. What a disappointment. Aren't you sad.");
-            return;
+
         }
+        s.source.volume = 0f;
+        s.source.Play();
+
         while (s.source.volume > 0)
         {
             s.source.volume = math.lerp(s.source.volume, 0, percentage);
             Debug.Log(s.source.volume);
             percentage += Time.deltaTime / transition;
+            yield return null;
         }
-        s.source.Stop();
     }
+
+
     private void Start()
     {
         FindObjectOfType<SoundManager>().FadeIn("main");
     }
-    
+
 }
