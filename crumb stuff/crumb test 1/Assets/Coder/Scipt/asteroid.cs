@@ -35,6 +35,7 @@ public class asteroid : MonoBehaviour
 
 
     private void Update(){
+        transform.Rotate(0.1f,0.1f,0.1f);
         if(GameObject.FindGameObjectWithTag("Spaceship") != null)
         {
 
@@ -66,11 +67,25 @@ public class asteroid : MonoBehaviour
         if(asteroidHP<=0){
             AsteroidExplosion.transform.position = this.gameObject.transform.position;
             RockExplode();
-        Destroy(this.gameObject);
+            Destroy(this.gameObject);
        }
-       if(asteroidHP<=0 && this.name=="asteroid_gold(Clone)"){
-        coin coins=Instantiate(coinprefab,this.transform.position,this.transform.rotation);
-        //coins.coinDecay();
+       if(asteroidHP<=0){
+        if(this.name=="PF_Asteorid_Base_1(Clone)" || this.name=="PF_Asteorid_Base_2(Clone)" || this.name=="PF_Asteorid_Base_3(Clone)"){
+            coin coins=Instantiate(coinprefab,this.transform.position,this.transform.rotation);
+            //coins.coinDecay();
+        }
+        else if(this.name=="PF_Asteorid_Gold_1(Clone)" || this.name=="PF_Asteorid_Gold_2(Clone)" || this.name=="PF_Asteorid_Gold_3(Clone)"){
+            coin coins=Instantiate(coinprefab,this.transform.position,this.transform.rotation);
+            //coins.coinDecay();
+        }
+        else if(this.name=="PF_Asteorid_Iron_1(Clone)" || this.name=="PF_Asteorid_Iron_2(Clone)" || this.name=="PF_Asteorid_Iron_3(Clone)" || this.name=="PF_Asteorid_Iron_4(Clone)"){
+            coin coins=Instantiate(coinprefab,this.transform.position,this.transform.rotation);
+            //coins.coinDecay();
+        }
+        else if(this.name=="PF_Asteroid_Large_1(Clone)" || this.name=="PF_Asteroid_Large_2(Clone)" || this.name=="PF_Asteroid_Large_3(Clone)"){
+            coin coins=Instantiate(coinprefab,this.transform.position,this.transform.rotation);
+            //coins.coinDecay();
+        } 
        }
     }
 

@@ -23,6 +23,8 @@ TagManager:
   - HUD
   - HyperDriveComponents
   - HyperDriveCounter
+  - gold
+  - safezoneperimeter
   layers:
   - Default
   - TransparentFX
