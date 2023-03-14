@@ -15,24 +15,19 @@ public class perimeter : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
+     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Spaceship")
+        if (other.tag == "Spaceship" && tof==false)
         {
-            spawner.startSpawning();
-            
 
+           spawner.startSpawning();
+            tof=true;
+            
+        }
+        else if(other.tag=="Spaceship" && tof==true){
+            spawner.stopSpawning();
+            tof=false;
         }
         
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Spaceship")
-        {
-            spawner.stopSpawning();
-
-
-        }
-
     }
 }
