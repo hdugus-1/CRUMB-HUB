@@ -1684,6 +1684,12 @@ MonoBehaviour:
     pitch: 0
     loop: 1
     source: {fileID: 0}
+  - name: shop
+    clip: {fileID: 8300000, guid: b5632441c5b3f1f4da421ec02a1e2085, type: 3}
+    volume: 0.2
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
 --- !u!4 &1320663820
 Transform:
   m_ObjectHideFlags: 0
