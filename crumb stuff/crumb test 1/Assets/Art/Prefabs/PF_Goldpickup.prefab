@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -9200224112601456242}
   m_Layer: 0
   m_Name: PF_Goldpickup
-  m_TagString: gold
+  m_TagString: grabgold
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

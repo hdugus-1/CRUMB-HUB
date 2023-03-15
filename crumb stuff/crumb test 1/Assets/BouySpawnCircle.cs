@@ -16,7 +16,7 @@ public class BouySpawnCircle : MonoBehaviour
             float angle = i * Mathf.PI * 2 / numberOfObjects;
             float x = Mathf.Cos(angle) * radius;
             float z = Mathf.Sin(angle) * radius;
-            Vector3 pos = transform.position + new Vector3(x, 0, z);
+            Vector3 pos = transform.position + new Vector3(x, 10, z);
             float angleDegrees = - angle* Mathf.Rad2Deg;
             Quaternion rot = Quaternion.Euler(0, angleDegrees, 0); 
             Instantiate(PF_bouy, pos, rot);

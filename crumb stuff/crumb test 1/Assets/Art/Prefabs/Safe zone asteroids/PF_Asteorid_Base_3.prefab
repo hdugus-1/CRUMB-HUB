@@ -121,7 +121,7 @@ MonoBehaviour:
   maxLifeTime: 10
   lifeTime: 0
   asteroidHP: 75
-  coinprefab: {fileID: 1311732616721963888, guid: 918b5f2e8b3f531479aa59066efeebb7, type: 3}
+  coinprefab: {fileID: 8910529479755107592, guid: 5d6d9f19442a100409163340ee98ac13, type: 3}
   damageReceieved: 25
 --- !u!136 &-2265826387739708544
 CapsuleCollider:
