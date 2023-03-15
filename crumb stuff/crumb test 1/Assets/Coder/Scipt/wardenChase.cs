@@ -26,10 +26,13 @@ public class wardenChase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = (spaceshipPosition.position - wardenPosition.position).normalized;
-        rigidbody.AddForce(direction*Accelspeed*Time.deltaTime);
-        rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, 15.0f);
-        transform.LookAt(spaceshipPosition, Vector3.up);
+        if(spaceshipPosition != null)
+        {
+            Vector3 direction = (spaceshipPosition.position - wardenPosition.position).normalized;
+            rigidbody.AddForce(direction*Accelspeed*Time.deltaTime);
+            rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, 15.0f);
+            transform.LookAt(spaceshipPosition, Vector3.up);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -37,10 +40,7 @@ public class wardenChase : MonoBehaviour
         Rigidbody otherRigidBody = collision.rigidbody;
         if (collision.gameObject.CompareTag("Spaceship"))
         {
-            Spawner.
             Destroy(gameObject);
-            Time.timeScale = 0.2f;
-            deathScene.DeathSceneActivate();
 
         }
     }
