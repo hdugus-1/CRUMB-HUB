@@ -15,16 +15,21 @@ public class WinningZone : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Spaceship") && collectedAllComponent)
+        if (other.CompareTag("Spaceship"))
         {
-            SceneManager.LoadScene("UI_win");
+            if (collectedAllComponent)
+            {
+                SceneManager.LoadScene("UI_win");
+
+            }
+            else
+            {
+                Vector3 force = -spaceshipRigidbody.velocity.normalized * 50f;
+                spaceshipRigidbody.velocity = Vector3.zero;
+                spaceshipRigidbody.AddForce(force, ForceMode.Impulse);
+            }
         }
-        else
-        {
-            Vector3 force = -spaceshipRigidbody.velocity.normalized * 50f;
-            spaceshipRigidbody.velocity = Vector3.zero;
-            spaceshipRigidbody.AddForce(force, ForceMode.Impulse);
-        }
+        
     }
 
 
