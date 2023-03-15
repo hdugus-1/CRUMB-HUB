@@ -21,7 +21,7 @@ public class WinningZone : MonoBehaviour
         }
         else
         {
-            Vector3 force = -spaceshipRigidbody.velocity.normalized * 100f;
+            Vector3 force = -spaceshipRigidbody.velocity.normalized * 50f;
             spaceshipRigidbody.velocity = Vector3.zero;
             spaceshipRigidbody.AddForce(force, ForceMode.Impulse);
         }

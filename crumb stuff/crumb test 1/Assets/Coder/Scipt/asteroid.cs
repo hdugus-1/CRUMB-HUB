@@ -20,7 +20,7 @@ public class asteroid : MonoBehaviour
     public float damageReceieved=25f;
    
     private void Awake() {
-       VFXbulletCollided.SetActive(false);
+        VFXbulletCollided.SetActive(false);
         AsteroidExplosion.SetActive(false);
         rb=GetComponent<Rigidbody>();
     }

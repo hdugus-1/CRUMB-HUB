@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
-using UnityEditor.Rendering.LookDev;
-//using System.Runtime.Remoting.Proxies;
 
 public class upgradeTrigger : MonoBehaviour
 {
@@ -23,10 +21,6 @@ public class upgradeTrigger : MonoBehaviour
     public buttonScript buttonScript;
     public bool pauseanimcheck = false;
     public Animator[] anim;
-    public PlayerInput player1;
-    public PlayerInput player2;
-    private Controls player1control;
-    private PlayerInput player2control;
     private float HUDopener;
 
     private bool HyperDriveinBound = false;
@@ -57,9 +51,6 @@ public class upgradeTrigger : MonoBehaviour
         playerinput = GetComponent<PlayerInput>();
         playercontrols = new Controls();
         isPause = false;
-        player1 = GetComponent<PlayerInput>();
-        player2 = GetComponent<PlayerInput>();
-        player1control = new Controls();
     }
 
     private void OnEnable()
