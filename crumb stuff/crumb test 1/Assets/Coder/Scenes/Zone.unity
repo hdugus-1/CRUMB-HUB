@@ -646,6 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ccd2975f9d4cef4ab49eeb1e1693e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spaceshipRigidbody: {fileID: 1667260010}
 --- !u!64 &327841721
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5115,6 +5116,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f64f4dcc30f4d44b10e96c9afd14ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1667260010 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 5955034354554583377, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+  m_PrefabInstance: {fileID: 861183642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1693505644
 GameObject:
   m_ObjectHideFlags: 0
@@ -8969,7 +8975,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2240306789593694418}
-  m_LocalRotation: {x: -0, y: -0, z: 0.21805806, w: 0.9759358}
+  m_LocalRotation: {x: 0.0000000913737, y: -0.000000020416069, z: 0.21805806, w: 0.9759358}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9101,7 +9107,7 @@ ParentConstraint:
   m_TranslationOffsets:
   - {x: -1.060291, y: -0.0021886826, z: -0.12834597}
   m_RotationOffsets:
-  - {x: 75.00014, y: 0, z: 0}
+  - {x: 75.0001, y: 0, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
