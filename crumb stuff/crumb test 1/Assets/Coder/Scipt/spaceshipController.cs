@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class spaceshipController : MonoBehaviour
@@ -18,8 +19,7 @@ public class spaceshipController : MonoBehaviour
     float accelval;
     float brakeval;
 
-    public int health = 1;
-    public float crashSpeed = 10;
+    
 
     private PlayerInput playerinput;
     private Controls playercontrols;
@@ -30,6 +30,14 @@ public class spaceshipController : MonoBehaviour
     static public bool isDead = false;
     static public float SpaceShipSpeed;
 
+    //health
+    public float crashSpeed = 10;
+
+    public int health = 1;
+    public int maxhealth = 1;
+    public Image[] healthBar;
+    public Sprite activeHealth;
+    public Sprite inactiveHealth;
 
     //VFX
     public MeshRenderer mainEngine;
@@ -120,6 +128,26 @@ public class spaceshipController : MonoBehaviour
     {
         SpaceShipSpeed = rigidbody.velocity.magnitude;
         
+        for (int i = 0; i < healthBar.Length; i++)
+        {
+            if(i < health)
+            {
+                healthBar[i].sprite = activeHealth;
+            }
+            else
+            {
+                healthBar[i].sprite = inactiveHealth;
+            }
+
+            if(i < maxhealth)
+            {
+                healthBar[i].enabled = true;
+            }
+            else
+            {
+                healthBar[i].enabled = false;
+            }
+        }
 
         Material engineFlame = mainEngine.material;
         Material SideEngineRight = sideEngineR.material;
@@ -139,6 +167,7 @@ public class spaceshipController : MonoBehaviour
             spawnertag.SetActive(false);
             Explosion.SetActive(true);
             Destroy(gameObject);
+            deathScene.DeathSceneActivate();
         }
     }
 
@@ -152,7 +181,7 @@ public class spaceshipController : MonoBehaviour
             spawnertag.SetActive(false);
             Explosion.SetActive(true);
             Destroy(gameObject);
-            //deathScene.DeathSceneActivate();
+            deathScene.DeathSceneActivate();
         }
 
         if (collision.relativeVelocity.magnitude > crashSpeed && !collision.gameObject.tag.Contains("grab"))

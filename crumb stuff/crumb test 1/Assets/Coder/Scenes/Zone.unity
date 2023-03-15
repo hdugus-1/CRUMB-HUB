@@ -2975,6 +2975,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8615203242278559041, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: maxhealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8615203242278559041, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: movespeed
       value: 600
       objectReference: {fileID: 0}
@@ -3002,6 +3006,34 @@ PrefabInstance:
       propertyPath: sideEngineR
       value: 
       objectReference: {fileID: 670703134}
+    - target: {fileID: 8615203242278559041, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: activeHealth
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b1f60f1b31a4be48a8d74ab6c4bef31, type: 3}
+    - target: {fileID: 8615203242278559041, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: inactiveHealth
+      value: 
+      objectReference: {fileID: 21300000, guid: 8ea35fa8ac20b3a4fa314d56f506680c, type: 3}
+    - target: {fileID: 8615203242278559041, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: healthBar.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8615203242278559041, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: healthBar.Array.data[0]
+      value: 
+      objectReference: {fileID: 2240306789618038028}
+    - target: {fileID: 8615203242278559041, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: healthBar.Array.data[1]
+      value: 
+      objectReference: {fileID: 2240306789128260837}
+    - target: {fileID: 8615203242278559041, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: healthBar.Array.data[2]
+      value: 
+      objectReference: {fileID: 2240306789901837273}
+    - target: {fileID: 8615203242278559041, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: healthBar.Array.data[3]
+      value: 
+      objectReference: {fileID: 2240306789107101118}
     - target: {fileID: 9131475122848097022, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_Name
       value: S_Engine (R)
@@ -8969,7 +9001,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2240306789593694418}
-  m_LocalRotation: {x: -0, y: -0, z: 0.21805806, w: 0.9759358}
+  m_LocalRotation: {x: 0.0000000913737, y: -0.000000020416069, z: 0.21805806, w: 0.9759358}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9101,7 +9133,7 @@ ParentConstraint:
   m_TranslationOffsets:
   - {x: -1.060291, y: -0.0021886826, z: -0.12834597}
   m_RotationOffsets:
-  - {x: 75.00014, y: 0, z: 0}
+  - {x: 75.0001, y: 0, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
   m_AffectTranslationZ: 1
