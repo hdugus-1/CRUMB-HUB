@@ -177,11 +177,11 @@ public class spaceshipController : MonoBehaviour
         Rigidbody otherRigidBody = collision.rigidbody;
         if (collision.gameObject.CompareTag("Warden"))
         {
+            deathScene.DeathSceneActivate();
             isDead= true;
             spawnertag.SetActive(false);
             Explosion.SetActive(true);
             Destroy(gameObject);
-            deathScene.DeathSceneActivate();
         }
 
         if (collision.relativeVelocity.magnitude > crashSpeed && !collision.gameObject.tag.Contains("grab"))

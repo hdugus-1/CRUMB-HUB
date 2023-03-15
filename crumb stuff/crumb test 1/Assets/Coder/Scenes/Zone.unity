@@ -646,6 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ccd2975f9d4cef4ab49eeb1e1693e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spaceshipRigidbody: {fileID: 1667260010}
 --- !u!64 &327841721
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5147,6 +5148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f64f4dcc30f4d44b10e96c9afd14ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1667260010 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 5955034354554583377, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+  m_PrefabInstance: {fileID: 861183642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1693505644
 GameObject:
   m_ObjectHideFlags: 0
