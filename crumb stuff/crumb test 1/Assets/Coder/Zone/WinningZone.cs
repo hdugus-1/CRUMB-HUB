@@ -8,6 +8,7 @@ public class WinningZone : MonoBehaviour
 {
     static public bool collectedAllComponent;
     public Rigidbody spaceshipRigidbody;
+    public Animator[] anim;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class WinningZone : MonoBehaviour
             }
             else
             {
+                anim[0].SetBool("Alert", true);
                 Vector3 force = -spaceshipRigidbody.velocity.normalized * 50f;
                 spaceshipRigidbody.velocity = Vector3.zero;
                 spaceshipRigidbody.AddForce(force, ForceMode.Impulse);

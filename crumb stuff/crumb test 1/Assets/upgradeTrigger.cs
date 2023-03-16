@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class upgradeTrigger : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class upgradeTrigger : MonoBehaviour
     public bool pauseanimcheck = false;
     public Animator[] anim;
     private float HUDopener;
+    public TextMeshProUGUI currentHyperDrives;
+    
 
     private bool HyperDriveinBound = false;
     private void OnTriggerStay(Collider other)
@@ -33,7 +36,11 @@ public class upgradeTrigger : MonoBehaviour
         if (other.CompareTag("HyperDriveComponents"))
         {
             Destroy(other.gameObject);
-            HyperDriveManager.HyperDriveCounter++;
+            if(HyperDriveManager.HyperDriveCounter < 4)
+            {
+                HyperDriveManager.HyperDriveCounter++;
+                currentHyperDrives.text = (HyperDriveManager.HyperDriveCounter.ToString() + " oUt oF 4"); 
+            }
         }
     }
 

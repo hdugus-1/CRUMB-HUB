@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class targetController : MonoBehaviour
 {
+    public Animator[] anim;
+
     public Transform target;
     public Rigidbody Grabbed;
     public Rigidbody ship;
@@ -58,7 +60,8 @@ public class targetController : MonoBehaviour
         }
         if(other.tag.Contains("HyperDriveComponents") && grabby == 1)
         {
-            grabstatus= true;
+            anim[0].SetBool("Alert", true);
+            grabstatus = true;
             thing = other;
         }
     }

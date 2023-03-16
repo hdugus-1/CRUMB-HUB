@@ -7,12 +7,13 @@ using UnityEngine.UI;
 public class DangerZone : MonoBehaviour
 {
     public GameObject wardenPrefab;
- 
+    public Animator[] anim;
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Spaceship"))
         {
+            anim[0].SetBool("Alert", true);
             Instantiate(wardenPrefab);
         }
     }
