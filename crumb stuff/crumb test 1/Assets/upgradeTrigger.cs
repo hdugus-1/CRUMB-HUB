@@ -12,6 +12,7 @@ public class upgradeTrigger : MonoBehaviour
     public bool spaceshipInbound;
     public GameObject upgradePanel;
     public GameObject pausePanel;
+    static public GameObject Pauseeventsystem;
     private PlayerInput playerinput;
     private Controls playercontrols;
     private float menuButton;
@@ -95,15 +96,18 @@ public class upgradeTrigger : MonoBehaviour
 
     void Start()
     {
+        Pauseeventsystem = GameObject.FindGameObjectWithTag("PauseEvent");
         spaceshipTransform = GameObject.FindGameObjectWithTag("Spaceship").transform;
         upgradePanel = GameObject.FindGameObjectWithTag("UpgradePanel");
         pausePanel = GameObject.FindGameObjectWithTag("PauseMenu");
         buttonController = GameObject.FindGameObjectWithTag("ButtonController");
         buttonScript = buttonController.GetComponent<buttonScript>();
+        Pauseeventsystem.SetActive(false);
     }
 
     void Update()
     {
+        Pauseeventsystem.SetActive(isPause);
         if (upgradePanel != null)
             upgradePanel.SetActive(spaceshipInbound);
         
@@ -133,6 +137,7 @@ public class upgradeTrigger : MonoBehaviour
                 }
                 pauseanimcheck = true;
             }
+
             
 
             if (playercontrols.Player.unPause.ReadValue<float>() == 1)
@@ -143,6 +148,7 @@ public class upgradeTrigger : MonoBehaviour
                     anim[i].SetTrigger("OpenClose");
                 }
                 pauseanimcheck = false;
+               
             }
         }
         else

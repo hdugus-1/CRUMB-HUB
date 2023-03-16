@@ -25,6 +25,8 @@ TagManager:
   - HyperDriveCounter
   - gold
   - safezoneperimeter
+  - DeathEvent
+  - PauseEvent
   layers:
   - Default
   - TransparentFX

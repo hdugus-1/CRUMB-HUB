@@ -23,6 +23,7 @@ public class spaceshipController : MonoBehaviour
 
     private PlayerInput playerinput;
     private Controls playercontrols;
+    static public GameObject Deatheventsystem;
     public new Rigidbody rigidbody;
     public targetController target;
     private GameObject spawnertag;
@@ -58,10 +59,11 @@ public class spaceshipController : MonoBehaviour
     private void Awake()
     {
         spawnertag = GameObject.FindGameObjectWithTag("spawner");
+        Deatheventsystem = GameObject.FindGameObjectWithTag("DeathEvent");
         playerinput = GetComponent<PlayerInput>();
         playercontrols = new Controls();
         Explosion.SetActive(false);
-
+        Deatheventsystem.SetActive(false);
 
         
     }
@@ -163,6 +165,7 @@ public class spaceshipController : MonoBehaviour
 
         if(health <= 0)
         {
+            Deatheventsystem.SetActive(true);
             isDead = true;
             spawnertag.SetActive(false);
             Explosion.SetActive(true);
@@ -177,6 +180,7 @@ public class spaceshipController : MonoBehaviour
         Rigidbody otherRigidBody = collision.rigidbody;
         if (collision.gameObject.CompareTag("Warden"))
         {
+            Deatheventsystem.SetActive(true);
             deathScene.DeathSceneActivate();
             isDead= true;
             spawnertag.SetActive(false);

@@ -20,6 +20,8 @@ public class buttonScript : MonoBehaviour
 
     public void StartGameButton()
     {
+        spaceshipController.Deatheventsystem.SetActive(false);
+        upgradeTrigger.Pauseeventsystem.SetActive(false);
         SceneManager.LoadScene(Scene);
     }
 
@@ -27,6 +29,8 @@ public class buttonScript : MonoBehaviour
     {
         if (upgradeTrigger.isPause)
         {
+            spaceshipController.Deatheventsystem.SetActive(false);
+            upgradeTrigger.Pauseeventsystem.SetActive(false);
             PlayerPrefs.DeleteAll();
             SceneManager.LoadScene(Scene);
             upgradeTrigger.isPause = false;
@@ -38,6 +42,8 @@ public class buttonScript : MonoBehaviour
     {
         if(spaceshipController.isDead)
         {
+            spaceshipController.Deatheventsystem.SetActive(false);
+            upgradeTrigger.Pauseeventsystem.SetActive(false);
             PlayerPrefs.DeleteAll();
             SceneManager.LoadScene(Scene);
             upgradeTrigger.isPause = false;
@@ -52,8 +58,7 @@ public class buttonScript : MonoBehaviour
 
     public void ExitGameButton()
     {
-       
-                Application.Quit();
+        Application.Quit();
     }
 
     public void MainMenuButtonisPause()
