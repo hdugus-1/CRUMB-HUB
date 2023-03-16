@@ -52,7 +52,7 @@ public class buttonScript : MonoBehaviour
 
     public void ExitGameButton()
     {
-        if (spaceshipController.isDead)
+       
                 Application.Quit();
     }
 

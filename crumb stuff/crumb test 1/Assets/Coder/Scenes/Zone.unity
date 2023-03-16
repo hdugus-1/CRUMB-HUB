@@ -1005,7 +1005,7 @@ Transform:
   m_GameObject: {fileID: 327841718}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 7}
-  m_LocalScale: {x: 1066, y: 10.66, z: 1066}
+  m_LocalScale: {x: 1200, y: 10.66, z: 1200}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1893204320}
@@ -1105,7 +1105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441937104}
   m_LocalRotation: {x: -0, y: 0, z: -0.122484274, w: 0.9924705}
-  m_LocalPosition: {x: -85.82283, y: -233.54088, z: 0}
+  m_LocalPosition: {x: -85.167175, y: -296.14755, z: 0}
   m_LocalScale: {x: 86.918846, y: 157.7978, z: 93.18294}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6858,9 +6858,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 691183280}
-        m_TargetAssemblyTypeName: deathMenuButton, Assembly-CSharp
-        m_MethodName: ExitButton
+      - m_Target: {fileID: 1655591848}
+        m_TargetAssemblyTypeName: buttonScript, Assembly-CSharp
+        m_MethodName: ExitGameButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11291,7 +11291,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2240306790092499942}
-  m_LocalRotation: {x: 0.0000001871996, y: 0.0000000044933195, z: -0.023995917, w: 0.9997121}
+  m_LocalRotation: {x: 0.0000002807994, y: 0.0000000067399797, z: -0.023995917, w: 0.9997121}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

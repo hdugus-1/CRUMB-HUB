@@ -26,7 +26,7 @@ public class WinningZone : MonoBehaviour
             else
             {
                 anim[0].SetBool("Alert", true);
-                Vector3 force = -spaceshipRigidbody.velocity.normalized * 50f;
+                Vector3 force = -spaceshipRigidbody.velocity.normalized * 10f;
                 spaceshipRigidbody.velocity = Vector3.zero;
                 spaceshipRigidbody.AddForce(force, ForceMode.Impulse);
             }
