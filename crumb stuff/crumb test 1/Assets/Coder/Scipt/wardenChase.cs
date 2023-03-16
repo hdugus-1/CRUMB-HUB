@@ -30,7 +30,7 @@ public class wardenChase : MonoBehaviour
         {
             Vector3 direction = (spaceshipPosition.position - wardenPosition.position).normalized;
             rigidbody.AddForce(direction * Accelspeed * Time.deltaTime);
-            rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, 15.0f);
+            rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, moveSpeed);
             transform.LookAt(spaceshipPosition, Vector3.up);
         }
     }
