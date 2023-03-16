@@ -11,6 +11,9 @@ public class targetController : MonoBehaviour
     public Transform target;
     public Rigidbody Grabbed;
     public Rigidbody ship;
+    public spaceshipController shipcontroller;
+    public float basespeed;
+    public float basemaxspeed;
     public Collider thing;
     Vector2 ballpoint;
     public float grabby;
@@ -25,6 +28,8 @@ public class targetController : MonoBehaviour
     {
         playerinput = GetComponent<PlayerInput>();
         playercontrols = new Controls();
+        basespeed = shipcontroller.movespeed;
+        basemaxspeed = shipcontroller.maxspeed;
     }
 
     private void OnEnable()
@@ -63,6 +68,9 @@ public class targetController : MonoBehaviour
             anim[0].SetBool("Alert", true);
             grabstatus = true;
             thing = other;
+            shipcontroller.movespeed = basespeed/2;
+            shipcontroller.maxspeed = basemaxspeed / 2;
+
         }
     }
     
@@ -93,6 +101,8 @@ public class targetController : MonoBehaviour
         {
             thing.attachedRigidbody.AddForce(ship.velocity + ((transform.position - oldpos) / Time.deltaTime) * 50);
             grabstatus = false;
+            shipcontroller.movespeed = basespeed;
+            shipcontroller.maxspeed = basemaxspeed;
         }
         
         

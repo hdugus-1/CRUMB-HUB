@@ -1105,7 +1105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441937104}
   m_LocalRotation: {x: -0, y: 0, z: -0.122484274, w: 0.9924705}
-  m_LocalPosition: {x: -85.82283, y: -233.54088, z: 0}
+  m_LocalPosition: {x: -85.167175, y: -296.14755, z: 0}
   m_LocalScale: {x: 86.918846, y: 157.7978, z: 93.18294}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3087,6 +3087,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 428663348859210190, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: shipcontroller
+      value: 
+      objectReference: {fileID: 8615203242493215707}
     - target: {fileID: 428663348859210190, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: anim.Array.size
       value: 1
