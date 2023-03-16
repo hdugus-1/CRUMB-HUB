@@ -118,7 +118,7 @@ public class upgradeTrigger : MonoBehaviour
 
 
         }
-        if (playercontrols.Player.pause.ReadValue<float>() == 1)
+        if (playercontrols.Player.pause.ReadValue<float>() == 1 && spaceshipController.isDead == false)
         {
             isPause = true;
             
