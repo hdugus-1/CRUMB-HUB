@@ -73,7 +73,6 @@ public class upgradeTrigger : MonoBehaviour
     public void OnUpgradeMenu(InputAction.CallbackContext context)
     {
         menuButton = context.ReadValue<float>();
-        isPause = false;
     }
 
     public void OnPauseResume()
@@ -108,10 +107,10 @@ public class upgradeTrigger : MonoBehaviour
         if (upgradePanel != null)
             upgradePanel.SetActive(spaceshipInbound);
         
-        if (spaceshipInbound)
+        if (spaceshipInbound && spaceshipController.isDead == false)
         {
 
-            if (menuButton == 1)
+            if (menuButton == 1 && isPause == false)
             {
                 SceneManager.LoadScene("UI_Shop");
             }
