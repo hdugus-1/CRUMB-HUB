@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 6060581253678074327}
-  moveSpeed: 16
+  moveSpeed: 10
   Accelspeed: 2500
   spaceshipPosition: {fileID: 0}
   wardenPosition: {fileID: 0}
