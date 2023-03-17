@@ -42,6 +42,7 @@ public class spaceshipController : MonoBehaviour
 
     //VFX
     public MeshRenderer mainEngine;
+    public MeshRenderer[] UpgradeEngine;
     public MeshRenderer sideEngineR;
     public MeshRenderer sideEngineL;
     private float flameLengthMainEngine = 3.0f;
@@ -52,6 +53,8 @@ public class spaceshipController : MonoBehaviour
     private float sideEngineRS = 1.35f;
     private float sideEngineLS = 1.35f;
     private float maxEngineThrust = 0.6f;
+    private float mainEngineScrollSpeed;
+    private float upgradeEngineFlameLength;
 
 
 
@@ -64,8 +67,6 @@ public class spaceshipController : MonoBehaviour
         playercontrols = new Controls();
         Explosion.SetActive(false);
         Deatheventsystem.SetActive(false);
-
-        
     }
 
 
@@ -96,10 +97,17 @@ public class spaceshipController : MonoBehaviour
     {
             accelval = context.ReadValue<float>();
         if (accelval == 0)
+        {
             flameLengthMainEngine = EngineDefault;
+            upgradeEngineFlameLength = EngineDefault;
+            mainEngineScrollSpeed = -1.2f;
+        }
+
         else
         {
             flameLengthMainEngine = maxEngineThrust;
+            upgradeEngineFlameLength = maxEngineThrust;
+            mainEngineScrollSpeed = -2.0f;
         }
 
     }
@@ -110,9 +118,13 @@ public class spaceshipController : MonoBehaviour
         if (brakeval >= 1)
         {
             flameLengthMainEngine = 3.0f;
+            upgradeEngineFlameLength = 3.0f;
         }
         else
+        {
             flameLengthMainEngine = EngineDefault;
+            upgradeEngineFlameLength = EngineDefault;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -151,10 +163,26 @@ public class spaceshipController : MonoBehaviour
             }
         }
 
+        //UpgradeEngineFlame.SetFloat("_Flame_length", upgradeEngineFlameLength);
+
+        MeshRenderer[] upgradeEngineRenderers = new MeshRenderer[UpgradeEngine.Length];
+        for (int i = 0; i < UpgradeEngine.Length; i++)
+        {
+            upgradeEngineRenderers[i] = UpgradeEngine[i].GetComponent<MeshRenderer>();
+            
+        };
+        for(int i = 0; i < upgradeEngineRenderers.Length; i++)
+        {
+            upgradeEngineRenderers[i].material.SetFloat("_Flame_length", upgradeEngineFlameLength);
+            upgradeEngineRenderers[i].material.SetFloat("_ScrollSpeed", mainEngineScrollSpeed);
+        }
+
+
         Material engineFlame = mainEngine.material;
         Material SideEngineRight = sideEngineR.material;
         Material SideEngineLeft = sideEngineL.material;
         engineFlame.SetFloat("_Flame_length", flameLengthMainEngine);
+        engineFlame.SetFloat("_ScrollSpeed", mainEngineScrollSpeed);
         SideEngineRight.SetFloat("_Flame_length", sideEngineRS);
         SideEngineLeft.SetFloat("_Flame_length", sideEngineLS);
 

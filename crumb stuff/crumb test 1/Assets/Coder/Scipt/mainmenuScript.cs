@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class mainmenuScript : MonoBehaviour
@@ -10,7 +11,7 @@ public class mainmenuScript : MonoBehaviour
 
 public void StartGame()
     {
-        SceneManager.LoadScene(Scene);
+        SceneManager.LoadScene("Intro");
         PlayerPrefs.DeleteAll();
     }
 
