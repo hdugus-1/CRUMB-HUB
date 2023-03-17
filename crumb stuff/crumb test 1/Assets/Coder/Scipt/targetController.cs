@@ -19,7 +19,7 @@ public class targetController : MonoBehaviour
     public float grabby;
     public bool grabstatus = false;
     Vector3 oldpos;
-    
+    public float lerptime = 0.5f;
     public float grabLength = 3;
     private PlayerInput playerinput;
     private Controls playercontrols;
@@ -85,7 +85,7 @@ public class targetController : MonoBehaviour
     void Update()
     {
         oldpos = transform.position;
-        transform.position = new Vector3(target.position.x + ballpoint.x * grabLength, target.position.y, target.position.z + ballpoint.y * grabLength);
+        transform.position = Vector3.Lerp(oldpos, new Vector3(target.position.x + ballpoint.x * grabLength, target.position.y, target.position.z + ballpoint.y * grabLength),lerptime);
         
         if(thing == null)
         {
