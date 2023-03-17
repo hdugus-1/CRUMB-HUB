@@ -11,14 +11,20 @@ public class buttonScript : MonoBehaviour
     public bool pausecheck;
     public upgradeTrigger upgradeTrigger;
     public bool ispause;
+    private float timer;
 
 
     void Awake()
     {
-
+        timer = 0;
         pausePanel = GameObject.FindGameObjectWithTag("PauseMenu");
     }
-    
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+    }
+
     public void IntroButton()
     {
         SceneManager.LoadScene("Intro");
@@ -26,11 +32,13 @@ public class buttonScript : MonoBehaviour
 
     public void StartGameButton()
     {
-        if(spaceshipController.Deatheventsystem != null)
-        spaceshipController.Deatheventsystem.SetActive(false);
-        upgradeTrigger.Pauseeventsystem.SetActive(false);
-        WinningZone.collectedAllComponent = false;
-        SceneManager.LoadScene(Scene);
+        if(timer > 3)
+        {
+            SceneManager.LoadScene(Scene);
+            spaceshipController.Deatheventsystem.SetActive(false);
+            upgradeTrigger.Pauseeventsystem.SetActive(false);
+            WinningZone.collectedAllComponent = false;
+        }
     }
     public void CreditScene()
     {
@@ -104,8 +112,4 @@ public class buttonScript : MonoBehaviour
         pausecheck = false;
     }
 
-    void Update()
-    {
-        
-    }
 }

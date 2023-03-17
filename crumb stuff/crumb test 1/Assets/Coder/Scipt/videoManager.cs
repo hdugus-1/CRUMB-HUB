@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class videoManager : MonoBehaviour
 {
     public VideoPlayer player;
+    [SerializeField] private string Scene = "UI_controls";
     public float time;
 
     private void Start()
@@ -23,7 +24,7 @@ public class videoManager : MonoBehaviour
     public void SkipButton()
     {
         if(time >= 3)
-            SceneManager.LoadScene("Zone");
+            SceneManager.LoadScene(Scene);
     }
 
 
@@ -31,7 +32,7 @@ public class videoManager : MonoBehaviour
     {
 
         yield return new WaitForSeconds(53);
-        SceneManager.LoadScene("Zone");
+        SceneManager.LoadScene(Scene);
 
     }
 }

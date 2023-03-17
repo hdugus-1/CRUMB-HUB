@@ -1115,7 +1115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441937104}
   m_LocalRotation: {x: -0, y: 0, z: -0.122484274, w: 0.9924705}
-  m_LocalPosition: {x: -85.167175, y: -296.14755, z: 0}
+  m_LocalPosition: {x: -84.6254, y: -295.61066, z: 0}
   m_LocalScale: {x: 86.918846, y: 157.7978, z: 93.18294}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5228,20 +5228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df3a19781ed9e4418ae61e46188eb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1179591879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179591871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ccd2975f9d4cef4ab49eeb1e1693e60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spaceshipRigidbody: {fileID: 5955034355405268939}
-  anim: []
 --- !u!1 &1185628922 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132148548546816, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
@@ -11615,7 +11601,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2240306790092499942}
-  m_LocalRotation: {x: 0.0000001871996, y: 0.0000000044933195, z: -0.023995917, w: 0.9997121}
+  m_LocalRotation: {x: 0.0000002807994, y: 0.0000000067399797, z: -0.023995917, w: 0.9997121}
   m_LocalPosition: {x: 0, y: 0, z: 0.000000059604645}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
