@@ -11,10 +11,6 @@ public class deathScene : MonoBehaviour
     void Awake()
     {
         animatorsStatic = animators;
-        if (animatorsStatic == null)
-            print("null!");
-        else
-            print("not null!");
     }
 
     static public void DeathSceneActivate()

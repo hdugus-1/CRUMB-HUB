@@ -13,6 +13,10 @@ public class UpgradeManager : MonoBehaviour
     public spaceshipController spaceship;
     public Weapon weapon;
     //public upgradeTrigger upgradetrigger;
+    public Animator[] anim;
+
+    private GameObject[] mainEngine;
+    private GameObject[] upgradedEngine;
 
 
     private const string CooldownUpgradeKey = "CooldownUpgrade";
@@ -21,7 +25,8 @@ public class UpgradeManager : MonoBehaviour
     
     void Awake()
     {
-       
+       if(WinningZone.collectedAllComponent)
+            anim[0].SetBool("Alert", true);
         if (instance == null)
         {
             instance = this;
@@ -32,10 +37,21 @@ public class UpgradeManager : MonoBehaviour
         }
         minimap = GameObject.Find("Minimap");
         Radar = GameObject.FindGameObjectWithTag("Radar");
+        mainEngine = GameObject.FindGameObjectsWithTag("MainEngine");
+        upgradedEngine = GameObject.FindGameObjectsWithTag("UpgradedEngine");
+        for(int i = 0; i < upgradedEngine.Length; i++)
+            upgradedEngine[i].SetActive(false);
     }
     public void Start()
     {
-        
+        if (PlayerPrefs.HasKey("engineUpgrade"))
+        {
+            for(int i = 0; i < mainEngine.Length; i++)
+                mainEngine[i].SetActive(false);
+            for(int i = 0; i < upgradedEngine.Length; i++)
+                upgradedEngine[i].SetActive(true);
+        }
+                
         if (PlayerPrefs.HasKey("minimapUpgraded")) 
         {
             minimap.SetActive(true); 
@@ -76,6 +92,12 @@ public class UpgradeManager : MonoBehaviour
             }
             SceneManager.LoadScene("Zone");
         }
+    }
+
+    public void AllComponentCollected()
+    {
+        WinningZone.collectedAllComponent = true;
+        SceneManager.LoadScene("Zone");
     }
 
     public void ShipUpgrade()

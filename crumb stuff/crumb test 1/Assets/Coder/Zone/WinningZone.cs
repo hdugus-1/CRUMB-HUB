@@ -6,22 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class WinningZone : MonoBehaviour
 {
-    static public bool collectedAllComponent;
+    static public bool collectedAllComponent = false;
     public Rigidbody spaceshipRigidbody;
     public Animator[] anim;
 
     private void Awake()
     {
-        collectedAllComponent = false;
+        //collectedAllComponent = false;
     }
+
+    
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Spaceship"))
         {
             if (collectedAllComponent)
             {
+                collectedAllComponent= false;
                 SceneManager.LoadScene("UI_win");
-
             }
             else
             {
