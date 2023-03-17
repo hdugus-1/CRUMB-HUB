@@ -4996,7 +4996,6 @@ GameObject:
   - component: {fileID: 1179591873}
   - component: {fileID: 1179591872}
   - component: {fileID: 1179591878}
-  - component: {fileID: 1179591879}
   m_Layer: 0
   m_Name: work zone
   m_TagString: safezoneperimeter
@@ -5111,20 +5110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df3a19781ed9e4418ae61e46188eb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1179591879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179591871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ccd2975f9d4cef4ab49eeb1e1693e60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spaceshipRigidbody: {fileID: 5955034355405268939}
-  anim: []
 --- !u!1 &1199697276
 GameObject:
   m_ObjectHideFlags: 0
