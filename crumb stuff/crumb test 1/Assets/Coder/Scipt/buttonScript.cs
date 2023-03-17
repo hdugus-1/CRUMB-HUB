@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class buttonScript : MonoBehaviour
@@ -17,13 +18,23 @@ public class buttonScript : MonoBehaviour
 
         pausePanel = GameObject.FindGameObjectWithTag("PauseMenu");
     }
+    
+    public void IntroButton()
+    {
+        SceneManager.LoadScene("Intro");
+    }
 
     public void StartGameButton()
     {
+        if(spaceshipController.Deatheventsystem != null)
         spaceshipController.Deatheventsystem.SetActive(false);
         upgradeTrigger.Pauseeventsystem.SetActive(false);
-        SceneManager.LoadScene(Scene);
         WinningZone.collectedAllComponent = false;
+        SceneManager.LoadScene(Scene);
+    }
+    public void CreditScene()
+    {
+        SceneManager.LoadScene("UI_credits");
     }
 
     public void RestartGameButtonisPause()

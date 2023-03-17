@@ -29,6 +29,7 @@ TagManager:
   - PauseEvent
   - MainEngine
   - UpgradedEngine
+  - UpgradeEngineFlameLength
   layers:
   - Default
   - TransparentFX
