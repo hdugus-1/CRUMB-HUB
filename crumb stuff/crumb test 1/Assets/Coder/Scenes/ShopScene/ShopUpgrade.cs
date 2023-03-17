@@ -17,7 +17,13 @@ public class ShopUpgrade : MonoBehaviour
         currentMoney.text = MoneyManager.money.ToString();
         currentComponents.text = HyperDriveManager.HyperDriveCounter.ToString();
     }
-
+    public void ShopCollectAllComponent()
+    {
+        if(HyperDriveManager.HyperDriveCounter >= 1) 
+        {
+            UpgradeManager.instance.AllComponentCollected();
+        }
+    }
     public void ShopActivateMinimap()
     {
         UpgradeManager.instance.ActivateMinimap();
@@ -31,12 +37,9 @@ public class ShopUpgrade : MonoBehaviour
 
     public void ShopUpgradeShip()
     {
+        PlayerPrefs.SetInt("engineUpgrade", 1);
         UpgradeManager.instance.ShipUpgrade();
     }
 
-    /*public void UpgradeHyperDrive()
-    {
-        UpgradeManager.instance.HyperDriveUpgrade();
-    }*/
 
 }

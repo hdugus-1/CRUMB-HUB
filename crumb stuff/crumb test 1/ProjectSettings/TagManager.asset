@@ -27,6 +27,8 @@ TagManager:
   - safezoneperimeter
   - DeathEvent
   - PauseEvent
+  - MainEngine
+  - UpgradedEngine
   layers:
   - Default
   - TransparentFX

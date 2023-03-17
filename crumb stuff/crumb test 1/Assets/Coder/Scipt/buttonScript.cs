@@ -23,6 +23,7 @@ public class buttonScript : MonoBehaviour
         spaceshipController.Deatheventsystem.SetActive(false);
         upgradeTrigger.Pauseeventsystem.SetActive(false);
         SceneManager.LoadScene(Scene);
+        WinningZone.collectedAllComponent = false;
     }
 
     public void RestartGameButtonisPause()
@@ -35,6 +36,7 @@ public class buttonScript : MonoBehaviour
             SceneManager.LoadScene(Scene);
             upgradeTrigger.isPause = false;
             spaceshipController.isDead = false;
+            WinningZone.collectedAllComponent = false;
         }
     }
     
@@ -48,6 +50,7 @@ public class buttonScript : MonoBehaviour
             SceneManager.LoadScene(Scene);
             upgradeTrigger.isPause = false;
             spaceshipController.isDead = false;
+            WinningZone.collectedAllComponent = false;
         }
     }
 
