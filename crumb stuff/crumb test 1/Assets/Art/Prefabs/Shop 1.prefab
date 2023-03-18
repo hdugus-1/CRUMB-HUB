@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3162406858036465795}
   - component: {fileID: 2039281658008100646}
   - component: {fileID: 4298699678089358316}
+  - component: {fileID: 1301095192226199360}
+  - component: {fileID: 4988584121167262045}
   m_Layer: 0
   m_Name: Shop 1
   m_TagString: Untagged
@@ -25,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2353395671005235769}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.032798767, y: -2.0392532, z: -3.449255}
-  m_LocalScale: {x: 11.368, y: 42.768692, z: 11.368}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 20, y: 15, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,3 +85,43 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1301095192226199360
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353395671005235769}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4062734542946498232, guid: 20f827e6c381266409e820c3fcdcbc3c, type: 3}
+--- !u!114 &4988584121167262045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353395671005235769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cb05b9a6d626248ba8cf8681932d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spaceshipTransform: {fileID: 0}
+  spaceshipInbound: 0
+  upgradePanel: {fileID: 0}
+  pausePanel: {fileID: 0}
+  buttonController: {fileID: 0}
+  buttonScript: {fileID: 0}
+  pauseanimcheck: 0
+  anim:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  currentHyperDrives: {fileID: 0}
