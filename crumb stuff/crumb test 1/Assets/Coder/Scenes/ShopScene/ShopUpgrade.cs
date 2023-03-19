@@ -20,7 +20,7 @@ public class ShopUpgrade : MonoBehaviour
     }
     public void ShopCollectAllComponent()
     {
-        if(HyperDriveManager.HyperDriveCounter >= 1) 
+        if(HyperDriveManager.HyperDriveCounter >= 4) 
         {
             UpgradeManager.instance.AllComponentCollected();
         }
