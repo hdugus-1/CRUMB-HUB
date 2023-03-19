@@ -30,6 +30,7 @@ TagManager:
   - MainEngine
   - UpgradedEngine
   - UpgradeEngineFlameLength
+  - UpgradeZone
   layers:
   - Default
   - TransparentFX

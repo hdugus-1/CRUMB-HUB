@@ -8,13 +8,19 @@ public class FancyCameraScript : MonoBehaviour
     public CinemachineVirtualCamera newFancyCam;
     private float CameraFOVDefaultValue;
     private float OffsetValue = 6.0f;
-    private float SecondOffsetValue = 30.0f;
+    static public bool playerIsDead;
+    [SerializeField] private CinemachineImpulseSource impulseSource;
 
-
+    private void Awake()
+    {
+        playerIsDead = false;
+    }
 
     private void Start()
     {
         CameraFOVDefaultValue = newFancyCam.m_Lens.FieldOfView;
+        impulseSource.GenerateImpulse(new Vector3(1f, 0, 1f));
+
     }
 
     private void Update()
@@ -24,10 +30,21 @@ public class FancyCameraScript : MonoBehaviour
             newFancyCam.m_Lens.FieldOfView = (spaceshipController.SpaceShipSpeed - OffsetValue)/3.0f + CameraFOVDefaultValue;
         }
 
-        //print("speed: " + spaceshipController.SpaceShipSpeed);
-        //print(newFancyCam.m_Lens.FieldOfView);
-        
+        if(Input.GetKeyUp(KeyCode.P)) 
+        {
+            CameraShake();
+        }
+
+
+        if (playerIsDead)
+            CameraShake();
     }
 
+    private void CameraShake()
+    {
+        impulseSource.GenerateImpulse();
+        print("called");
+
+    }
 
 }

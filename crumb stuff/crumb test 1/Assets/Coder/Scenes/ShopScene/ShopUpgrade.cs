@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 
 public class ShopUpgrade : MonoBehaviour
 {
@@ -26,19 +27,29 @@ public class ShopUpgrade : MonoBehaviour
     }
     public void ShopActivateMinimap()
     {
-        UpgradeManager.instance.ActivateMinimap();
-        PlayerPrefs.SetInt("minimapUpgraded", 1);
+        if (!PlayerPrefs.HasKey("minimapUpgraded"))
+        {
+            UpgradeManager.instance.ActivateMinimap();
+            PlayerPrefs.SetInt("minimapUpgraded", 1);
+        }
     }
 
     public void ShopUpgradeGun()
     {
-        UpgradeManager.instance.UpgradeGun();
+        if(!PlayerPrefs.HasKey("gunUpgraded"))
+        {
+            UpgradeManager.instance.UpgradeGun();
+            PlayerPrefs.SetInt("gunUpgraded", 1);
+        }
     }
 
     public void ShopUpgradeShip()
     {
-        PlayerPrefs.SetInt("engineUpgrade", 1);
-        UpgradeManager.instance.ShipUpgrade();
+        if(!PlayerPrefs.HasKey("engineUpgrade"))
+        {
+            PlayerPrefs.SetInt("engineUpgrade", 1);
+            UpgradeManager.instance.ShipUpgrade();
+        }
     }
 
 

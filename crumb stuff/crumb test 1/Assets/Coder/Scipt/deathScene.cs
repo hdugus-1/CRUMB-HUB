@@ -21,14 +21,4 @@ public class deathScene : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if(Input.GetKey(KeyCode.P))
-        {
-            foreach (Animator anim in animatorsStatic)
-            {
-                anim.SetTrigger("OpenClose");
-            }
-        }
-    }
 }

@@ -47,6 +47,7 @@ public class upgradeTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+
         if (other.CompareTag("Spaceship"))
         {
             spaceshipInbound = false;

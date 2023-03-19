@@ -104,8 +104,8 @@ public class UpgradeManager : MonoBehaviour
     {
         if (MoneyManager.money >= UpgradeCost)
         {
-            float upgradeAmounth = 2.5f;
-            spaceship.turnspeed *= 1.1f;
+            float upgradeAmounth = 2.0f;
+            spaceship.turnspeed *= 1.2f;
             spaceship.movespeed *= upgradeAmounth;
             spaceship.maxspeed  *= upgradeAmounth;
 

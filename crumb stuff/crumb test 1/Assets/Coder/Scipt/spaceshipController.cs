@@ -6,6 +6,7 @@ using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using System.Runtime.CompilerServices;
 
 public class spaceshipController : MonoBehaviour
 {
@@ -67,6 +68,7 @@ public class spaceshipController : MonoBehaviour
         playercontrols = new Controls();
         Explosion.SetActive(false);
         Deatheventsystem.SetActive(false);
+        upgradeEngineFlameLength = EngineDefault;
     }
 
 
@@ -133,6 +135,18 @@ public class spaceshipController : MonoBehaviour
         {
             target.grabstatus = false;
             Destroy(other.gameObject);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("UpgradeZone"))
+        {
+            float maxSpeed = 8;
+            if(rigidbody.velocity.magnitude >= maxSpeed)
+            {
+                rigidbody.velocity = rigidbody.velocity.normalized * maxSpeed;
+            }
         }
     }
 
