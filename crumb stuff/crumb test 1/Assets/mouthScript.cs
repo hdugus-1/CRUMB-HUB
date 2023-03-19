@@ -14,8 +14,10 @@ public class mouthScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag.Contains("gold") && target.grabstatus == true)
+        if (other.tag.Contains("grabgold") && target.grabstatus == true)
         {
+            spaceshipController.staticStarShineEffect.SetActive(false);
+            spaceshipController.staticStarShineEffect.SetActive(true);
             target.grabstatus = false;
             Destroy(other.gameObject);
             MoneyManager.money += goldprice;

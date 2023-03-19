@@ -42,6 +42,8 @@ public class spaceshipController : MonoBehaviour
     public Sprite inactiveHealth;
 
     //VFX
+    public GameObject starShineEffect;
+    static public GameObject staticStarShineEffect;
     public MeshRenderer mainEngine;
     public MeshRenderer[] UpgradeEngine;
     public MeshRenderer sideEngineR;
@@ -62,6 +64,8 @@ public class spaceshipController : MonoBehaviour
 
     private void Awake()
     {
+        staticStarShineEffect = starShineEffect;
+        starShineEffect.SetActive(false);
         spawnertag = GameObject.FindGameObjectWithTag("spawner");
         Deatheventsystem = GameObject.FindGameObjectWithTag("DeathEvent");
         playerinput = GetComponent<PlayerInput>();
@@ -131,7 +135,7 @@ public class spaceshipController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag.Contains("gold") && target.grabstatus == true)
+        if (other.tag.Contains("grabgold") && target.grabstatus == true)
         {
             target.grabstatus = false;
             Destroy(other.gameObject);

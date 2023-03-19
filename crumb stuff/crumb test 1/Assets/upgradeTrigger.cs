@@ -25,9 +25,19 @@ public class upgradeTrigger : MonoBehaviour
     public Animator[] anim;
     private float HUDopener;
     public TextMeshProUGUI currentHyperDrives;
-    
+
+    //VFX
+    public GameObject StarShineEffect;
+
 
     private bool HyperDriveinBound = false;
+    void Awake()
+    {
+        StarShineEffect.SetActive(false);
+        playerinput = GetComponent<PlayerInput>();
+        playercontrols = new Controls();
+        isPause = false;
+    }
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Spaceship"))
@@ -37,6 +47,8 @@ public class upgradeTrigger : MonoBehaviour
         if (other.CompareTag("HyperDriveComponents"))
         {
             Destroy(other.gameObject);
+            StarShineEffect.SetActive(false);
+            StarShineEffect.SetActive(true);
             if(HyperDriveManager.HyperDriveCounter < 4)
             {
                 HyperDriveManager.HyperDriveCounter++;
@@ -55,12 +67,6 @@ public class upgradeTrigger : MonoBehaviour
 
     }
 
-    void Awake()
-    {
-        playerinput = GetComponent<PlayerInput>();
-        playercontrols = new Controls();
-        isPause = false;
-    }
 
     private void OnEnable()
     {

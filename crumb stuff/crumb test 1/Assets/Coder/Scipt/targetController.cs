@@ -58,8 +58,6 @@ public class targetController : MonoBehaviour
         if (other.tag.Contains("grab") && grabby == 1)
         {
             grabstatus = true;
-           
-            //other.attachedRigidbody.velocity = Vector3.zero;
             thing = other;
             
         }
