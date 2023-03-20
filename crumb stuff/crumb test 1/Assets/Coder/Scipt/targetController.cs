@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class targetController : MonoBehaviour
 {
     public Animator[] anim;
+
+    //Added temporary variables for grab arm
+    public Transform joint1;
+    public Transform joint2;
+    public float grabOpenGap = 20;
 
     public Transform target;
     public Rigidbody Grabbed;
@@ -89,12 +94,22 @@ public class targetController : MonoBehaviour
         {
             grabstatus = false;
         }
+        if(grabby == 1 && joint1 != null && joint2 != null) //Close grab arm
+        { 
+            joint1.localRotation = Quaternion.Euler(0, 0, 0);
+            joint2.localRotation = Quaternion.Euler(0, 0, 0);
+        }
         if (grabby == 1 && grabstatus == true)
         {
             thing.transform.position = transform.position;
             thing.attachedRigidbody.velocity = Vector3.zero;
         }
 
+        if (grabby == 0 && joint1 != null && joint2 != null) //open grab arm
+        {
+            joint1.localRotation = Quaternion.Euler(0, -grabOpenGap, 0);
+            joint2.localRotation = Quaternion.Euler(0, grabOpenGap, 0);
+        }
         if (grabby == 0 && grabstatus == true)
         {
             thing.attachedRigidbody.AddForce(ship.velocity + ((transform.position - oldpos) / Time.deltaTime) * 50);
