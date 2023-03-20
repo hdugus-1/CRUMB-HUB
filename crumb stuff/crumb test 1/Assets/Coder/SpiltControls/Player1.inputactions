@@ -6,124 +6,144 @@
             "id": "0d3998dd-b7a7-45db-9c2f-9ffb420a275c",
             "actions": [
                 {
-                    "name": "Steer",
+                    "name": "Grab",
+                    "type": "Button",
+                    "id": "7072aeaa-dbf5-4d9e-820b-69c6b119d5c3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "6feacbaf-76d0-4c42-a026-7f13466c4651",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Menu Back",
+                    "type": "Button",
+                    "id": "32bad338-c47a-4e0f-885d-811cb706cf3b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "0c6ab984-d5fd-4d39-837b-75a887cf1d24",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ShowStatus",
+                    "type": "Button",
+                    "id": "f2a14618-d2f0-4f5e-917c-b4f92b9f6375",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "5409a982-fad1-4fb3-ba6d-53591a43a2df",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Steering",
                     "type": "PassThrough",
-                    "id": "8f9a548d-c1c4-4923-9bdf-072b48dd0205",
+                    "id": "0e0fa09f-55d8-4d69-b73d-28942a7f9046",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Accelerate",
-                    "type": "PassThrough",
-                    "id": "a965eeea-4bc0-416a-a279-c3a99965363d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Brake",
-                    "type": "PassThrough",
-                    "id": "7e0f784f-c382-4324-8148-8f593a9ba47f",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "UpgradeMenu",
-                    "type": "Button",
-                    "id": "e9b245df-ab76-4926-acef-9096f8005109",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "SpawnWarden",
-                    "type": "Button",
-                    "id": "ed1ae0d6-673e-4655-858a-a62aedf8a037",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "openHUD",
-                    "type": "Value",
-                    "id": "bf197d10-93ef-4b56-81d6-1b4b4a78527a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "779de235-609c-4958-83d7-7f83deace2cf",
-                    "path": "<Gamepad>/leftStick/x",
+                    "id": "8dc3920d-3d89-48fc-b17e-b4d1b6ed03a7",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Steer",
+                    "action": "Grab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "e1e3971f-b95e-40b1-a600-7560bf8da4ae",
+                    "id": "49087ec5-8e6b-4b50-be5a-89a2d0419ac1",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Accelerate",
+                    "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "20a4ca5a-9720-4032-86bc-1045f14f2118",
-                    "path": "<Gamepad>/rightShoulder",
+                    "id": "907b3694-1a37-42cd-b9fc-9c970e814d3f",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Brake",
+                    "action": "Menu Back",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "2fe9ffea-c3e0-4473-8514-d71705a6a7e9",
-                    "path": "<Gamepad>/buttonNorth",
+                    "id": "a71053bd-7b2f-4993-a153-5051f8ed3c91",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "UpgradeMenu",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "db4ab2d0-c775-41bb-b9d0-5fbc8666dc4f",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SpawnWarden",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b8c5c73c-6ffe-488f-bd3b-f7aeea5e44ba",
+                    "id": "241bd591-d127-4eb1-884e-eced263199f7",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "openHUD",
+                    "action": "ShowStatus",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "61672c29-44b5-402d-9f04-cfb3b34076da",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f07236cb-672f-487f-9474-c7341998037f",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Steering",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
