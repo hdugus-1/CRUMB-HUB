@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlaySound : MonoBehaviour
 {
-    [SerializeField] string soundToFadeTo;
+    public string soundToFadeTo;
     static SoundManager soundManager;
     void Start()
     {
