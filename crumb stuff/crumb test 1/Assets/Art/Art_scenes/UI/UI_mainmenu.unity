@@ -1133,7 +1133,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -541.22, y: -125.47}
+  m_AnchoredPosition: {x: -541.22, y: -125.46997}
   m_SizeDelta: {x: 1132.26, y: 316.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1085224634
@@ -1516,6 +1516,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174863877}
   m_CullTransparentMesh: 1
+--- !u!1 &1199587564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1199587566}
+  - component: {fileID: 1199587565}
+  m_Layer: 0
+  m_Name: SoundToFadeTo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1199587565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199587564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88bc1f4e3da55e46b0f6a87430c5554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundToFadeTo: main
+--- !u!4 &1199587566
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199587564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -247.54903, y: -74.47452, z: -15.681549}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1282657893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,25 +1718,25 @@ MonoBehaviour:
   - name: area
     clip: {fileID: 8300000, guid: e051162643f67a74aa21394c6abdb822, type: 3}
     volume: 0.3
-    pitch: 0
+    pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: chase
     clip: {fileID: 8300000, guid: 06b9138fb1ac9ad43bda42e69623fb0c, type: 3}
     volume: 0.48
-    pitch: 0
+    pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: win
     clip: {fileID: 8300000, guid: 9428d88717bffde4f8c58c4a09af7c55, type: 3}
     volume: 0.48
-    pitch: 0
+    pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: shop
     clip: {fileID: 8300000, guid: b5632441c5b3f1f4da421ec02a1e2085, type: 3}
     volume: 0.2
-    pitch: 0
+    pitch: 1
     loop: 1
     source: {fileID: 0}
 --- !u!4 &1320663820

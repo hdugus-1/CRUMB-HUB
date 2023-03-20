@@ -34,19 +34,26 @@ public class SoundManager : MonoBehaviour
             s.source.playOnAwake = false;
         }
     }
-    public void FadeIn(string name)
-    {
-        StartCoroutine(StartInFade(name));
-    }
-
-    public void FadeOut(string name)
-    {
-        StartCoroutine(StartOutFade(name));
+    public void soundTransistion(string name)
+    {        
+        foreach(Sounds sound in sounds)
+        {
+            if(sound.name == name)
+            {
+                Debug.Log("This " + sound.name);
+                StartCoroutine(StartInFade(name));
+            }
+            else if(sound.name != name)
+            {
+                Debug.Log(sound.name);
+                StartCoroutine(StartOutFade(sound.name));
+            }
+        }
     }
     IEnumerator StartInFade(string name)
     {
         float percentage = 0f;
-        float transition = 1f;
+        float transition = 5f;
         Sounds s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
@@ -66,7 +73,7 @@ public class SoundManager : MonoBehaviour
     IEnumerator StartOutFade(string name)
     {
         float percentage = 0f;
-        float transition = 15f;
+        float transition = 5f;
         Sounds s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
