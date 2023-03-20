@@ -104,7 +104,7 @@ public class UpgradeManager : MonoBehaviour
     {
         if (MoneyManager.money >= UpgradeCost)
         {
-            float upgradeAmounth = 2.0f;
+            float upgradeAmounth = 1.8f;
             spaceship.turnspeed *= 1.2f;
             spaceship.movespeed *= upgradeAmounth;
             spaceship.maxspeed  *= upgradeAmounth;
@@ -137,14 +137,6 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
-    /*public void HyperDrive()
-    {
-        if (upgradetrigger.HyperDriveCounter == 4)
-        {
-            //add Hyperdrive/SetActive
-        }
-        
-    }*/
 
 
 

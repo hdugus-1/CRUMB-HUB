@@ -29,12 +29,20 @@ public class targetController : MonoBehaviour
     private PlayerInput playerinput;
     private Controls playercontrols;
 
+    private bool speedReduced = false;
+    float tempMaxSpeed;
+    float tempMoveSpeed;
+
     private void Awake()
     {
         playerinput = GetComponent<PlayerInput>();
         playercontrols = new Controls();
-        basespeed = shipcontroller.movespeed;
-        basemaxspeed = shipcontroller.maxspeed;
+    }
+
+    private void Start()
+    {
+        tempMaxSpeed = shipcontroller.maxspeed;
+        tempMoveSpeed = shipcontroller.movespeed;
     }
 
     private void OnEnable()
@@ -59,7 +67,7 @@ public class targetController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        
+        float speedWhenGrab = 0.45f;
         if (other.tag.Contains("grab") && grabby == 1)
         {
             grabstatus = true;
@@ -71,22 +79,25 @@ public class targetController : MonoBehaviour
             anim[0].SetBool("Alert", true);
             grabstatus = true;
             thing = other;
-            shipcontroller.movespeed = basespeed/2;
-            shipcontroller.maxspeed = basemaxspeed / 2;
-
+            if(!speedReduced)
+            {
+                shipcontroller.movespeed *= speedWhenGrab;
+                shipcontroller.maxspeed *= speedWhenGrab;
+                speedReduced= true;
+            }
         }
-    }
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if(grabby != 1)
+        {
+            shipcontroller.movespeed = tempMoveSpeed;
+            shipcontroller.maxspeed = tempMaxSpeed;
+            speedReduced = false;
+        }
+
         oldpos = transform.position;
         transform.position = Vector3.Lerp(oldpos, new Vector3(target.position.x + ballpoint.x * grabLength, target.position.y, target.position.z + ballpoint.y * grabLength),lerptime);
         
@@ -114,8 +125,8 @@ public class targetController : MonoBehaviour
         {
             thing.attachedRigidbody.AddForce(ship.velocity + ((transform.position - oldpos) / Time.deltaTime) * 50);
             grabstatus = false;
-            shipcontroller.movespeed = basespeed;
-            shipcontroller.maxspeed = basemaxspeed;
+            //shipcontroller.movespeed = basespeed;
+            //shipcontroller.maxspeed = basemaxspeed;
         }
         
         
