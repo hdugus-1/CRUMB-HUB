@@ -34,6 +34,7 @@ public class buttonScript : MonoBehaviour
     {
         if(timer > 3)
         {
+            HyperDriveManager.HyperDriveCounter = 0;
             SceneManager.LoadScene(Scene);
             spaceshipController.Deatheventsystem.SetActive(false);
             upgradeTrigger.Pauseeventsystem.SetActive(false);
@@ -56,6 +57,7 @@ public class buttonScript : MonoBehaviour
             upgradeTrigger.isPause = false;
             spaceshipController.isDead = false;
             WinningZone.collectedAllComponent = false;
+            HyperDriveManager.HyperDriveCounter = 0;
         }
     }
     
@@ -70,6 +72,7 @@ public class buttonScript : MonoBehaviour
             upgradeTrigger.isPause = false;
             spaceshipController.isDead = false;
             WinningZone.collectedAllComponent = false;
+            HyperDriveManager.HyperDriveCounter = 0;
         }
     }
 

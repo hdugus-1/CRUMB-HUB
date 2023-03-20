@@ -37,6 +37,7 @@ public class upgradeTrigger : MonoBehaviour
         playerinput = GetComponent<PlayerInput>();
         playercontrols = new Controls();
         isPause = false;
+        currentHyperDrives.text = (HyperDriveManager.HyperDriveCounter.ToString() + " oUt oF 4");
     }
     private void OnTriggerStay(Collider other)
     {
