@@ -162,7 +162,7 @@ public class spaceshipController : MonoBehaviour
         
         for (int i = 0; i < healthBar.Length; i++)
         {
-            if(i < health)
+            if(i > maxhealth - health -1)
             {
                 healthBar[i].sprite = activeHealth;
             }
