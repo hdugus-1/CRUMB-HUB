@@ -10,8 +10,6 @@ public class SoundManager : MonoBehaviour
     public Sounds[] sounds;
 
     public static SoundManager instance;
-    float percentage = 0f;
-    float transition = 100f;
     // Start is called before the first frame update
     void Awake()
     {
@@ -27,6 +25,7 @@ public class SoundManager : MonoBehaviour
         foreach (Sounds s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
+            s.source.bypassEffects= true;
             s.source.clip = s.clip;
 
             s.source.volume = s.volume;
@@ -35,44 +34,19 @@ public class SoundManager : MonoBehaviour
             s.source.playOnAwake = false;
         }
     }
-
-    public void Play (string name)
-    {
-        Sounds s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.LogWarning("Sound:" + name + "not found. What a disappointment. Aren't you sad.");
-            return;
-        }
-          
-        s.source.Play();
-    }
-
-    public void StopPlay(string name)
-    {
-        Sounds s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null)
-        {
-            Debug.LogWarning("Sound: " + name + "not found. What a disappointment. Aren't you sad.");
-            return;
-        }
-
-        s.source.Stop();
-    }
-
     public void FadeIn(string name)
     {
-        StartCoroutine(InFade(name));
+        StartCoroutine(StartInFade(name));
     }
 
     public void FadeOut(string name)
     {
-        StartCoroutine(OutFade(name));
+        StartCoroutine(StartOutFade(name));
     }
-    IEnumerator InFade(string name)
+    IEnumerator StartInFade(string name)
     {
         float percentage = 0f;
-        float transition = 15f;
+        float transition = 1f;
         Sounds s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
@@ -85,12 +59,11 @@ public class SoundManager : MonoBehaviour
         while (s.source.volume < s.volume)
         {
             s.source.volume = math.lerp(0, s.volume, percentage);
-            Debug.Log(s.source.volume);
             percentage += Time.deltaTime / transition;
             yield return null;
         }
     }
-    IEnumerator OutFade(string name)
+    IEnumerator StartOutFade(string name)
     {
         float percentage = 0f;
         float transition = 15f;
@@ -106,16 +79,9 @@ public class SoundManager : MonoBehaviour
         while (s.source.volume > 0)
         {
             s.source.volume = math.lerp(s.source.volume, 0, percentage);
-            Debug.Log(s.source.volume);
             percentage += Time.deltaTime / transition;
             yield return null;
         }
-    }
-
-
-    private void Start()
-    {
-        //FindObjectOfType<SoundManager>().FadeIn("main");
-    }
+    }    
 
 }
