@@ -35,12 +35,13 @@ public class SoundManager : MonoBehaviour
         }
     }
     public void soundTransistion(string name)
-    {        
+    {       
+        StopAllCoroutines();
         foreach(Sounds sound in sounds)
         {
             if(sound.name == name)
             {
-                Debug.Log("This " + sound.name);
+                Debug.Log("This " + sound.name);                
                 StartCoroutine(StartInFade(name));
             }
             else if(sound.name != name)
@@ -60,7 +61,7 @@ public class SoundManager : MonoBehaviour
             Debug.LogWarning("Sound:" + name + "not found. What a disappointment. Aren't you sad.");
             
         }
-        s.source.volume = 0f;
+        s.source.volume = 0;
         s.source.Play();
 
         while (s.source.volume < s.volume)
@@ -79,16 +80,14 @@ public class SoundManager : MonoBehaviour
         {
             Debug.LogWarning("Sound:" + name + "not found. What a disappointment. Aren't you sad.");
 
-        }
-        s.source.volume = 0f;
-        s.source.Play();
-
+        }        
         while (s.source.volume > 0)
         {
             s.source.volume = math.lerp(s.source.volume, 0, percentage);
             percentage += Time.deltaTime / transition;
             yield return null;
         }
+        s.source.Stop();
     }    
 
 }
