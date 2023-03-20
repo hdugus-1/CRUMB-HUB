@@ -13,6 +13,11 @@ public class DangerZone : MonoBehaviour
     {
         if (other.CompareTag("Spaceship"))
         {
+            GameObject musicManager = GameObject.FindGameObjectWithTag("MusicManager");
+            if (musicManager != null)
+            {
+                musicManager.GetComponent<PlaySound>().soundToFadeTo = "chase";
+            }
             anim[0].SetBool("Alert", true);
             Instantiate(wardenPrefab);
         }

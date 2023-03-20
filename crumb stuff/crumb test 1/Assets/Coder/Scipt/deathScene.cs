@@ -15,6 +15,11 @@ public class deathScene : MonoBehaviour
 
     static public void DeathSceneActivate()
     {
+        GameObject musicManager = GameObject.FindGameObjectWithTag("MusicManager");
+        if (musicManager != null)
+        {
+            musicManager.GetComponent<PlaySound>().soundToFadeTo = "main";
+        }
         foreach (Animator anim in animatorsStatic)
         {
             anim.SetTrigger("OpenClose");
