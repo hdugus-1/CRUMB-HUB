@@ -6,7 +6,7 @@ public class mouthScript : MonoBehaviour
 {
 
     public targetController target;
-    public int goldprice = 500;
+    public int goldprice = 150;
     // Start is called before the first frame update
     void Start()
     {

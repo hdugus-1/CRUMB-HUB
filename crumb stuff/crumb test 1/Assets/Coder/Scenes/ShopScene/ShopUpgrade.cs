@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
 
 public class ShopUpgrade : MonoBehaviour
 {
@@ -23,6 +22,7 @@ public class ShopUpgrade : MonoBehaviour
         if(HyperDriveManager.HyperDriveCounter >= 4) 
         {
             UpgradeManager.instance.AllComponentCollected();
+            PlayerPrefs.SetInt("hyperDrive", 1);
         }
     }
     public void ShopActivateMinimap()
