@@ -6,15 +6,6 @@
             "id": "8b42e411-0942-4332-b402-b55f9f3a6106",
             "actions": [
                 {
-                    "name": "Fire",
-                    "type": "Button",
-                    "id": "14349d03-9970-4d79-9584-19947a1b027c",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "GunBaseRight",
                     "type": "PassThrough",
                     "id": "5e659556-a85e-4838-8d84-85554baf9656",
@@ -27,15 +18,6 @@
                     "name": "GunBaseLeft",
                     "type": "PassThrough",
                     "id": "6b20fbe7-d941-4066-bb9f-579a24766d41",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Grab",
-                    "type": "PassThrough",
-                    "id": "9ad7c20b-2a3f-417f-a2e2-4095a84c946a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -58,20 +40,36 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Accelerate",
+                    "type": "Button",
+                    "id": "0ddcd681-0e4f-40b8-9d89-4f72ede5c00b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Brake",
+                    "type": "Button",
+                    "id": "5c721cae-df45-42e2-a62e-bd05997dc820",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "2ada8d41-09f7-4edb-b946-54448c464984",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "a158fa61-2951-4935-807b-628d247da6d4",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "3a500166-c0ed-4752-89cd-5fef98829401",
@@ -96,17 +94,6 @@
                 },
                 {
                     "name": "",
-                    "id": "e5030e98-14ff-4823-b744-77e90b52a1cd",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Grab",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "2047fa27-2cb9-4a0e-844e-cf02190578d5",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
@@ -124,6 +111,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "HUD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f19b0fec-9de5-4b02-aff3-b5f7de4cde75",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Accelerate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7e1f3a0d-333c-4dee-a4e7-c3263e13708e",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Brake",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb45d247-3ce2-4e86-b3a8-85936aba9e50",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

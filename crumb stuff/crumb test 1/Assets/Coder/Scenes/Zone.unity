@@ -167,22 +167,6 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4076043890029298814}
-        m_TargetAssemblyTypeName: Weapon, Assembly-CSharp
-        m_MethodName: Shoot
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 14349d03-9970-4d79-9584-19947a1b027c
-    m_ActionName: Player2/Fire[/XInputControllerWindows/buttonSouth,/XInputControllerWindows1/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 3472844979832195297}
         m_TargetAssemblyTypeName: GunBaseController, Assembly-CSharp
         m_MethodName: GunBaseRotationRight
@@ -217,22 +201,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 428663348636096340}
         m_TargetAssemblyTypeName: targetController, Assembly-CSharp
-        m_MethodName: OnGrab
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 9ad7c20b-2a3f-417f-a2e2-4095a84c946a
-    m_ActionName: Player2/Grab[/XInputControllerWindows/leftTrigger,/XInputControllerWindows1/leftTrigger]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 428663348636096340}
-        m_TargetAssemblyTypeName: targetController, Assembly-CSharp
         m_MethodName: OnSteer
         m_Mode: 0
         m_Arguments:
@@ -261,6 +229,54 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ad7c75a2-80c1-4f78-8c4a-b1ee3bd05b7c
     m_ActionName: Player2/HUD[/XInputControllerWindows/buttonWest,/XInputControllerWindows1/buttonWest]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8615203242493215707}
+        m_TargetAssemblyTypeName: spaceshipController, Assembly-CSharp
+        m_MethodName: OnAccel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0ddcd681-0e4f-40b8-9d89-4f72ede5c00b
+    m_ActionName: Player2/Accelerate[/XInputControllerWindows1/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8615203242493215707}
+        m_TargetAssemblyTypeName: spaceshipController, Assembly-CSharp
+        m_MethodName: OnBrake
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5c721cae-df45-42e2-a62e-bd05997dc820
+    m_ActionName: Player2/Brake[/XInputControllerWindows1/leftTrigger]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 499523890}
+        m_TargetAssemblyTypeName: upgradeTrigger, Assembly-CSharp
+        m_MethodName: OnUpgradeMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2ada8d41-09f7-4edb-b946-54448c464984
+    m_ActionName: Player2/Interact[/XInputControllerWindows1/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player2
@@ -1081,7 +1097,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441937104}
   m_LocalRotation: {x: -0, y: 0, z: -0.122484274, w: 0.9924705}
-  m_LocalPosition: {x: -85.76482, y: -297.0188, z: 0}
+  m_LocalPosition: {x: -84.6254, y: -295.61066, z: 0}
   m_LocalScale: {x: 86.918846, y: 157.7978, z: 93.18294}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2850,6 +2866,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1655591848}
+    - target: {fileID: 415414043530443568, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7283586
+      objectReference: {fileID: 0}
+    - target: {fileID: 415414043530443568, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.017806372
+      objectReference: {fileID: 0}
+    - target: {fileID: 415414043530443568, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.68476015
+      objectReference: {fileID: 0}
+    - target: {fileID: 415414043530443568, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.016740508
+      objectReference: {fileID: 0}
     - target: {fileID: 428663348859210190, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: anim.Array.data[0]
       value: 
@@ -2918,6 +2950,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.000000074505806
       objectReference: {fileID: 0}
+    - target: {fileID: 2240306790092499943, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0000002807994
+      objectReference: {fileID: 0}
+    - target: {fileID: 2240306790092499943, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0000000067399797
+      objectReference: {fileID: 0}
     - target: {fileID: 2240306790426523188, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2936,11 +2976,11 @@ PrefabInstance:
       objectReference: {fileID: 499523890}
     - target: {fileID: 6479931048198061852, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -85.76474
+      value: -84.625305
       objectReference: {fileID: 0}
     - target: {fileID: 6479931048198061852, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -297.0187
+      value: -295.61063
       objectReference: {fileID: 0}
     - target: {fileID: 8615203242278559041, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: Explosion
@@ -7327,9 +7367,9 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8615203242493215707}
-        m_TargetAssemblyTypeName: spaceshipController, Assembly-CSharp
-        m_MethodName: OnSteer
+      - m_Target: {fileID: 428663348636096340}
+        m_TargetAssemblyTypeName: targetController, Assembly-CSharp
+        m_MethodName: OnGrab
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7339,13 +7379,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 8f9a548d-c1c4-4923-9bdf-072b48dd0205
-    m_ActionName: Player1/Steer[/XInputControllerWindows/leftStick/x,/XInputControllerWindows1/leftStick/x]
+    m_ActionId: 7072aeaa-dbf5-4d9e-820b-69c6b119d5c3
+    m_ActionName: Player1/Grab[/XInputControllerWindows/leftTrigger,/XInputControllerWindows1/leftTrigger]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8615203242493215707}
-        m_TargetAssemblyTypeName: spaceshipController, Assembly-CSharp
-        m_MethodName: OnAccel
+      - m_Target: {fileID: 4076043890029298814}
+        m_TargetAssemblyTypeName: Weapon, Assembly-CSharp
+        m_MethodName: Shoot
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7355,24 +7395,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: a965eeea-4bc0-416a-a279-c3a99965363d
-    m_ActionName: Player1/Accelerate[/XInputControllerWindows/rightTrigger,/XInputControllerWindows1/rightTrigger]
+    m_ActionId: 6feacbaf-76d0-4c42-a026-7f13466c4651
+    m_ActionName: Player1/Shoot[/XInputControllerWindows/rightTrigger,/XInputControllerWindows1/rightTrigger]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8615203242493215707}
-        m_TargetAssemblyTypeName: spaceshipController, Assembly-CSharp
-        m_MethodName: OnBrake
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 7e0f784f-c382-4324-8148-8f593a9ba47f
-    m_ActionName: Player1/Brake[/XInputControllerWindows/rightShoulder,/XInputControllerWindows1/rightShoulder]
+      m_Calls: []
+    m_ActionId: 32bad338-c47a-4e0f-885d-811cb706cf3b
+    m_ActionName: Player1/Menu Back[/XInputControllerWindows/buttonEast,/XInputControllerWindows1/buttonEast]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 499523890}
@@ -7387,24 +7415,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: e9b245df-ab76-4926-acef-9096f8005109
-    m_ActionName: Player1/UpgradeMenu[/XInputControllerWindows/buttonNorth,/XInputControllerWindows1/buttonNorth]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1259305079}
-        m_TargetAssemblyTypeName: SpawnWarden, Assembly-CSharp
-        m_MethodName: SpawnWardenTheBoss
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: ed1ae0d6-673e-4655-858a-a62aedf8a037
-    m_ActionName: Player1/SpawnWarden[/XInputControllerWindows/leftShoulder,/XInputControllerWindows1/leftShoulder]
+    m_ActionId: 0c6ab984-d5fd-4d39-837b-75a887cf1d24
+    m_ActionName: Player1/Interact[/XInputControllerWindows/buttonSouth,/XInputControllerWindows1/buttonSouth]
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 499523890}
@@ -7419,8 +7431,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: bf197d10-93ef-4b56-81d6-1b4b4a78527a
-    m_ActionName: Player1/openHUD[/XInputControllerWindows/buttonWest,/XInputControllerWindows1/buttonWest]
+    m_ActionId: f2a14618-d2f0-4f5e-917c-b4f92b9f6375
+    m_ActionName: Player1/ShowStatus[/XInputControllerWindows/buttonWest,/XInputControllerWindows1/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5409a982-fad1-4fb3-ba6d-53591a43a2df
+    m_ActionName: Player1/Pause[/XInputControllerWindows/start,/XInputControllerWindows1/start]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8615203242493215707}
+        m_TargetAssemblyTypeName: spaceshipController, Assembly-CSharp
+        m_MethodName: OnSteer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0e0fa09f-55d8-4d69-b73d-28942a7f9046
+    m_ActionName: Player1/Steering[/XInputControllerWindows/leftStick/x,/XInputControllerWindows1/leftStick/x]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player1
