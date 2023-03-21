@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class targetController : MonoBehaviour
 {
+    public AudioSource GrabSound;
     public Animator[] anim;
 
     //Added temporary variables for grab arm
@@ -33,6 +34,7 @@ public class targetController : MonoBehaviour
     float tempMaxSpeed;
     float tempMoveSpeed;
 
+    private bool playedGrabSound = false;
     private void Awake()
     {
         playerinput = GetComponent<PlayerInput>();
@@ -106,7 +108,13 @@ public class targetController : MonoBehaviour
             grabstatus = false;
         }
         if(grabby == 1 && joint1 != null && joint2 != null) //Close grab arm
-        { 
+        {
+            if (!GrabSound.isPlaying && !playedGrabSound) 
+            { 
+                GrabSound.Play();   
+                playedGrabSound = true;
+
+            }
             joint1.localRotation = Quaternion.Euler(0, 0, 0);
             joint2.localRotation = Quaternion.Euler(0, 0, 0);
         }
@@ -118,6 +126,7 @@ public class targetController : MonoBehaviour
 
         if (grabby == 0 && joint1 != null && joint2 != null) //open grab arm
         {
+            if (playedGrabSound) playedGrabSound = false;
             joint1.localRotation = Quaternion.Euler(0, -grabOpenGap, 0);
             joint2.localRotation = Quaternion.Euler(0, grabOpenGap, 0);
         }

@@ -3086,6 +3086,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1166999368543543355, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1166999368543543355, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2240306789779948034, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -1.77
@@ -3170,6 +3178,18 @@ PrefabInstance:
       propertyPath: healthBar.Array.data[3]
       value: 
       objectReference: {fileID: 1751896239}
+    - target: {fileID: 8915434057079725368, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915434057079725368, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: Priority
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915434057079725368, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: BypassListenerEffects
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
 --- !u!1 &863322453

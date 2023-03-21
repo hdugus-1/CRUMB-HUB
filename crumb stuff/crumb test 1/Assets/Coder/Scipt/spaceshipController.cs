@@ -21,6 +21,11 @@ public class spaceshipController : MonoBehaviour
     float brakeval;
 
     public AudioSource ShipImpactSound;
+    public AudioSource ThrusterSound;
+    public AudioSource ThrusterEndSound;
+    private bool havePlayedThrusterEndSound = false;
+    private float thrusterMinSound = 0.02f;
+    private float thrusterMaxSound = 0.1f;
 
     private PlayerInput playerinput;
     private Controls playercontrols;
@@ -73,6 +78,9 @@ public class spaceshipController : MonoBehaviour
         Explosion.SetActive(false);
         Deatheventsystem.SetActive(false);
         upgradeEngineFlameLength = EngineDefault;
+
+        ThrusterSound.volume = 0;
+        ThrusterSound.Play();
     }
 
 
@@ -104,6 +112,15 @@ public class spaceshipController : MonoBehaviour
             accelval = context.ReadValue<float>();
         if (accelval == 0)
         {
+            if (ThrusterSound.volume > thrusterMinSound)
+            {
+                if (!havePlayedThrusterEndSound)
+                {
+                    ThrusterEndSound.Play();
+                    havePlayedThrusterEndSound = true;
+                }
+                ThrusterSound.volume = Mathf.Lerp(ThrusterSound.volume, thrusterMinSound, 10f);
+            }
             flameLengthMainEngine = EngineDefault;
             upgradeEngineFlameLength = EngineDefault;
             mainEngineScrollSpeed = -1.2f;
@@ -111,6 +128,15 @@ public class spaceshipController : MonoBehaviour
 
         else
         {
+            if (ThrusterSound.volume < thrusterMaxSound)
+            {
+                if (havePlayedThrusterEndSound)
+                {
+                    ThrusterEndSound.Stop();
+                    havePlayedThrusterEndSound = false;
+                }
+                ThrusterSound.volume = Mathf.Lerp(ThrusterSound.volume, thrusterMaxSound, 10f);
+            }
             flameLengthMainEngine = maxEngineThrust;
             upgradeEngineFlameLength = maxEngineThrust;
             mainEngineScrollSpeed = -2.0f;
