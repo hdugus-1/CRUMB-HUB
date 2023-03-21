@@ -6424,6 +6424,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2828281921027952397, guid: d4812bf14c17c8644a16f4d320554b27, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b8ff82122c9db04fa56cd18a2cb3205, type: 2}
+    - target: {fileID: 4391961743307185558, guid: d4812bf14c17c8644a16f4d320554b27, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 34a073e03d77cf1498e86a4599931b56, type: 2}
     - target: {fileID: 8531675107841486241, guid: d4812bf14c17c8644a16f4d320554b27, type: 3}
       propertyPath: m_Name
       value: PUT GRAPHICS HERE!!! 1 1
