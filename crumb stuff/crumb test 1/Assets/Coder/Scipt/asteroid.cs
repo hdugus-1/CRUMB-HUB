@@ -70,6 +70,11 @@ public class asteroid : MonoBehaviour
             Destroy(this.gameObject);
        }
        if(asteroidHP<=0){
+            
+            coin coins = Instantiate(coinprefab, this.transform.position, this.transform.rotation);
+
+            //Unessesary code
+            /*
         if(this.name=="PF_Asteorid_Base_1(Clone)" || this.name=="PF_Asteorid_Base_2(Clone)" || this.name=="PF_Asteorid_Base_3(Clone)"){
             coin coins=Instantiate(coinprefab,this.transform.position,this.transform.rotation);
             //coins.coinDecay();
@@ -85,8 +90,9 @@ public class asteroid : MonoBehaviour
         else if(this.name=="PF_Asteroid_Large_1(Clone)" || this.name=="PF_Asteroid_Large_2(Clone)" || this.name=="PF_Asteroid_Large_3(Clone)"){
             coin coins=Instantiate(coinprefab,this.transform.position,this.transform.rotation);
             //coins.coinDecay();
-        } 
-       }
+            
+        } */
+        }
     }
 
     void Explode()

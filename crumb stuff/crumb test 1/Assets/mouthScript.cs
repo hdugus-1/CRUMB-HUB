@@ -6,7 +6,9 @@ public class mouthScript : MonoBehaviour
 {
 
     public targetController target;
-    public int goldprice = 150;
+    public int lowestGoldValue = 50;
+    public int highestGoldValue = 150;
+    private int goldprice = 150;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,7 @@ public class mouthScript : MonoBehaviour
     {
         if (other.tag.Contains("grabgold") && target.grabstatus == true)
         {
+            goldprice = Random.Range(lowestGoldValue, highestGoldValue);
             spaceshipController.staticStarShineEffect.SetActive(false);
             spaceshipController.staticStarShineEffect.SetActive(true);
             target.grabstatus = false;

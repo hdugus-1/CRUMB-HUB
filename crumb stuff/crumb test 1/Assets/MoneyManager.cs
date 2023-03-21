@@ -10,7 +10,7 @@ public class MoneyManager : MonoBehaviour
     public static MoneyManager instance;
     public TextMeshProUGUI currentMoney;
 
-    static public int money = 5000;
+    static public int money = 0;
 
 
     private void Awake()
