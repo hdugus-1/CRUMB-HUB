@@ -30,9 +30,16 @@ public class buttonScript : MonoBehaviour
         SceneManager.LoadScene("Intro");
     }
 
+    void ResetGame()
+    {
+        PlayerPrefs.DeleteAll();
+        MoneyManager.money = 0;
+    }
+
     public void StartGameButton()
     {
-        if(timer > 3)
+        ResetGame();
+        if (timer > 3)
         {
             HyperDriveManager.HyperDriveCounter = 0;
             SceneManager.LoadScene(Scene);
@@ -50,9 +57,9 @@ public class buttonScript : MonoBehaviour
     {
         if (upgradeTrigger.isPause)
         {
+            ResetGame();
             spaceshipController.Deatheventsystem.SetActive(false);
             upgradeTrigger.Pauseeventsystem.SetActive(false);
-            PlayerPrefs.DeleteAll();
             SceneManager.LoadScene(Scene);
             upgradeTrigger.isPause = false;
             spaceshipController.isDead = false;
@@ -65,9 +72,9 @@ public class buttonScript : MonoBehaviour
     {
         if(spaceshipController.isDead)
         {
+            ResetGame();
             spaceshipController.Deatheventsystem.SetActive(false);
             upgradeTrigger.Pauseeventsystem.SetActive(false);
-            PlayerPrefs.DeleteAll();
             SceneManager.LoadScene(Scene);
             upgradeTrigger.isPause = false;
             spaceshipController.isDead = false;
@@ -83,6 +90,7 @@ public class buttonScript : MonoBehaviour
 
     public void ExitGameButton()
     {
+        ResetGame();
         Application.Quit();
     }
 
