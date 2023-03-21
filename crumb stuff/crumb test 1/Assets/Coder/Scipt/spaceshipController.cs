@@ -241,6 +241,7 @@ public class spaceshipController : MonoBehaviour
             isDead = true;
             spawnertag.SetActive(false);
             Explosion.SetActive(true);
+            ThrusterSound.Stop();
             Destroy(gameObject);
             deathScene.DeathSceneActivate();
         }
@@ -257,6 +258,7 @@ public class spaceshipController : MonoBehaviour
             isDead= true;
             spawnertag.SetActive(false);
             Explosion.SetActive(true);
+            ThrusterSound.Stop();
             Destroy(gameObject);
         }
 
