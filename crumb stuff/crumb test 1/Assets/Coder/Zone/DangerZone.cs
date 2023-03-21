@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class DangerZone : MonoBehaviour
 {
     public GameObject wardenPrefab;
+    public AudioSource WardenWarningSound;
     public Animator[] anim;
 
     private void OnTriggerExit(Collider other)
@@ -20,17 +21,8 @@ public class DangerZone : MonoBehaviour
             }
             anim[0].SetBool("Alert", true);
             Instantiate(wardenPrefab);
+            if (WardenWarningSound != null) WardenWarningSound.Play();
+            else Debug.LogWarning("No warden popup sound detected");
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

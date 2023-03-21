@@ -20,7 +20,7 @@ public class spaceshipController : MonoBehaviour
     float accelval;
     float brakeval;
 
-    
+    public AudioSource ShipImpactSound;
 
     private PlayerInput playerinput;
     private Controls playercontrols;
@@ -236,6 +236,8 @@ public class spaceshipController : MonoBehaviour
 
         if (collision.relativeVelocity.magnitude > crashSpeed && !collision.gameObject.tag.Contains("grab"))
         {
+            if (ShipImpactSound != null) ShipImpactSound.Play();
+            else Debug.LogWarning("No ship impact sound detected");
             health -= 1;
         }
     }
