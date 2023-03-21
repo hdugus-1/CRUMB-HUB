@@ -1905,7 +1905,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &2240306789779948060
 MonoBehaviour:
@@ -6055,7 +6055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8016579591277445292, guid: 0d75546b4edc96b4384bd7e7324c2ad4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.28363
+      value: 16.92363
       objectReference: {fileID: 0}
     - target: {fileID: 8016579591277445293, guid: 0d75546b4edc96b4384bd7e7324c2ad4, type: 3}
       propertyPath: far clip plane
