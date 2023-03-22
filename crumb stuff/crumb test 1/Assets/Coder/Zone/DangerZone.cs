@@ -9,10 +9,11 @@ public class DangerZone : MonoBehaviour
     public GameObject wardenPrefab;
     public AudioSource WardenWarningSound;
     public Animator[] anim;
+    private GameObject wardenCheck;
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Spaceship"))
+        if (other.CompareTag("Spaceship") && wardenCheck == null)
         {
             GameObject musicManager = GameObject.FindGameObjectWithTag("MusicManager");
             if (musicManager != null)
@@ -24,5 +25,10 @@ public class DangerZone : MonoBehaviour
             if (WardenWarningSound != null) WardenWarningSound.Play();
             else Debug.LogWarning("No warden popup sound detected");
         }
+    }
+
+    private void Update()
+    {
+        wardenCheck = GameObject.FindGameObjectWithTag("Warden");
     }
 }
