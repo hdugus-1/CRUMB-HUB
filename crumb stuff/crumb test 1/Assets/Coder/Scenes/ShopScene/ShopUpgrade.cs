@@ -22,7 +22,6 @@ public class ShopUpgrade : MonoBehaviour
         if(HyperDriveManager.HyperDriveCounter >= 4) 
         {
             UpgradeManager.instance.AllComponentCollected();
-            PlayerPrefs.SetInt("hyperDrive", 1);
         }
     }
     public void ShopActivateMinimap()
@@ -30,7 +29,7 @@ public class ShopUpgrade : MonoBehaviour
         if (!PlayerPrefs.HasKey("minimapUpgraded"))
         {
             UpgradeManager.instance.ActivateMinimap();
-            PlayerPrefs.SetInt("minimapUpgraded", 1);
+            //PlayerPrefs.SetInt("minimapUpgraded", 1);
         }
     }
 
@@ -39,7 +38,6 @@ public class ShopUpgrade : MonoBehaviour
         if(!PlayerPrefs.HasKey("gunUpgraded"))
         {
             UpgradeManager.instance.UpgradeGun();
-            PlayerPrefs.SetInt("gunUpgraded", 1);
         }
     }
 
@@ -47,7 +45,6 @@ public class ShopUpgrade : MonoBehaviour
     {
         if(!PlayerPrefs.HasKey("engineUpgrade"))
         {
-            PlayerPrefs.SetInt("engineUpgrade", 1);
             UpgradeManager.instance.ShipUpgrade();
         }
     }

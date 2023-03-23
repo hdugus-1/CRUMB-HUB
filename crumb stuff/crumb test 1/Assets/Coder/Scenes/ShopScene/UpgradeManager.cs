@@ -90,6 +90,7 @@ public class UpgradeManager : MonoBehaviour
             {
                 MoneyManager.instance.currentMoney.text = MoneyManager.money.ToString();
             }
+            PlayerPrefs.SetInt("minimapUpgraded", 1);
             SceneManager.LoadScene("Zone");
         }
     }
@@ -97,6 +98,7 @@ public class UpgradeManager : MonoBehaviour
     public void AllComponentCollected()
     {
         WinningZone.collectedAllComponent = true;
+        PlayerPrefs.SetInt("hyperDrive", 1);
         SceneManager.LoadScene("Zone");
     }
 
@@ -117,6 +119,7 @@ public class UpgradeManager : MonoBehaviour
             {
                 MoneyManager.instance.currentMoney.text = MoneyManager.money.ToString();
             }
+            PlayerPrefs.SetInt("engineUpgrade", 1);
             SceneManager.LoadScene("Zone");
         }
     }
@@ -133,7 +136,8 @@ public class UpgradeManager : MonoBehaviour
             {
                 MoneyManager.instance.currentMoney.text = MoneyManager.money.ToString();
             }
-            SceneManager.LoadScene("Zone");
+            PlayerPrefs.SetInt("gunUpgraded", 1);
+        SceneManager.LoadScene("Zone");
         }
     }
 
