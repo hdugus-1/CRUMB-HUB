@@ -34,6 +34,7 @@ public class buttonScript : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         MoneyManager.money = 0;
+        MainTimer.maintimer = 0;
     }
 
     public void StartGameButton()
