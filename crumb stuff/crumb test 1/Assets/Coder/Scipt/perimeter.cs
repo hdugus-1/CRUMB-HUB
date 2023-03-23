@@ -15,19 +15,21 @@ public class perimeter : MonoBehaviour
     }
 
 
-     private void OnTriggerEnter(Collider other)
+    // Start is called before the first frame update
+    private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Spaceship" && tof==false)
         {
-
-           spawner.startSpawning();
             tof=true;
-            
-        }
-        else if(other.tag=="Spaceship" && tof==true){
-            spawner.stopSpawning();
-            tof=false;
+            spawner.startSpawning();
         }
         
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.tag=="Spaceship" && tof==true){
+            tof=false;
+            spawner.stopSpawning();
+        }
     }
 }
