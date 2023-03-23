@@ -933,6 +933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spaceshipRigidbody: {fileID: 5955034355405268939}
+  cam: {fileID: 861183643}
   anim:
   - {fileID: 25598552187103172}
 --- !u!64 &327841721
@@ -1108,7 +1109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441937104}
   m_LocalRotation: {x: -0, y: 0, z: -0.122484274, w: 0.9924705}
-  m_LocalPosition: {x: -87.721954, y: -179.19673, z: 0}
+  m_LocalPosition: {x: -84.08356, y: -295.0738, z: 0}
   m_LocalScale: {x: 86.918846, y: 157.7978, z: 93.18294}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2894,19 +2895,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 415414043530443568, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7283586
+      value: 0.7283582
       objectReference: {fileID: 0}
     - target: {fileID: 415414043530443568, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.017806372
+      value: -0.017806284
       objectReference: {fileID: 0}
     - target: {fileID: 415414043530443568, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.68476015
+      value: -0.6847607
       objectReference: {fileID: 0}
     - target: {fileID: 415414043530443568, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.016740508
+      value: -0.01674032
       objectReference: {fileID: 0}
     - target: {fileID: 428663348859210190, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: anim.Array.data[0]
@@ -3062,7 +3063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2240306789779948035, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_RotationOffsets.Array.data[0].x
-      value: 89.96574
+      value: 89.980225
       objectReference: {fileID: 0}
     - target: {fileID: 2240306789779948035, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_TranslationOffsets.Array.data[0].x
@@ -3134,11 +3135,11 @@ PrefabInstance:
       objectReference: {fileID: 499523890}
     - target: {fileID: 6479931048198061852, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -87.721954
+      value: -84.08356
       objectReference: {fileID: 0}
     - target: {fileID: 6479931048198061852, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -179.19667
+      value: -295.07373
       objectReference: {fileID: 0}
     - target: {fileID: 7512893191505388983, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_audioClip
@@ -3234,6 +3235,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+--- !u!114 &861183643 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8321530017546160609, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+  m_PrefabInstance: {fileID: 861183642}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &863322453
 GameObject:
   m_ObjectHideFlags: 0
@@ -7290,6 +7302,10 @@ PrefabInstance:
     - target: {fileID: 6978183835090791134, guid: d4812bf14c17c8644a16f4d320554b27, type: 3}
       propertyPath: m_LocalPosition.z
       value: -4.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 6983043920714770515, guid: d4812bf14c17c8644a16f4d320554b27, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7332020474803022308, guid: d4812bf14c17c8644a16f4d320554b27, type: 3}
       propertyPath: m_LocalRotation.w
