@@ -19,7 +19,7 @@ public class WinningZone : MonoBehaviour
     {
         if (other.CompareTag("Spaceship"))
         {
-            if (collectedAllComponent)
+            if (collectedAllComponent == false)
             {
                 collectedAllComponent= false;
                 StartCoroutine(FovIncrease());//increases fov and loads win screen
