@@ -118,7 +118,7 @@ MonoBehaviour:
   size: 2
   minsize: 1
   maxsize: 2
-  speed: 5
+  speed: 7
   maxLifeTime: 10
   lifeTime: 0
   asteroidHP: 75

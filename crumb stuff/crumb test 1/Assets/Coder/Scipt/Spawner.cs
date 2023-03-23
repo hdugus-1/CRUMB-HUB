@@ -48,14 +48,14 @@ public class Spawner : MonoBehaviour
                 int asteroidchoice=0;
                 Vector3 asteroidspawnDirection = Vector3.one;
                 Vector3 asteroidspawnPoint = Vector3.one;
-                flattenedpos = UnityEngine.Random.onUnitSphere * 40;
+                flattenedpos = UnityEngine.Random.onUnitSphere * 70;
                 flattenedpos.y = 0.8f;
                 asteroidspawnDirection = flattenedpos;
                 asteroidspawnPoint = (GameObject.FindGameObjectWithTag("Spaceship").transform.position) + asteroidspawnDirection;
                 distvec = Vector3.Distance(asteroidspawnPoint, GameObject.FindGameObjectWithTag("Spaceship").transform.position);
-                while (distvec < 30)
+                while (distvec < 55)
                 {
-                    flattenedpos = UnityEngine.Random.onUnitSphere * 40;
+                    flattenedpos = UnityEngine.Random.onUnitSphere * 70;
                     flattenedpos.y = 1.8f;
                     asteroidspawnDirection = flattenedpos;
                     asteroidspawnPoint = (GameObject.FindGameObjectWithTag("Spaceship").transform.position) + asteroidspawnDirection;

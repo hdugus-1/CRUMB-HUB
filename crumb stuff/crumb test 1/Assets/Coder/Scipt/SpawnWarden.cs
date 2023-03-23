@@ -8,6 +8,7 @@ public class SpawnWarden : MonoBehaviour
     public GameObject wardenPrefab;
     public Animator[] anim;
 
+    
     public void SpawnWardenTheBoss(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -16,5 +17,5 @@ public class SpawnWarden : MonoBehaviour
             Instantiate(wardenPrefab);
         }
     }
-
+    
 }
