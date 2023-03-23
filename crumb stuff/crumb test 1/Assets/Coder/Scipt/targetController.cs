@@ -7,9 +7,15 @@ using UnityEngine.InputSystem;
 public class targetController : MonoBehaviour
 {
     public Transform target;
-    public Rigidbody Grabbed;
     public Rigidbody ship;
+<<<<<<< Updated upstream
     public Collider thing;
+=======
+    public spaceshipController shipcontroller;
+    public float basespeed;
+    public float basemaxspeed;
+    public Collider GrabbedThing;
+>>>>>>> Stashed changes
     Vector2 ballpoint;
     public float grabby;
     public bool grabstatus = false;
@@ -51,6 +57,7 @@ public class targetController : MonoBehaviour
         if (other.tag.Contains("grab") && grabby == 1)
         {
             grabstatus = true;
+<<<<<<< Updated upstream
            
             Debug.Log("grabbed");
             //other.attachedRigidbody.velocity = Vector3.zero;
@@ -62,6 +69,23 @@ public class targetController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+=======
+            GrabbedThing = other;
+            
+        }
+        if(other.tag.Contains("HyperDriveComponents") && grabby == 1)
+        {
+            anim[0].SetBool("Alert", true);
+            grabstatus = true;
+            GrabbedThing = other;
+            if(!speedReduced)
+            {
+                shipcontroller.movespeed *= speedWhenGrab;
+                shipcontroller.maxspeed *= speedWhenGrab;
+                speedReduced= true;
+            }
+        }
+>>>>>>> Stashed changes
         
     }
 
@@ -71,19 +95,19 @@ public class targetController : MonoBehaviour
         oldpos = transform.position;
         transform.position = new Vector3(target.position.x + ballpoint.x * sens, target.position.y, target.position.z + ballpoint.y * sens);
         
-        if(thing == null)
+        if(GrabbedThing == null)
         {
             grabstatus = false;
         }
         if (grabby == 1 && grabstatus == true)
         {
-            thing.transform.position = transform.position;
-            thing.attachedRigidbody.velocity = Vector3.zero;
+            GrabbedThing.transform.position = transform.position;
+            GrabbedThing.attachedRigidbody.velocity = Vector3.zero;
         }
 
         if (grabby == 0 && grabstatus == true)
         {
-            thing.attachedRigidbody.AddForce(ship.velocity + ((transform.position - oldpos) / Time.deltaTime) * 50);
+            GrabbedThing.attachedRigidbody.AddForce(ship.velocity + ((transform.position - oldpos) / Time.deltaTime) * 50);
             grabstatus = false;
         }
         
