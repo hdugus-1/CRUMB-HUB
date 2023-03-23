@@ -11,6 +11,7 @@ public class buttonScript : MonoBehaviour
     public bool pausecheck;
     public upgradeTrigger upgradeTrigger;
     public bool ispause;
+    public GameObject compHandler;
     private float timer;
 
 
@@ -18,6 +19,7 @@ public class buttonScript : MonoBehaviour
     {
         timer = 0;
         pausePanel = GameObject.FindGameObjectWithTag("PauseMenu");
+        compHandler = GameObject.FindGameObjectWithTag("component manager");
     }
 
     private void Update()
@@ -33,6 +35,7 @@ public class buttonScript : MonoBehaviour
     void ResetGame()
     {
         PlayerPrefs.DeleteAll();
+        compHandler.GetComponent<componentHandler>().emptyTheList();
         MoneyManager.money = 0;
         MainTimer.maintimer = 0;
     }

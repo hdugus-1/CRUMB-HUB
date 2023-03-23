@@ -25,6 +25,7 @@ public class upgradeTrigger : MonoBehaviour
     public Animator[] anim;
     private float HUDopener;
     public TextMeshProUGUI currentHyperDrives;
+    public GameObject compHandler;
 
     //VFX
     public GameObject StarShineEffect;
@@ -47,6 +48,7 @@ public class upgradeTrigger : MonoBehaviour
         }
         if (other.CompareTag("HyperDriveComponents"))
         {
+            compHandler.GetComponent<componentHandler>().components.Add(other.gameObject.name);
             Destroy(other.gameObject);
             StarShineEffect.SetActive(false);
             StarShineEffect.SetActive(true);
@@ -111,6 +113,8 @@ public class upgradeTrigger : MonoBehaviour
         buttonController = GameObject.FindGameObjectWithTag("ButtonController");
         buttonScript = buttonController.GetComponent<buttonScript>();
         Pauseeventsystem.SetActive(false);
+
+        compHandler = GameObject.FindGameObjectWithTag("component manager");
     }
 
     void Update()
