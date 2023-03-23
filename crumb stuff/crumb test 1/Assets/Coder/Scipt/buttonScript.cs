@@ -35,7 +35,11 @@ public class buttonScript : MonoBehaviour
     void ResetGame()
     {
         PlayerPrefs.DeleteAll();
-        compHandler.GetComponent<componentHandler>().emptyTheList();
+        if(compHandler != null)
+        {
+            compHandler.GetComponent<componentHandler>().emptyTheList();
+        }
+        
         MoneyManager.money = 0;
         MainTimer.maintimer = 0;
     }

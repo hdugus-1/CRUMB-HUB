@@ -410,6 +410,7 @@ MonoBehaviour:
   pausecheck: 0
   upgradeTrigger: {fileID: 0}
   ispause: 0
+  compHandler: {fileID: 0}
 --- !u!4 &1368592077
 Transform:
   m_ObjectHideFlags: 0
