@@ -1108,7 +1108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441937104}
   m_LocalRotation: {x: -0, y: 0, z: -0.122484274, w: 0.9924705}
-  m_LocalPosition: {x: -84.66556, y: -277.5401, z: 0}
+  m_LocalPosition: {x: -84.08356, y: -295.0738, z: 0}
   m_LocalScale: {x: 86.918846, y: 157.7978, z: 93.18294}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1995,7 +1995,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &691183273
 GameObject:
@@ -2538,7 +2538,7 @@ Transform:
   - {fileID: 579376236}
   - {fileID: 432206892}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &754923407
 MonoBehaviour:
@@ -3153,6 +3153,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4806707157451369366, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_TranslationAtRest.z
+      value: 21.34
+      objectReference: {fileID: 0}
     - target: {fileID: 4948401564572720925, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_Name
       value: PF_SpaceShip_1
@@ -3175,11 +3179,11 @@ PrefabInstance:
       objectReference: {fileID: 499523890}
     - target: {fileID: 6479931048198061852, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -84.66556
+      value: -84.08356
       objectReference: {fileID: 0}
     - target: {fileID: 6479931048198061852, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -277.54004
+      value: -295.07373
       objectReference: {fileID: 0}
     - target: {fileID: 7512893191505388983, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_audioClip
@@ -3215,7 +3219,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8321530018641989114, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478270717963944889, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_TranslationAtRest.z
+      value: 21.34
       objectReference: {fileID: 0}
     - target: {fileID: 8498385421501844849, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3249,6 +3257,10 @@ PrefabInstance:
       propertyPath: healthBar.Array.data[3]
       value: 
       objectReference: {fileID: 1751896239}
+    - target: {fileID: 8652983367571280678, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.34
+      objectReference: {fileID: 0}
     - target: {fileID: 8915434057079725368, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
       propertyPath: m_Pitch
       value: 1
@@ -3719,13 +3731,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4491a62e9e1da2e41b60040d6ac76b58, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 100
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 200
@@ -4867,13 +4879,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4491a62e9e1da2e41b60040d6ac76b58, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 99
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 200
@@ -5505,11 +5517,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &1548014603 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9132038007598716875, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
-  m_PrefabInstance: {fileID: 861183642}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1572971570
 GameObject:
   m_ObjectHideFlags: 0
@@ -7627,7 +7634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8669287405999593095, guid: d4812bf14c17c8644a16f4d320554b27, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8669287405999593095, guid: d4812bf14c17c8644a16f4d320554b27, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7969,6 +7976,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 754923406}
     m_Modifications:
+    - target: {fileID: 859936938070494263, guid: 4d44128d43e8dee4f963e2595d395442, type: 3}
+      propertyPath: Priority
+      value: 130
+      objectReference: {fileID: 0}
     - target: {fileID: 3441876431839129109, guid: 4d44128d43e8dee4f963e2595d395442, type: 3}
       propertyPath: m_Name
       value: PF_Player_Ship_Explosion
@@ -10009,7 +10020,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4076043889210661604, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
   m_PrefabInstance: {fileID: 861183642}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548014603}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0f64f4dcc30f4d44b10e96c9afd14ea, type: 3}
@@ -10135,17 +10146,9 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8615203242278559041, guid: 53a3b1b166131d047874c4a7e2531540, type: 3}
   m_PrefabInstance: {fileID: 861183642}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548014603}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d8a18f18beb25744953f5faaeaebb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!81 &8615203242493215712
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548014603}
-  m_Enabled: 1

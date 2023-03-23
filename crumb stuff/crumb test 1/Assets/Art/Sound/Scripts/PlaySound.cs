@@ -20,7 +20,7 @@ public class PlaySound : MonoBehaviour
     }
     private void Update()
     {
-        if(soundToFadeTo != OldsoundName)
+        if(soundToFadeTo != OldsoundName && soundManager != null)
         {
             soundManager.soundTransistion(soundToFadeTo);
             OldsoundName = soundToFadeTo;

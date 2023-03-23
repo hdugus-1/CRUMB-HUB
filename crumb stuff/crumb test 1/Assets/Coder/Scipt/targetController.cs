@@ -69,7 +69,7 @@ public class targetController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        float speedWhenGrab = 0.45f;
+        float speedWhenGrab = 0.55f;
         if (other.tag.Contains("grab") && grabby == 1)
         {
             grabstatus = true;
