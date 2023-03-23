@@ -7068,9 +7068,13 @@ PrefabInstance:
       value: 2.89
       objectReference: {fileID: 0}
     - target: {fileID: 4391961743307185558, guid: d4812bf14c17c8644a16f4d320554b27, type: 3}
-      propertyPath: m_Materials.Array.data[1]
+      propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 34a073e03d77cf1498e86a4599931b56, type: 2}
+    - target: {fileID: 4391961743307185558, guid: d4812bf14c17c8644a16f4d320554b27, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7d741873bf2c684e9bddca0d9394f96, type: 2}
     - target: {fileID: 4560235615902983550, guid: d4812bf14c17c8644a16f4d320554b27, type: 3}
       propertyPath: m_Enabled
       value: 0
