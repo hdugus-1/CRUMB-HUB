@@ -491,6 +491,7 @@ MonoBehaviour:
   pausecheck: 0
   upgradeTrigger: {fileID: 0}
   ispause: 0
+  compHandler: {fileID: 0}
 --- !u!1 &190762152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,7 +1898,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: chase
     clip: {fileID: 8300000, guid: 06b9138fb1ac9ad43bda42e69623fb0c, type: 3}
-    volume: 0.48
+    volume: 0.32
     pitch: 1
     loop: 1
     source: {fileID: 0}
